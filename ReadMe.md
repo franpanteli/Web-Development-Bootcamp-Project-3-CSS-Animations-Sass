@@ -1,4 +1,4 @@
-<h1>Ohmyfood</h1>h1>
+<h1>Ohmyfood</h1>
 <ul>
 	<li> index.html <- this is the html for the main webpage 
 	<li> assets <- this is the directory which contains the assets (the CSS file and images for the page)
