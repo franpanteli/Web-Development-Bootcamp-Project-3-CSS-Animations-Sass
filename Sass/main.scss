@@ -1,0 +1,36 @@
+// The purpose of this Sass file is to combine all of the partial Sass files for the project.
+// These are imported in a certain order -> to maintain the specificity of the imported elements.
+// This one Sass file then links to the main CSS file for the project, which compiles the code in the order of these imports.
+
+// The first imports are the partials in the utils directory -> this is following a 7-1 file structure (see the ReadMe for the project).
+// Import variables to define global styles
+@import 'utils/_variables';
+
+// Import functions and mixins for reusable styles
+@import 'utils/_functions';
+@import 'utils/_mixins';
+
+// Import extensions for additional utility styles
+@import 'utils/_extensions';
+
+// Import base styles for fundamental elements
+@import 'base/_base';
+@import 'base/_typography';
+
+/* Import component-specific styles */
+@import 'components/_buttons';
+
+// Import layout styles for headers, navigation, and containers
+@import 'layouts/_header';
+@import 'layouts/_nav';
+@import 'layouts/_container';
+@import 'layouts/_form';
+
+// Import page-specific styles for different sections
+@import 'pages/_work';
+@import 'pages/_about';
+@import 'pages/_project';
+
+// Your custom styles can be added here
+
+// Output the compiled styles
