@@ -1,3 +1,4 @@
+<h1>Ohmyfood<h1>
 <ul>
 	<li> index.html <- this is the html for the main webpage 
 	<li> assets <- this is the directory which contains the assets (the CSS file and images for the page)
@@ -19,3 +20,11 @@ In VSCode
 	<li>To open the terminal -> command shift p -> create new terminal</li>
 	<li><u>To open a file using the terminal (in VSCode)</u> -> cd into that directory with the file, then <u> 'open file_name' </u><- chatGPT says to use 'code file_name' for this,  but it doesn't work -> the suggestion which does is 'open file_name''</li>
 </ul>
+
+The assets folder 
+<ul>
+	<li>This file contains the styles.css file, and the styles.map file which is produced when this is compiled from the main.scss file</li>
+	<li>This also includes the images for the project and the ohmyfood logo</li>
+</ul>
+
+
