@@ -40,6 +40,7 @@
       <span class="mouse-effect-regular">Islington, London</span>
     </div>
   </nav>
+
   <!-- BOOK THE MEAL YOU WANT DIV -->
   <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -48,7 +49,7 @@
     <section class="container-around-book-the-meal-you-want">
       <div class="mouse-effect-regular">Book the meal you want</div>
       <h4 class="mouse-effect-regular">Discover our carefully selected high-end restaurants</h4>
-      <a href="#">
+      <a href="#Restaurants">
         <button class="pink-button mouse-effect-link">Explore our restaurants</button>
       </a>
     </section>
@@ -93,15 +94,16 @@
   <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
       <section class="restaurants-homepage-section">
 
-        <h2 class="mouse-effect-regular">Restaurants</h2>
+        <h2 class="mouse-effect-regular" id="Restaurants">Restaurants</h2>
+
         <div class="container-around-restaurant-names">
+
           <!-- Kitchen West -->
           <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
           <!-- the plight to make a restaurant div -->
           <div class="restaurant-card">
 
-            <a class="link-around-restaurant-card" href="#"> 
-
+            <a class="link-around-restaurant-card" href="restaurants/Kitchen-West-template-menu.html"> 
               <!-- the image in the restaurant div --> 
               <div class="image-container-menu-div">
               </div>
@@ -121,20 +123,32 @@
                 <div class="label-which-says-new-on-menu mouse-effect-link">
                   New
                 </div>  
-
-                <!-- the svg in the subtitle -->
-                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                </svg>    
-
-
             </a>
           </div>
+
+          <!-- the heart svg is clickable, as is the restaurant card it's been placed over). The div below inserts the svg below the restaurant card
+              and the class which styles it (position-icon-over-restaurant-card) has been defined to move its position over the restaurant card
+              (this way it remains clickable) -->
+
+          <div class="position-icon-over-restaurant-card">  
+            <input type="checkbox" id="heartCheckbox1" class="heartCheckbox">
+            <label for="heartCheckbox1" class="heart-container">
+                <svg class="custom-svg" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                    <path class="heart-background" d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z"/>
+                </svg>
+            </label>
+          </div>
+
+
+
+          
 
           <!-- Elderflower -->
           <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
           <div class="restaurant-card">
-            <a class="link-around-restaurant-card" href="#">
+            
+            <!-- <a class="link-around-restaurant-card" href="/html-pages/restaurants/Elderflower.html"> -->
+              <a class="link-around-restaurant-card" href="restaurants/Elderflower.html"> 
               <!-- the image in the restaurant div -->
               <div class="image-container-menu-div">
               </div>
@@ -154,18 +168,23 @@
                     -> this is due to the relative positioning of the New label in front of the respective restaurant card -->
                 <div class="label-which-says-new-on-menu mouse-effect-link">
                   New
-                </div>   
-                <!-- the svg in the subtitle -->
-                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                </svg>    
+                </div>    
             </a>
+          </div>
+
+          <div class="position-icon-over-restaurant-card">  
+            <input type="checkbox" id="heartCheckbox2" class="heartCheckbox">
+            <label for="heartCheckbox2" class="heart-container">
+                <svg class="custom-svg" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                    <path class="heart-background" d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z"/>
+                </svg>
+            </label>
           </div>
 
           <!-- Shoreditch Canteen -->
           <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
           <div class="restaurant-card">
-            <a class="link-around-restaurant-card" href="#">
+            <a class="link-around-restaurant-card" href="restaurants/Shoreditch-Canteen.html">
               <!-- the image in the restaurant div -->
               <div class="image-container-menu-div">
               </div>
@@ -181,19 +200,26 @@
                 </div>
       
                 <!-- the svg in the subtitle -->
-                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                </svg>    
+                </svg>     -->
             </a>
+          </div>
+          <div class="position-icon-over-restaurant-card" id="Shoreditch"> 
+            <input type="checkbox" id="heartCheckbox4" class="heartCheckbox">
+            <label for="heartCheckbox4" class="heart-container">
+                <svg class="custom-svg" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                    <path class="heart-background" d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z"/>
+                </svg>
+            </label>
           </div>
 
           <!-- The Bay Leaf-->
           <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
           <div class="restaurant-card">
-            <a class="link-around-restaurant-card" href="#">
+            <a class="link-around-restaurant-card" href="restaurants/The–Bay-Leaf.html">
               <!-- the image in the restaurant div -->
-              <div class="image-container-menu-div">
-              </div>
+              <div class="image-container-menu-div"></div>
 
               <!-- the subtitles in the restaurant div -->
               <div class="subtitles-for-restaurant-cards">
@@ -206,13 +232,24 @@
                 </div>
       
                 <!-- the svg in the subtitle -->
-                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                </svg>    
+                </svg>     -->
             </a>
           </div>
+
+          <div class="position-icon-over-restaurant-card"> 
+            <input type="checkbox" id="heartCheckbox3" class="heartCheckbox">
+            <label for="heartCheckbox3" class="heart-container">
+                <svg class="custom-svg" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                    <path class="heart-background" d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z"/>
+                </svg>
+            </label>
+          </div>
+
         </div>
       </section>
+
   </main>
 
   <!-- FOOTER -->
