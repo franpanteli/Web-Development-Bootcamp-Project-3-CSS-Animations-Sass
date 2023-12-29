@@ -1,36 +1,40 @@
-// The purpose of this Sass file is to combine all of the partial Sass files for the project.
-// These are imported in a certain order -> to maintain the specificity of the imported elements.
-// This one Sass file then links to the main CSS file for the project, which compiles the code in the order of these imports.
+// The purpose of this Sass file is to combine all of the partial Sass files for the project
+// These are imported in a certain order -> to maintain the specificity of the imported elements
+// This one Sass file then links to the main CSS file for the project, which compiles the code in the order of these imports
 
-// The first imports are the partials in the utils directory -> this is following a 7-1 file structure (see the ReadMe for the project).
-// Import variables to define global styles
-@import 'utils/_variables';
+//  The process used to obtain the order of these imports below was: 
+    // The CSS and html for the mobile version of the ohmyfood website was first written
+    // This CSS was then deconstructed into several sections, according to the 7-1 file structure in Sass
+    // This file structure was provided in the Sass course on the OpenClassrooms platform, and is listed below:  
+        // base/ <- for global styles (resets, typography)
+        // components/ <- for individual component styles
+        // layout/ <- for overall layout structure styles
+        // pages/ <- for page-specific styles
+        // themes/ <- for theme-related styles
+        // abstracts/ <- for Sass tools, mixins, variables
+        // vendors/ <- for third-party styles which are used
+    // The CSS was then taken out of its main file and broken down into several partial scss files, which are imported back into this scss file
+    // The order of the imports listed below is the same as the order in which they initially appeared in the CSS for the mobile version of the 
+    // ohmyfood homepeage, so that when they compile into CSS they are in the same order that they were in that initial CSS file
 
-// Import functions and mixins for reusable styles
-@import 'utils/_functions';
-@import 'utils/_mixins';
+// utilities 
+@import "./sass/utils/variables";
+@import "./sass/utils/mixins";
 
-// Import extensions for additional utility styles
-@import 'utils/_extensions';
+// base 
+@import "./sass/base/root";
 
-// Import base styles for fundamental elements
-@import 'base/_base';
-@import 'base/_typography';
+// layouts
+@import "./sass/layouts/header";
 
-/* Import component-specific styles */
-@import 'components/_buttons';
+// components 
+@import "./sass/components/restaurant_cards";
+@import "./sass/components/more_potential_animation_files";
 
-// Import layout styles for headers, navigation, and containers
-@import 'layouts/_header';
-@import 'layouts/_nav';
-@import 'layouts/_container';
-@import 'layouts/_form';
+// more layouts 
+@import "./sass/layouts/footer";
+@import "./sass/layouts/pages";
+@import "./sass/layouts/loading_animations";
 
-// Import page-specific styles for different sections
-@import 'pages/_work';
-@import 'pages/_about';
-@import 'pages/_project';
-
-// Your custom styles can be added here
-
-// Output the compiled styles
+// more utilities 
+@import "./sass/utils/keyframes";
