@@ -1,286 +1,242 @@
-<!-- HEAD / DOC TYPE ETC -->
+<!-- DOCUMENT CONTENTS -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- HEAD / DOC TYPE ETC -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ohmyfood</title>
-  <!-- Import Roboto font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
-  <!-- Link to your styles.css file -->
-  <!-- <link rel="stylesheet" href="assets/styles.css"> -->
-  <!-- <link rel="stylesheet" href="/Users/francescapanteli/Desktop/ohmyfood/assets/initial-homepage-css.css"> -->
-  <link rel="stylesheet" href="/Users/francescapanteli/Desktop/ohmyfood/assets/initial-homepage-css.css">
-  <!-- Import Inter font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- below - this connects the index.html file to the CSS file which is compiled using Sass -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
+<!-- NAV BAR / HEADER SECTION -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
 <body>
+    <header>
+        <h1>Ohmyfood</h1>
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Islington, London</p>
+        </div>
+        <div class="introduction">
+            <div class="introduction__title">
+                <h2>Book the meal you want</h2>
+            </div>
+            <div class="introduction__down-title">
+                <p>Discover our carefully selected high-end restaurants</p>
+            </div>
+            <a href="#Restaurants">
+                <button class="button">Explore our restaurants</button>
+            </a>
+        </div>
+    </header>
 
+<!-- THE "How it works" SECTION WITH THE PURPLE CIRCLES -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-  <!-- NAV BAR -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-  <nav>
-    <div class="white-div-at-top-of-mobile-homepage-nav-bar">
-      <!-- <img src="/assets/images/logo/ohmyfood.png" width="162px" height="44px"> -->
-      <div class="missing-logo"></div>
-    </div>
-
-    <div class="grey-div-at-bottom-of-mobile-homepage-nav-bar">
-      <svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.88337 16.1772C1.34281 9.59472 0.5 8.91915 0.5 6.5C0.5 3.18628 3.18628 0.5 6.5 0.5C9.81372 0.5 12.5 3.18628 12.5 6.5C12.5 8.91915 11.6572 9.59472 7.11662 16.1772C6.81865 16.6076 6.18131 16.6076 5.88337 16.1772ZM6.5 9C7.88072 9 9 7.88072 9 6.5C9 5.11928 7.88072 4 6.5 4C5.11928 4 4 5.11928 4 6.5C4 7.88072 5.11928 9 6.5 9Z" fill="#353535"/>
-      </svg>
-
-      <span class="mouse-effect-regular">Islington, London</span>
-    </div>
-  </nav>
-
-  <!-- BOOK THE MEAL YOU WANT DIV -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <main>
-    <section class="container-around-book-the-meal-you-want">
-      <div class="mouse-effect-regular">Book the meal you want</div>
-      <h4 class="mouse-effect-regular">Discover our carefully selected high-end restaurants</h4>
-      <a href="#Restaurants">
-        <button class="pink-button mouse-effect-link">Explore our restaurants</button>
-      </a>
+    <section class="functionning">
+        <h2>How it works</h2>
+        <ul class="functionning__list">
+            <li>
+                <div class="functionning__list--number">1</div>
+                <div><i class="fas fa-mobile-alt"></i></div>
+                <p>Choose a restaurant</p>
+            </li>
+            <li>
+                <div class="functionning__list--number">2</div>
+                <div><i class="fas fa-list"></i></div>
+                <p>Build your meal</p>
+            </li>
+            <li>
+                <div class="functionning__list--number">3</div>
+                <div><i class="fas fa-store"></i></div>
+                <p>Enjoy your meal at the restaurant</p>
+            </li>
+        </ul>
     </section>
 
 
-  <!-- HOW IT WORKS DIV -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-      <section class="how-it-works-mobile-homepage-section">
-        <h3 class="mouse-effect-regular">How it works</h3>
-        <div class="container-around-how-it-works-cards"> 
-          <div class="how-it-works-cards">
-            <div class="purple-circle mouse-effect-regular">1</div>
-            <svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.0487 0.543091H2.9356C1.85748 0.543091 0.982788 1.37885 0.982788 2.40898V18.58C0.982788 19.6101 1.85748 20.4459 2.9356 20.4459H12.0487C13.1268 20.4459 14.0015 19.6101 14.0015 18.58V2.40898C14.0015 1.37885 13.1268 0.543091 12.0487 0.543091ZM7.49216 19.202C6.77206 19.202 6.19028 18.6461 6.19028 17.958C6.19028 17.27 6.77206 16.7141 7.49216 16.7141C8.21226 16.7141 8.79403 17.27 8.79403 17.958C8.79403 18.6461 8.21226 19.202 7.49216 19.202ZM12.0487 15.0037C12.0487 15.2603 11.829 15.4702 11.5605 15.4702H3.4238C3.15529 15.4702 2.9356 15.2603 2.9356 15.0037V2.87545C2.9356 2.61889 3.15529 2.40898 3.4238 2.40898H11.5605C11.829 2.40898 12.0487 2.61889 12.0487 2.87545V15.0037Z" fill="#7E7E7E"/>
-            </svg>
-            <span class="mouse-effect-regular top-two-how-it-works">Choose a restaurant</span>
-          </div>
+<!-- RESTAURANT CARDS SECTION (WITH THE FOUR RESTAURANT CARDS) -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444  -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-          <div class="how-it-works-cards">
-            <div class="purple-circle mouse-effect-regular">2</div>
-            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 0.209595C1.20333 0.209595 0.913319 0.317343 0.666645 0.519215C0.419972 0.721087 0.227713 1.00802 0.114181 1.34372C0.000649929 1.67942 -0.0290551 2.04881 0.0288228 2.40519C0.0867006 2.76157 0.229562 3.08892 0.439341 3.34586C0.649119 3.60279 0.916394 3.77777 1.20737 3.84865C1.49834 3.91954 1.79994 3.88316 2.07403 3.74411C2.34811 3.60506 2.58238 3.36958 2.74721 3.06746C2.91203 2.76533 3 2.41013 3 2.04677C3 1.55952 2.84197 1.09223 2.56066 0.747692C2.27936 0.403154 1.89783 0.209595 1.5 0.209595ZM1.5 6.33353C1.20333 6.33353 0.913319 6.44128 0.666645 6.64315C0.419972 6.84502 0.227713 7.13195 0.114181 7.46765C0.000649929 7.80335 -0.0290551 8.17275 0.0288228 8.52912C0.0867006 8.8855 0.229562 9.21286 0.439341 9.46979C0.649119 9.72672 0.916394 9.9017 1.20737 9.97259C1.49834 10.0435 1.79994 10.0071 2.07403 9.86804C2.34811 9.72899 2.58238 9.49351 2.74721 9.19139C2.91203 8.88927 3 8.53407 3 8.17071C3 7.68346 2.84197 7.21616 2.56066 6.87163C2.27936 6.52709 1.89783 6.33353 1.5 6.33353ZM1.5 12.4575C1.20333 12.4575 0.913319 12.5652 0.666645 12.7671C0.419972 12.969 0.227713 13.2559 0.114181 13.5916C0.000649929 13.9273 -0.0290551 14.2967 0.0288228 14.6531C0.0867006 15.0094 0.229562 15.3368 0.439341 15.5937C0.649119 15.8507 0.916394 16.0256 1.20737 16.0965C1.49834 16.1674 1.79994 16.131 2.07403 15.992C2.34811 15.8529 2.58238 15.6174 2.74721 15.3153C2.91203 15.0132 3 14.658 3 14.2946C3 13.8074 2.84197 13.3401 2.56066 12.9956C2.27936 12.651 1.89783 12.4575 1.5 12.4575ZM15.5 13.0699H5.5C5.36739 13.0699 5.24022 13.1344 5.14645 13.2492C5.05268 13.3641 5 13.5198 5 13.6822V14.907C5 15.0695 5.05268 15.2252 5.14645 15.3401C5.24022 15.4549 5.36739 15.5194 5.5 15.5194H15.5C15.6326 15.5194 15.7598 15.4549 15.8536 15.3401C15.9473 15.2252 16 15.0695 16 14.907V13.6822C16 13.5198 15.9473 13.3641 15.8536 13.2492C15.7598 13.1344 15.6326 13.0699 15.5 13.0699ZM15.5 0.821988H5.5C5.36739 0.821988 5.24022 0.886508 5.14645 1.00135C5.05268 1.1162 5 1.27196 5 1.43438V2.65917C5 2.82158 5.05268 2.97735 5.14645 3.0922C5.24022 3.20704 5.36739 3.27156 5.5 3.27156H15.5C15.6326 3.27156 15.7598 3.20704 15.8536 3.0922C15.9473 2.97735 16 2.82158 16 2.65917V1.43438C16 1.27196 15.9473 1.1162 15.8536 1.00135C15.7598 0.886508 15.6326 0.821988 15.5 0.821988ZM15.5 6.94592H5.5C5.36739 6.94592 5.24022 7.01044 5.14645 7.12529C5.05268 7.24013 5 7.3959 5 7.55831V8.7831C5 8.94552 5.05268 9.10128 5.14645 9.21613C5.24022 9.33098 5.36739 9.39549 5.5 9.39549H15.5C15.6326 9.39549 15.7598 9.33098 15.8536 9.21613C15.9473 9.10128 16 8.94552 16 8.7831V7.55831C16 7.3959 15.9473 7.24013 15.8536 7.12529C15.7598 7.01044 15.6326 6.94592 15.5 6.94592Z" fill="#7E7E7E"/>
-            </svg>  
-            <span class="top-two-how-it-works mouse-effect-regular" id="Build-your-meal">Build your meal</span>
-          </div>
-
-          <div class="how-it-works-cards">
-            <div class="purple-circle mouse-effect-regular">3</div>
-            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.5914 4.43686L15.6947 0.812378C15.5252 0.487014 15.2242 0.287598 14.9027 0.287598H3.09613C2.77466 0.287598 2.47365 0.487014 2.30415 0.812378L0.407495 4.43686C-0.571518 6.30858 0.296443 8.91149 2.12588 9.20887C2.25739 9.22986 2.39182 9.24035 2.52625 9.24035C3.39129 9.24035 4.15697 8.78554 4.683 8.08234C5.20904 8.78554 5.97764 9.24035 6.83976 9.24035C7.70479 9.24035 8.47047 8.78554 8.99651 8.08234C9.52254 8.78554 10.2911 9.24035 11.1533 9.24035C12.0183 9.24035 12.784 8.78554 13.31 8.08234C13.839 8.78554 14.6046 9.24035 15.4668 9.24035C15.6041 9.24035 15.7356 9.22986 15.8671 9.20887C17.7024 8.91499 18.5733 6.31208 17.5914 4.43686ZM15.4726 10.3634C15.1804 10.3634 14.891 10.3109 14.6105 10.2304V13.722H3.38837V10.2304C3.10782 10.3074 2.8185 10.3634 2.52625 10.3634C2.35091 10.3634 2.17264 10.3494 2.00022 10.3214C1.83656 10.2934 1.67583 10.2479 1.52094 10.1955V17.0806C1.52094 17.6998 1.93885 18.2001 2.45612 18.2001H15.5486C16.0659 18.2001 16.4838 17.6998 16.4838 17.0806V10.1955C16.326 10.2514 16.1681 10.2969 16.0045 10.3214C15.8262 10.3494 15.6509 10.3634 15.4726 10.3634Z" fill="#9356DC"/>
-            </svg>
-            <span id="emjoy-your-meal-at-the-restaurant" class="mouse-effect-regular">Enjoy your meal at the restaurant</span>
-          </div>
+    <section class="restaurants" id="Restaurants">
+        <!-- the text which says 'Restaurants' before the cards start -->
+        <div class="restaurants__title">
+            <h2>Restaurants</h2>   
         </div>
-      </section>
 
-  <!-- RESTAURANTS DIV -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-      <section class="restaurants-homepage-section">
+        <!-- BELOW - KITCHEN WEST CARD -->
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <div class="restaurants_container">
+            <div class="restaurants__card">
+                <a href="./page/palette_du_gout.html">
+                    <div class="button_card">
+                        <span class="new">New</span>
+                    </div>
+                    <img class="restaurants_image"
+                        src="./assets/images/restaurants/circle-dish-with-hand.jpg"
+                        alt="photo de restaurant chic">
+                    <div class="restaurant_descript">
+                        <div class="restaurants_name">
+                            <h3>Kitchen West
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart my-heart-full"></i>
+                            </h3>
+                        </div>
+                        <div class="subtile_card">
+                            <p>Angel</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-        <h2 class="mouse-effect-regular" id="Restaurants">Restaurants</h2>
+            <!-- BELOW - ELDERFLOWER CARD -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
+                <!-- this is similar to the Kitchen West card (with a New label) and was created from coppying this card and changing 
+                     its content and image -->
+            <div class="restaurants__card">
+                <a href="./page/la_note_enchantee.html">
+                    <div class="button_card">
+                        <span class="new">New</span>
+                    </div>
+                    <img class="restaurants_image" src="./assets/images/restaurants/circle-from-above-dish.jpg"
+                        alt="image d'une assiette magnifique du restaurant">
+                    <div class="restaurant_descript">
+                        <div class="restaurants_name">
+                            <h3>Elderflower
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart my-heart-full"></i>
+                            </h3>
+                        </div>
+                        <div class="subtile_card">
+                            <p>Old Street</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-        <div class="container-around-restaurant-names">
+            <!-- BELOW - SHOREDITCH CANTEEN CARD -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                    <!-- the 'Shoreditch Canteen' and 'The Bay Leaf' cards don't have New labels -> and so these two cards have been created
+                        in a -->
+            <div class="restaurants__card">
+                <a href="./page/a_la_francaise.html">
+                    <div class="button_card">
+                    </div>
+                    <img class="restaurants_image"
+                        src="./assets/images/restaurants/circle-from-the-side-dish.jpg"
+                        alt="image d'une belle assiette bien dressé ">
+                    <div class="restaurant_descript">
+                        <div class="restaurants_name">
+                            <h3>Shoreditch Canteen
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart my-heart-full"></i>
+                            </h3>
+                        </div>
+                        <div class="subtile_card">
+                            <p>Shoreditch</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-          <!-- Kitchen West -->
-          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-          <!-- the plight to make a restaurant div -->
-          <div class="restaurant-card">
+            <!-- BELOW - THE BAY LEAF CARD -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <div class="restaurants__card">
+                <a href="./page/delices_des_sens.html">
+                    <div class="button_card">
 
-            <a class="link-around-restaurant-card" href="restaurants/Kitchen-West-template-menu.html"> 
-              <!-- the image in the restaurant div --> 
-              <div class="image-container-menu-div">
-              </div>
-
-              <!-- the subtitles in the restaurant div -->
-              <div class="subtitles-for-restaurant-cards">
-                <!-- a container for the subtitle text -->
-                <div class="subtitles-for-restaurant-cards-text">
-                  <!-- a span for the bold subtitle text at the top -->
-                  <span class="first-span-on-homepage-subtitle-divs">Kitchen West</span>
-                  <!-- a span for the subtitle text at the bottom -->
-                  <span class="second-span-on-homepage-subtitle-divs">Angel</span>
-                </div>
-
-                <!--  the label which says 'new' over the dish 
-                    -> this has to be inserted in between the svg and the div which contains the spans in the subtitle section of the card -->
-                <div class="label-which-says-new-on-menu mouse-effect-link">
-                  New
-                </div>  
-            </a>
-          </div>
-
-          <!-- the heart svg is clickable, as is the restaurant card it's been placed over). The div below inserts the svg below the restaurant card
-              and the class which styles it (position-icon-over-restaurant-card) has been defined to move its position over the restaurant card
-              (this way it remains clickable) -->
-
-          <div class="position-icon-over-restaurant-card">  
-            <input type="checkbox" id="heartCheckbox1" class="heartCheckbox">
-            <label for="heartCheckbox1" class="heart-container">
-                <svg class="custom-svg" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                    <path class="heart-background" d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z"/>
-                </svg>
-            </label>
-          </div>
-
-
-
-          
-
-          <!-- Elderflower -->
-          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-          <div class="restaurant-card">
-            
-            <!-- <a class="link-around-restaurant-card" href="/html-pages/restaurants/Elderflower.html"> -->
-              <a class="link-around-restaurant-card" href="restaurants/Elderflower.html"> 
-              <!-- the image in the restaurant div -->
-              <div class="image-container-menu-div">
-              </div>
-
-              <!-- the subtitles in the restaurant div -->
-              <div class="subtitles-for-restaurant-cards">
-                <!-- a container for the subtitle text -->
-                <div class="subtitles-for-restaurant-cards-text">
-                  <!-- a span for the bold subtitle text at the top -->
-                  <span class="first-span-on-homepage-subtitle-divs">Elderflower</span>
-                  <!-- a span for the subtitle text at the bottom -->
-                  <span class="second-span-on-homepage-subtitle-divs">Old Street</span>
-                </div>
-
-                <!--  the label which says 'new' over the dish 
-                    -> this has to be inserted in between the svg and the div which contains the spans in the subtitle section of the card
-                    -> this is due to the relative positioning of the New label in front of the respective restaurant card -->
-                <div class="label-which-says-new-on-menu mouse-effect-link">
-                  New
-                </div>    
-            </a>
-          </div>
-
-          <div class="position-icon-over-restaurant-card">  
-            <input type="checkbox" id="heartCheckbox2" class="heartCheckbox">
-            <label for="heartCheckbox2" class="heart-container">
-                <svg class="custom-svg" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                    <path class="heart-background" d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z"/>
-                </svg>
-            </label>
-          </div>
-
-          <!-- Shoreditch Canteen -->
-          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-          <div class="restaurant-card">
-            <a class="link-around-restaurant-card" href="restaurants/Shoreditch-Canteen.html">
-              <!-- the image in the restaurant div -->
-              <div class="image-container-menu-div">
-              </div>
-
-              <!-- the subtitles in the restaurant div -->
-              <div class="subtitles-for-restaurant-cards">
-                <!-- a container for the subtitle text -->
-                <div class="subtitles-for-restaurant-cards-text">
-                  <!-- a span for the bold subtitle text at the top -->
-                  <span class="first-span-on-homepage-subtitle-divs">Shoreditch Canteen</span>
-                  <!-- a span for the subtitle text at the bottom -->
-                  <span class="second-span-on-homepage-subtitle-divs">Shoreditch</span>
-                </div>
-      
-                <!-- the svg in the subtitle -->
-                <!-- <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                </svg>     -->
-            </a>
-          </div>
-          <div class="position-icon-over-restaurant-card" id="Shoreditch"> 
-            <input type="checkbox" id="heartCheckbox4" class="heartCheckbox">
-            <label for="heartCheckbox4" class="heart-container">
-                <svg class="custom-svg" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                    <path class="heart-background" d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z"/>
-                </svg>
-            </label>
-          </div>
-
-          <!-- The Bay Leaf-->
-          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-          <div class="restaurant-card">
-            <a class="link-around-restaurant-card" href="restaurants/The–Bay-Leaf.html">
-              <!-- the image in the restaurant div -->
-              <div class="image-container-menu-div"></div>
-
-              <!-- the subtitles in the restaurant div -->
-              <div class="subtitles-for-restaurant-cards">
-                <!-- a container for the subtitle text -->
-                <div class="subtitles-for-restaurant-cards-text">
-                  <!-- a span for the bold subtitle text at the top -->
-                  <span class="first-span-on-homepage-subtitle-divs">The Bay Leaf</span>
-                  <!-- a span for the subtitle text at the bottom -->
-                  <span class="second-span-on-homepage-subtitle-divs">Hoxton</span>
-                </div>
-      
-                <!-- the svg in the subtitle -->
-                <!-- <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                </svg>     -->
-            </a>
-          </div>
-
-          <div class="position-icon-over-restaurant-card"> 
-            <input type="checkbox" id="heartCheckbox3" class="heartCheckbox">
-            <label for="heartCheckbox3" class="heart-container">
-                <svg class="custom-svg" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                    <path class="heart-background" d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z"/>
-                </svg>
-            </label>
-          </div>
-
+                    </div>
+                    <img class="restaurants_image"
+                        src="./assets/images/restaurants/circle-from-the-side-dish.jpg"
+                        alt="image d'une belle assiette en forme de bateau bien dressé">
+                    <div class="restaurant_descript">
+                        <div class="restaurants_name">
+                            <h3>The Bay Leaf
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart my-heart-full"></i>
+                            </h3>
+                        </div>
+                        <div class="subtile_card">
+                            <p>Hoxton</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-      </section>
+    </section>
 
-  </main>
+<!-- FOOTER -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-  <!-- FOOTER -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-  <footer>
-    <div class="missing-image-logo-in-footer"></div>
-    <div class="footer-elements">
-      <div class="footer-elements-with-svg mouse-effect-link">
-        <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5.49736 0.385973C5.51851 0.505308 5.92308 2.78538 5.92308 3.65628C5.92308 4.9842 5.18798 5.93127 4.1012 6.31213L4.44231 12.3576C4.46082 12.7055 4.1726 13 3.80769 13H2.11538C1.75313 13 1.46226 12.708 1.48077 12.3576L1.82188 6.31213C0.732452 5.93127 0 4.98166 0 3.65628C0 2.78284 0.404567 0.505308 0.425721 0.385973C0.510337 -0.129456 1.62356 -0.137073 1.69231 0.413902V3.99905C1.72668 4.08538 2.09159 4.0803 2.11538 3.99905C2.1524 3.35667 2.32428 0.464683 2.32692 0.398668C2.41418 -0.129456 3.50889 -0.129456 3.59351 0.398668C3.5988 0.467223 3.76803 3.35667 3.80505 3.99905C3.82885 4.0803 4.19639 4.08538 4.22813 3.99905V0.413902C4.29688 -0.134534 5.41274 -0.129456 5.49736 0.385973ZM8.64928 7.64005L8.25264 12.3398C8.22091 12.6953 8.51442 13 8.88462 13H10.3654C10.7171 13 11 12.7283 11 12.3906V0.60941C11 0.274254 10.7171 3.62896e-05 10.3654 3.62896e-05C8.18389 3.62896e-05 4.51106 4.53225 8.64928 7.64005Z" fill="white"/>
-        </svg>  
-        <strong>Suggest a restaurant</strong>
-      </div>
-
-      <div class="footer-elements-with-svg mouse-effect-link">
-        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.08765 4.87486H6.2572V6.29686C6.2572 7.30495 5.65573 8.12514 4.91646 8.12514C4.1772 8.12514 3.57573 7.30495 3.57573 6.29686V3.2091L2.3672 4.19941C2.00781 4.49143 1.78808 5.02214 1.78808 5.59094V6.79202L0.298367 7.96516C0.0134597 8.18862 -0.0852336 8.68632 0.0804966 9.07483L1.57021 12.5943C1.73407 12.9828 2.09905 13.1148 2.38396 12.8914L4.30941 11.3754H6.85309C7.51042 11.3754 8.04485 10.6466 8.04485 9.75027H8.3428C8.67239 9.75027 8.93868 9.38716 8.93868 8.93771V7.31257H9.08765C9.33531 7.31257 9.53456 7.04087 9.53456 6.70314V5.48429C9.53456 5.14656 9.33531 4.87486 9.08765 4.87486ZM11.838 3.92517L10.3483 0.405735C10.1844 0.0172256 9.81947 -0.114817 9.53456 0.10864L7.60911 1.62459H5.70601C5.48255 1.62459 5.26468 1.71092 5.07475 1.8709L4.45093 2.40161C4.27589 2.54888 4.17161 2.81043 4.17161 3.08975V6.29686C4.17161 6.85804 4.50493 7.31257 4.91646 7.31257C5.328 7.31257 5.66132 6.85804 5.66132 6.29686V4.06229H9.08765C9.66305 4.06229 10.1304 4.69965 10.1304 5.48429V6.20798L11.6202 5.03484C11.9051 4.80884 12.0019 4.31368 11.838 3.92517Z" fill="white"/>
-        </svg>  
-        <strong>Become a partner</strong>
-      </div>
-
-      <div class="footer-elements-without-svg mouse-effect-link">
-        Legal notice
-      </div>
-      <div class="footer-elements-without-svg mouse-effect-link">
-        Contact
-      </div>
-    </div>
-  </footer>
-
+    <footer>
+        <div class="footer">
+            <a href="#">
+                <div class="footer_title ">
+                    <h2>Ohmyfood</h2>
+                </div>
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3 class="footer_logo">
+                            <i class="fa-solid fa-utensils"></i>
+                            Suggest a restaurant
+                        </h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h3 class="footer_logo">
+                            <i class="fa-solid fa-handshake-angle"></i> Become a partner
+                        </h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h3>Legal notice</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h3>Contact</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
+
+<!-- DOCUMENT END -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
