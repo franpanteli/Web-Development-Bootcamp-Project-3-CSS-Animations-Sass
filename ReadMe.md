@@ -13,7 +13,7 @@ For this, three further courses were first completed on the OpenClassrooms platf
   <li><strong>Create Modern CSS Animations</strong> - this was a 15-hour-long course covering CSS transitions / transformations, the 12 principles of animation, timing functions, opacity, anchor points using transform-origin, Chrome DevTools, CSS keyframes and Chrome's Animation tool. This course was also produced by Pat Gerke</li>
   </ul> 
 <h3> 3ii ohmyfood Website</h3>
-
+<p><strong>ohmyfood: </strong> the third project this bootcamp entailed was ohmyfood. This was a six-week project, with the aim of developing and applying skills in SaaS, GitHub and applying animations to webpages.</p>
 <h1>Ohmyfood</h1>
 <ul>
 	<li> index.html <- this is the html for the main webpage 
