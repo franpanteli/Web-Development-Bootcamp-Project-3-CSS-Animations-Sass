@@ -1,8 +1,15 @@
 <!-- DOCUMENT CONTENTS -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 
+    1. HEAD / DOC TYPE ETC <- import fonts, icon compatibility, link to the compiled CSS file
+    2. NAV BAR / HEADER SECTION
+    3. THE "How it works" SECTION WITH THE PURPLE CIRCLES
+    4. RESTAURANT CARDS SECTION (WITH THE FOUR RESTAURANT CARDS)
+    5. FOOTER
+ -->
 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,17 +21,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- below - this is the text which shows in the tab for the webpage -->
     <title>ohmyfood</title>
+
+    <!-- import fonts -->
+        <!-- -> these fonts were the same as the ones used in the project mockup in Figma and were exported from google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- icon compatibility -->
+        <!-- this html allows the icons from the  font awesome library to be used throughout the project, and was taken from looking 
+            up 'font awesome cdn' in a browser -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <!-- below - this connects the index.html file to the CSS file which is compiled using Sass -->
+
+    <!-- linking to CSSS -->
+        <!-- this connects the html file to the CSS file -> that CSS file is the one which is compiled using Sass for the project -->
     <link rel="stylesheet" href="./styles.css">
 </head>
 
@@ -35,18 +52,115 @@
 
 <body>
     <header>
+        <!-- the Ohmyfood logo -->
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <!-- 
+                -> there was a png of this logo provided in the starting files for the project
+                -> text was used here instead, to achieve faster loading times for the page
+                -> the fonts used to create this were imported in the <head> of the project and used to target its h1 elements in the compiled
+                   CSS
+            -->
         <h1>Ohmyfood</h1>
+
+        <!-- Grey banner with "Islington, London" and icon -->
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <!-- 
+                -> this is the grey banner, with the "Islington, London" text and maps icon
+                -> both elements are contained in a div 
+                -> the class that div uses to target them is the "location" class 
+                    - this flexes the two items into a row -> and then justifies them into the centre of the page
+                    -> the icon is then targeted with right padding, to add separation between the items
+                    -> the compiled CSS also sets the background colour of the containing div with hexcodes which were exported from Figma
+            -->
+
         <div class="location">
+            <!-- icon -->
+                <!-- 
+                    -> this is the maps icon, which was imported from the font awesome library
+                    -> code was written into the header of the html file, to ensure that the icons from this library imported properly 
+                        throughout the html file
+                -->
             <i class="fa-solid fa-location-dot"></i>
+
             <p>Islington, London</p>
         </div>
+
+        <!-- "Book the meal you want" text and button container -->
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <!-- 
+                -> this is the div for the text which says "Book the meal you want" and contains the pink button
+                -> this div is still contained within the header (rather than body) tag because -
+                    -> there are 5 different html pages for the website in the mockup (the homepage and four menus which stem off of it)
+                    -> across each of these 5 pages, only one of them has the "Book the meal you want" section at the top (this page)
+                    -> the button which this section contains is reused across each of the 5 pages (but has different contents inside it for the
+                        menu pages)
+                    -> this div was included as part of the header of the webpage, as it is only used on this page -> at the top, of all the 
+                        5 html pages in the website 
+                -> this div contains three elements, which are targeted using the introduction class 
+             -->
+
         <div class="introduction">
+            <!-- element 1: "Book the meal you want" text -->
+                <!-- 
+                    -> all items were moved into the centre of the webpage using the introduction class
+                    -> BEM notation was used for these selectors 
+                        -> (__title) <- the title element 
+                        -> introduction__title <- the title element in the introduction class 
+                        -> this notation was new for the third bootcamp project and was introduced in its Sass course 
+                    -> a div was placed around the first element
+                        -> padding was added to this div  
+                        -> the div_class h2 element was also targeted, as this text was included in the header of the page
+                        -> less generic / more specific styling in the header section elements 
+                 -->
             <div class="introduction__title">
                 <h2>Book the meal you want</h2>
             </div>
-            <div class="introduction__down-title">
-                <p>Discover our carefully selected high-end restaurants</p>
-            </div>
+
+            <!-- element 2: "Discover our carefully selected high-end restaurants" text -->
+                <!-- 
+                    -> the second element was targeted with the selector called introduction__down-title  
+                        -> this was chosen to follow the BEM naming convention   
+                            -> introduction <- the name of the class which is around the div containing this section 
+                                -> block in BEM
+                                -> i.e the div which contains the entire section (block) uses the introduction class
+                            -> __down <- the section of the block which the selector is targeting 
+                                -> i.e, we are targeting the subtitle below the first element in the block 
+                                -> __ <- called a dunder 
+                                -> element (E) in BEM
+                            -> -title <- modifier <- M in BEM
+                                -> because we are modifying the stylings for its title 
+                                -> this was named according to what we were targeting (the title), rather than its appearance in case
+                                    this changed
+                    -> a paragraph was used for this element rather than a span so that it was block (as opposed to inline)
+                 -->     
+
+            <p class="introduction__down-title">Discover our carefully selected high-end restaurants</p>
+   
+            <!-- element 3: the pink button which says "Explore our restaurants" -->
+                <!-- 
+                    -> the link around this (<a> tag)
+                        -> this links to the id called Restaurants, defined later in this file 
+                    -> the button class was defined for this -> every html file in the project contains an instance of this button class
+                    -> this button was targeted using two main pieces of CSS
+                        -> the appearance of the button in its normal state -> these properties were inserted from Figma 
+                        -> the second was the appearance of the button while being hovered over
+                    -> these created two states (before and after hover) <- so transitions were used to animate it 
+                        -> the two main choices listed in the Animations course on the OpenClassrooms platform were @keyframes and transitions 
+                        -> since there were two states in the CSS / Sass for the button class, a transition was selected for this 
+                            animation 
+                    -> adding in the animations with transitions 
+                        -> we have two states -> the button in its normal state, and the button in its hover state
+                        -> we are adding in transitions in between those two states <- and we are transitioning two properties 
+                        -> the first property we're transitioning is for the opacity and the second is for its size (initially, this may be changed later)
+                        -> in the compiled CSS / Sass, these can be seen under '.introduction .button' and '.introduction .button:hover'
+                        -> in the CSS / Sass for the button beforehand 
+                                -> then we have these two properties across both of those states which we are transitioning 
+                                    -> the initial state of the button, final state <- opacity / width 
+                                -> then the CSS / Sass which is telling the browser to transition those two properties in shorthand notation
+                        -> and similarly for the CSS / Sass after the transition -> we have added in another transition once the button has been 
+                            hovered off of, to revert it back into its normal state
+                 -->  
+
             <a href="#Restaurants">
                 <button class="button">Explore our restaurants</button>
             </a>
@@ -58,32 +172,73 @@
 <!-- 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
+<!-- 
+    About this section of the webpage 
+    -> this is for the section of the homepage with the cards which have the purple circles 
+    -> out of the 5 html pages for the project, this section is unique to this index.html file, containing the project homepage
+    -> this was taken out of the header of the project and moved into its own section 
+    -> this section of the homepage is intended to explain the functioning of the webpage (a food delivery app), using three call to action cards
+    -> the class which is around this block was defined as the functioning class 
+        -> the selectors which are contained within this block follow the BEM naming convention 
+        -> this naming convention was introduced in the course material for the third project 
+            -> the entire section (the block), then the elements and which part they modify       
+
+ -->
+
     <section class="functionning">
+        <!-- below - this is the text before the cards are defined -->
         <h2>How it works</h2>
+
+        <!-- The cards with the purple circles -->
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
+            <!-- 
+                -> the cards in this section were created using list elements and icons -> styled into cards using Sass / css 
+                -> the class which was defined in the div placed around these elements adds in padding below them 
+                -> there are three cards in this section, all follow a similar structure
+                -> the first is explained for brevity, and the two proceeding this are the same 
+                -> functioning__list 
+                    -> laksjdfnslkjdfnslkjdfnslkjfnslkjdnflksjdnflksjdfnlakjfn
+            -->
+
         <ul class="functionning__list">
+            <!-- 'Choose a restaurant' card -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
+            <!-- ANNOTATE THIS SLDFKJNGSLKDFJNGLSKJFNGLSKDJFNGSLDKFJGNSLDKJFGNSLKDFJGNLKSDFJNGLKDFJNlskdfnglskjnfglskfjngslkjfnglsdkjfn
+                    ENERGY HACKERS ENERGY HACKERS ENERGY HACKERS ENERGY HACKERS ENERGY HACKERS  -->
+            <!-- THEN SPELL CHECK THE SECTION, THEN COMMIT THE CHANGES -->
             <li>
                 <div class="functionning__list--number">1</div>
                 <div><i class="fas fa-mobile-alt"></i></div>
                 <p>Choose a restaurant</p>
             </li>
+
+            <!-- the remaining two cards in this section have the same structure and different content -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
             <li>
                 <div class="functionning__list--number">2</div>
                 <div><i class="fas fa-list"></i></div>
                 <p>Build your meal</p>
             </li>
+
             <li>
                 <div class="functionning__list--number">3</div>
                 <div><i class="fas fa-store"></i></div>
-                <p>Enjoy your meal at the restaurant</p>
+                <!-- <p>Enjoy your meal at the restaurant</p> -->
+                <p>Eat your meal at the restaurant</p>
             </li>
         </ul>
+
     </section>
+
+    <!-- MONDAY -> this section (the garbled parts, and pushing it to github) and  -->
 
 
 <!-- RESTAURANT CARDS SECTION (WITH THE FOUR RESTAURANT CARDS) -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!-- 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444  -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+    <!-- TUESDAY -> this section and the media queries (explained), universal credit appointment -->
 
     <section class="restaurants" id="Restaurants">
         <!-- the text which says 'Restaurants' before the cards start -->
@@ -197,6 +352,7 @@
 <!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
+    <!-- WEDNESAAY -> this section -->
     <footer>
         <div class="footer">
             <a href="#">
