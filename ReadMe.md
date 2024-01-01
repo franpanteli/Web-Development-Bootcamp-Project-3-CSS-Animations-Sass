@@ -1,3 +1,19 @@
+<h2> Project 3 - ohmyfood </h2>
+<h3>3i ohmyfood Course Notes</h3>
+<p>'ohmyfood' is the third web development project I completed during this bootcamp. This was produced to integrate Sass animations with the HTML and CSS skills building from the previous project. The primary aim of this was to develop these skills by completing the course material and apply them by [INSERT START] , using GitHub, using GitHub, using GitHub, using GitHubconverting the mockup of a travel agency called Booki into a webpage. This mockup was provided in Figma. [INSERT END] </p>
+<p>
+
+</p>
+For this, three further courses were first completed on the OpenClassrooms platform. My notes from these may be found in the folder called '3i ohmyfood Course Notes by Fran_Panteli.' Further information about these courses is detailed below.
+
+  <ul>
+  <li><strong>Manage Your Code Project With Git and GitHub </strong> - the first course was a 6-hour long course on Git and GitHub. This was taught by Max Wardeh and covered Git commands, branching systems, using Git Reset and troubleshooting</li>
+  <li><strong>Produce Maintainable CSS With Sass</strong> - the second was a 15-hour long course which included 7-1 file patterning, BEM selectors, specificity, CSS Preprocessors, Sass variables / extensions / functions, mixins, conditionals, advanced Sass data types, loops, breakpoints, and Autoprefixer. This course was produced by Pat Gerke</li>
+
+  <li><strong>Create Modern CSS Animations</strong> - this was a 15-hour-long course covering CSS transitions / transformations, the 12 principles of animation, timing functions, opacity, anchor points using transform-origin, Chrome DevTools, CSS keyframes and Chrome's Animation tool. This course was also produced by Pat Gerke</li>
+  </ul> 
+<h3> 3ii ohmyfood Website</h3>
+
 <h1>Ohmyfood</h1>
 <ul>
 	<li> index.html <- this is the html for the main webpage 
