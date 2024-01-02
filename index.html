@@ -176,13 +176,12 @@
     About this section of the webpage 
     -> this is for the section of the homepage with the cards which have the purple circles 
     -> out of the 5 html pages for the project, this section is unique to this index.html file, containing the project homepage
-    -> this was taken out of the header of the project and moved into its own section 
-    -> this section of the homepage is intended to explain the functioning of the webpage (a food delivery app), using three call to action cards
+    -> these cards were taken out of the <header> of the html page and moved into their own section 
+    -> this section of the homepage is intended to explain the functioning of the webpage (a food delivery app), using three call-to-action points
     -> the class which is around this block was defined as the functioning class 
         -> the selectors which are contained within this block follow the BEM naming convention 
         -> this naming convention was introduced in the course material for the third project 
-            -> the entire section (the block), then the elements and which part they modify       
-
+            -> the entire section (the block), then the elements and which part they modify          
  -->
 
     <section class="functionning">
@@ -197,18 +196,53 @@
                 -> there are three cards in this section, all follow a similar structure
                 -> the first is explained for brevity, and the two proceeding this are the same 
                 -> functioning__list 
-                    -> laksjdfnslkjdfnslkjdfnslkjfnslkjdnflksjdnflksjdfnlakjfn
+                    -> this is the class for the div placed around all three of the cards
+                    -> the selectors which derive off of this follow the BEM naming convention 
+                    -> this class was defined to control the behaviour of the cards with media queries for responsive design, as well as add 
+                        padding below them to match the Figma mockup of the page 
             -->
 
         <ul class="functionning__list">
             <!-- 'Choose a restaurant' card -->
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
-            <!-- ANNOTATE THIS SLDFKJNGSLKDFJNGLSKJFNGLSKDJFNGSLDKFJGNSLDKJFGNSLKDFJGNLKSDFJNGLKDFJNlskdfnglskjnfglskfjngslkjfnglsdkjfn
-                    ENERGY HACKERS ENERGY HACKERS ENERGY HACKERS ENERGY HACKERS ENERGY HACKERS  -->
-            <!-- THEN SPELL CHECK THE SECTION, THEN COMMIT THE CHANGES -->
+            <!-- 
+                Each of these cards was created using an <li> element 
+                -> each of the cards with the purple circles was created using a list element
+                -> these comments explain the thought process behind one of these list elements 
+                    -> the remaining two cards (list elements) in this section follow the same structure as this, but with different contents
+                -> how these cards were created
+                    -> each card was a list element
+                    -> that list element contained multiple items <- which were then flexed into a row inside it, using the functioning__list class
+                    -> multiple items were created in each list <li> element, since these items are the contents of the card that list element represents  
+             -->
             <li>
+                <!-- 
+                    Purple circles 
+                        -> the first element in each of the cards (list elements) is the number in its purple circle
+                        They were created with the radius property 
+                            -> a div was placed around the number -> and a class was defined to target that div 
+                                -> that class was formatted to create purple circles, using the radius property
+                                -> this class uses the BEM naming convention, introduced in the Sass course on the OpenClassrooms platform
+
+                        These were positioned with negative margins 
+                            -> the purple circles were moved to the left by using negative margins
+                                -> relative positioning of these elements was initially used -> although this was later changed to negative margins 
+                            -> so we have all of the elements in one of the list items, flexed to the start of the box in a row 
+                                -> flexing these items to the start of the cards in this way enables them to withstand page resizing
+                            -> then the purple circles which are coming off of the left of them are being positioned with negative margins 
+                                -> this was done to move them slightly off their respective cards (list elements)
+                -->
                 <div class="functionning__list--number">1</div>
+
+                <!--  
+                    -> the second elements are the icons 
+                    -> these were exported from the font-awesome library, and were placed inside their own divs 
+                    -> this class was defined to allow one of these icons to be purple and the others to be grey 
+                    -> extra margins were also added to these elements 
+                -->
                 <div><i class="fas fa-mobile-alt"></i></div>
+
+                <!-- -> below - the text on the card -->
                 <p>Choose a restaurant</p>
             </li>
 
@@ -226,11 +260,7 @@
                 <p>Enjoy your meal at the restaurant</p>
             </li>
         </ul>
-
     </section>
-
-    <!-- MONDAY -> this section (the garbled parts, and pushing it to github) and  -->
-
 
 <!-- RESTAURANT CARDS SECTION (WITH THE FOUR RESTAURANT CARDS) -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
