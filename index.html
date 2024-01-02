@@ -212,6 +212,7 @@
                     -> the remaining two cards (list elements) in this section follow the same structure as this, but with different contents
                 -> how these cards were created
                     -> each card was a list element
+                        -> list-style: none; <- to remove the styling on these list elements (so that the cards which represent them resemble divs)
                     -> that list element contained multiple items <- which were then flexed into a row inside it, using the functioning__list class
                     -> multiple items were created in each list <li> element, since these items are the contents of the card that list element represents  
              -->
@@ -231,6 +232,13 @@
                                 -> flexing these items to the start of the cards in this way enables them to withstand page resizing
                             -> then the purple circles which are coming off of the left of them are being positioned with negative margins 
                                 -> this was done to move them slightly off their respective cards (list elements)
+
+                        Media queries for these cards        
+                            -> the media queries for this list were created by making the screen smaller and looking for the point at which the cards 
+                                needed to be stacked, rather than all placed on one row 
+                            -> at this point, the widths of the list elements (cards) were set using media queries,
+                            -> since the list elements were flexed, increasing their widths at this point of the page resizing would enable them to start 
+                                stacking
                 -->
                 <div class="functionning__list--number">1</div>
 
