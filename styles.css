@@ -156,10 +156,7 @@ li {
   background: #ffffff;
   height: 16em;
 }
-.restaurants__card:hover {
-  transform: scale(1.02);
-  transition: transform 0.2s ease-in-out;
-}
+
 .restaurants_image {
   -o-object-fit: cover;
      object-fit: cover;
@@ -235,13 +232,6 @@ li {
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
-}
-
-.my-heart-full:hover {
-  opacity: 1;
-  background-position: 0% 100%;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  transition: opacity 1s ease-in-out;
 }
 
 .fa-heart {
@@ -446,10 +436,6 @@ footer a {
   align-items: center;
   transition-duration: 0.3s;
   cursor: pointer;
-}
-.choice__card:hover > .choice__card__check {
-  margin: 0;
-  transition: all 0.8s;
 }
 
 .fa-circle-check {
