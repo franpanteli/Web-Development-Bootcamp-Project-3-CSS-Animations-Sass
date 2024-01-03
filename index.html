@@ -273,23 +273,74 @@
 <!-- RESTAURANT CARDS SECTION (WITH THE FOUR RESTAURANT CARDS) -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
+    <!-- 
+        About this section of the homepage 
+        -> there are four Restaurant cards
+            -> the cards in the previous section were made using list elements
+            -> these Restaurant cards were created using divs
+        -> there is a larger div which is around all 4 of the Restaurant cards
+        -> so we have a big div around 4 little divs
+        -> each of those little divs is a Restaurant card
+        -> all of these cards have a similar structure, so the later comments go through the html for the first one (Kitchen West)
+        -> the classes which were used to target these cards follow the BEM naming convention 
+            -> the class which is around all 4 of the little divs is called 'restaurants_container'
+            -> and the classes which target the little divs nested inside it follow a similar naming style, as per the BEM naming convention 
+    -->
+
     <section class="restaurants" id="Restaurants">
         <!-- the text which says 'Restaurants' before the cards start -->
         <div class="restaurants__title">
             <h2>Restaurants</h2>   
         </div>
 
+    <!-- 
+        Media queries, flex grids and the 'restaurants_container' class
+        -> this is the class for the big div which is placed around the little divs for the Restaurant cards <- and is the same 
+            class which was used to add media queries to this section of the homepeage
+        -> mobile and desktop mockups of these cards were provided -> we were expected to choose and implement their behaviour as the webpage 
+            expanded past the mobile breakpoint and into the tablet breakpoint
+        -> this was a mobile first website -> and so the process used to do this was different in comparison to the second project, 
+            which was desktop-first and expanding to large desktops
+        -> the class which was placed around the little divs for the Restaurant cards was the same class used to add these media queries 
+            -> when the webpage expands to the tablet breakpoint, the widths of the cards expands and their widths fill the page 
+            -> once we reach past the tablet breakpoint, the class which targets these cards adds in a grid using flex -> to force 
+                them into a 2x2 matrix (with two rows of equal width)
+            -> each of the Restaurant cards takes up a quadrant of this grid. These quadrants were separated by adding margins around the boxes 
+                which filled them 
+    -->
+
         <!-- BELOW - KITCHEN WEST CARD -->
         <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <div class="restaurants_container">
+
+    <!-- 
+        Designing a Restaurant card
+            -> it was previously mentioned that each of the Restaurant cards was given by a little div contained in this larger div 
+            -> this section of this html file explores the solution which was devised for one Restaurant card (a little div)
+    -->
+
             <div class="restaurants__card">
+                <!-- 
+                    Links around the Restaurant cards 
+                        -> since these cards were hyperlinked to other html files included as part of the project, <a> tags were placed 
+                            inside each of these little divs 
+	                    -> this solution was devised to force the behaviour of the Restaurant cards to be block (as opposed to inline)
+                 -->
                 <a href="./page/palette_du_gout.html">
+
+                    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                     <div class="button_card">
                         <span class="new">New</span>
                     </div>
+
+
+                    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                     <img class="restaurants_image"
                         src="./assets/images/restaurants/circle-dish-with-hand.jpg"
                         alt="photo de restaurant chic">
+
+
+                    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                     <div class="restaurant_descript">
                         <div class="restaurants_name">
                             <h3>Kitchen West
@@ -301,6 +352,9 @@
                             <p>Angel</p>
                         </div>
                     </div>
+
+
+
                 </a>
             </div>
 
@@ -381,9 +435,7 @@
     </section>
 
 <!-- FOOTER -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
     <!-- WEDNESAAY -> this section -->
     <footer>
@@ -426,6 +478,4 @@
 </html>
 
 <!-- DOCUMENT END -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
