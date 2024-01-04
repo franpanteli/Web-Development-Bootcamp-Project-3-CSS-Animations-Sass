@@ -386,20 +386,80 @@
 
                     <!-- below -> for the subtitle content of the card -->
                     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                    <!-- 
+                        The subtitles for the Restaurant cards
+                            -> a div has been placed around the entire subtitle -> this is targeted using the 'restaurant_descript' selector 
+                                -> this class resets the line height for the subtitle text 
+                                -> this removes the vertical spacing between the top and bottom lines of text in the subtitle 
+                                    -> there are default margins to the h3 element used for the top subtitle element, which cause issues otherwise
+                            -> then there are two rows inside that subtitle 
+                                -> the first contains the Restaurant name and the heart icon
+                                    -> these are placed inside the same h3 element -> so that they're aligned 
+                                    -> you can have an <li> </li> tag, and inside that can be multiple lines of code 
+                                        -> the same is true of h3 tags -> the content inside them doesn't just have to be text, and it doesn't just 
+                                            have to take up one line 
+                                -> then the second is a paragraph element which contains the location of the Restaurant on the card 
+                            -> the first of these rows is more complicated -> since it contains the icons which are being animated using a transition effect
+                                -> the html for this is gone through in more depth below -> but the point is, placing it in the h3 tag with the text for the 
+                                    Restaurant name allows the animated icons to be on the same line as that text
+                                    -> the icons were placed in the same <h3> tag as the name of the Restaurant -> this is something which can be done, and was 
+                                        done in this case to align the elements inside it
+                     -->
+
                     <div class="restaurant_descript">
+
+                        <!-- 
+                            The code for the top line of the subtitle contents in the Restaurant cards
+                                Mentioned from before 
+                                -> a div was placed around the top row of the subtitle for the Restaurant card 
+                                -> this div contains an h3 heading -> multiple elements were used inside this one <h3> tag 
+                                        -> this was mentioned before, to align these elements 
+                                
+                                The 'restaurants_name' class
+                                -> the class which targets the div around this entire top subtitle row is called 'restaurants_name'
+                                    -> the purpose of this is to flex the elements into a row <- there are three items inside the div which it 
+                                        surrounds -> on the top row of the Restaurant card subtitle
+                                    -> the entire purpose of this class is to target the positioning of these items in relation to each other, 
+                                        while minimising the amount of classes used 
+                                    -> the solution devised for this was to flex these items into a row, justify them into the centre and then 
+                                        add in padding to the right of the text, to separate it from the icons 
+                                    -> including all three elements in the same <h3> tag allows for them to be aligned
+                                        -> then these elements are more efficiently targeted by surrounding the entire thing in a div (which
+                                            this class does)
+                                    -> the widths of the Restaurant cards were targeted using media queries, to ensure that this subtitle content 
+                                        stays on one line
+                         -->
+
                         <div class="restaurants_name">
-                            <h3>Kitchen West
+                            <h3>
+                                <!-- first, we have the text for the Restaurant name
+                                    -> this is different for each of the Restaurant cards -->
+                                Kitchen West
+
+                                <!-- 
+                                    The animation for the hover state of the heart icons 
+                                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+                                        
+                                        -> these icons were inserted using the 
+                                 -->
                                 <i class="fa-regular fa-heart"></i>
                                 <i class="fa-solid fa-heart my-heart-full"></i>
                             </h3>
                         </div>
+
+                        <!-- 
+                            The code for the bottom line of the subtitle content in the Restaurant cards 
+                                -> these paragraph elements were wrapped in divs -> and these set the font / appearance of this text 
+                                    using the standard properties which could be taken from the mockup of the element in Figma 
+                         -->
+
                         <div class="subtile_card">
                             <p>Angel</p>
                         </div>
                     </div>
 
 
-                    
+
                 </a>
             </div>
 
@@ -439,7 +499,8 @@
                         alt="An image of food">
                     <div class="restaurant_descript">
                         <div class="restaurants_name">
-                            <h3>Shoreditch Canteen
+                            <h3>
+                                Shoreditch Canteen
                                 <i class="fa-regular fa-heart"></i>
                                 <i class="fa-solid fa-heart my-heart-full"></i>
                             </h3>
@@ -463,7 +524,8 @@
                         alt="An image of food">
                     <div class="restaurant_descript">
                         <div class="restaurants_name">
-                            <h3>The Bay Leaf
+                            <h3>
+                                The Bay Leaf
                                 <i class="fa-regular fa-heart"></i>
                                 <i class="fa-solid fa-heart my-heart-full"></i>
                             </h3>
