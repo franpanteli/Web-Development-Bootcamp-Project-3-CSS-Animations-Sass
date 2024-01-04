@@ -440,8 +440,77 @@
                                     The animation for the hover state of the heart icons 
                                     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
                                         
-                                        -> these icons were inserted using the 
+                                        The heart icon was inserted fromt he font awesome libary
+                                        -> these icons were inserted using the font awesome libary
+                                            -> there is a line earlier in the header of the code which links to this libary and allows its icons 
+                                                to be imported 
+                                        -> an animation was created which targeted the icon in its hover state
+
+                                        Why transitions were used for these icons 
+                                            -> two methods were suggested to add in these animations on the OpenCleassrooms platform 
+                                                -> @keyframes and transitions
+                                                -> seeing as there were two states (either the icon was being hovered over or it wasn't), a 
+                                                    transition efffect was added in using css / Sass to add create this effect
+                                                -> the two states which are being trainsitioned between for this icon -> are it in its hover state, 
+                                                    or in its normal state 
+                                                    -> it's placed inslide a link for the page, so if it's clicked on then the page will redirect 
+                                                    -> to enable it to be permanently clickable -> it could be placed in front of the <a> tags which 
+                                                        create these links -> e.g using absolute positinoing (as with the 'New' label)
+                                            -> there are two (one for before the transition and one for after the transition)
+
+
+                                        Why there are two icons in the html, but one on the rendered webpage (to create the transition)
+                                            -> on the final webpage, there is one icon 
+                                            -> in the html for this below, there are two 
+                                                -> the first is the appearance of the icon in its normal state
+                                                        -> this icon is positioned absolutely (otherwise it disappears out of the Restaurant card)
+                                                        -> we want its position to be relative to the Restaurant card it's in (not the entire webpage)
+                                                -> the second is the appearance of the icon in its second (hover) state
+                                                        -> we are using the same icon (the fa heart icon), with the html icon <i> tags 
+                                                        -> one of the differences is -> we are now targeting it with the fa-solid attribute
+                                                            -> the entire icon in the secondary state is solid 
+                                                -> the second icon is being targeted with the 'my-heart-full' class          
+
+                                        Using the 'my-heart-full' class to create the transition for this icon in its hover state
+                                            -> the icons for the two states (before and after the transition of the icon) were added in next to each other in the 
+                                                html below 
+                                                    -> we have before and after the transition, as two separate icons added above each other in the html
+                                            -> the class which was used to create the transition between them was called the 'my-heart-full' class 
+                                                -> this class targets the last version of the icon -> the second one, after it's transitioned
+                                                -> so we have two different icons (before and after the transition) 
+                                                    -> the class which adds in the transition is added onto the icon in the html which represents the full heart
+                                                        (this is the icon after the transition)
+                                            -> how this class works is 
+                                                -> there is the class in its regular state, and then there is the class in its hover state
+
+                                                The class in its regular state
+                                                    -> the regular state sets the behaviour of the full heart -> the opacity of that is completely 0 (so in its 
+                                                        initial state it can't be seen)
+                                                        -> then a transition is added in to transition this opacity 
+                                                        -> so when the heart goes to the second state (the hover state) -> this is the property which is being 
+                                                            transitioned 
+                                                    -> the pink background is also set, which is the same gradient that was exported from Figma 
+                                                        -> there are also multiple prefixes in the compiled css, which enable the code to use vendor prefixes before 
+                                                            properties are made more open source (this is detailed in the Sass course notes in the project repository)
+                                                
+                                                The class in its hover state
+                                                    -> this sets the opacity of the background for the icon in its hover state -> 1 
+                                                    -> two transition effects were added in for this -> to transition back to the regular state of the icon 
+                                                        -> in other words, two states (before and after the icon is hovered over)
+                                                        -> so we have a transition to go from before the ison is being hovered over 
+                                                            -> and another to go from after to before 
+                                                        -> this is why the solution devised for this adds in a transition property in the compiled css - both 
+                                                            to the code before the transition, and to the code after the transition
+                                                            -> transitioning back the opacity 
+                                                            -> before to after, and then after to before -> the use of two transition properties - and both times 
+                                                                transitioning the opacity of the icon 
+                                                        -> the background gradient of the icon has also been set here -> in the css for the initial and final css
+                                                    -> since two icons were used (one for the before and after state of the animation), the compiled css positions the 
+                                                        second icon with a background-position property, to be in the same position as the first icon
+                                                            -> this way the second one is lying on top of the first one -> and it's only visible once it's being hovered
+                                                                over
                                  -->
+
                                 <i class="fa-regular fa-heart"></i>
                                 <i class="fa-solid fa-heart my-heart-full"></i>
                             </h3>
@@ -457,8 +526,6 @@
                             <p>Angel</p>
                         </div>
                     </div>
-
-
 
                 </a>
             </div>
