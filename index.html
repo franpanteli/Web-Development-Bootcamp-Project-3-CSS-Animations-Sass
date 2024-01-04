@@ -321,32 +321,70 @@
         The restaurants__card class
             -> this class was placed around the entire little div, and was used to create the card
             -> this contains parameters for the dimensions et al of the little div, except for its width 
-            -> the width of thes little div was targeted using the media queries which were placed around all of the Restaurant 
+            -> the width of this little div was targeted using the media queries which were placed around all of the Restaurant 
                 cards
     -->
 
             <div class="restaurants__card">
+
                 <!--         
                     Links around the Restaurant cards 
+                        -> so we have a div for each restaurant card -> then inside that div is an <a> tag for the card
                         -> since these cards were hyperlinked to other html files included as part of the project, <a> tags were placed 
                             inside each of these little divs 
                         -> this solution was devised to force the behaviour of the Restaurant cards to be block (as opposed to inline)
                  -->
+
                 <a href="./page/INSERT.html">
 
-
+                    <!-- for green "New"  labels only used on the top two Restaurant cards -->
                     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-                    <div class="button_card">
-                        <span class="new">New</span>
-                    </div>
+                        <!-- 
+                            -> spans were used for the New labels 
+                            -> the 'new' selector was used to target these elements -> this has two purposes
+                                -> the first is to define the appearance of the 'New' labels -> background colour, dimensions etc
+                                -> the second is to position the New label over the image in the Restaurant card
+                                    -> absolute positioning (the origin of this translation is the little container around that card)
+                                    -> you would think if you were to place a span above an <img> in the html, that the New label in the span 
+                                        wouldn't show in front of that image (it would show before it, stacked on top of it)
+                                    -> but using absolute positioning moves the New label to be in front of the <img> on the card
+                                    -> so in the html, the span and the <img> tag are defined on top of each other with the same indentation 
+                                        -> but using absolute positioning on the New label allows it to be in front of the <img> tag on the webpage,
+                                         with that fixed position -> relative to that card (not relative positioning, which is relative to the entire 
+                                        webpage itself)
+                                    -> the two elements which have the same level of indentation in the html 
+                                        -> one can be behind the other on the actual webpage if absolute positioning is used on one (independent of the z-index of that element)
+                                        -> then the right and top percentages are used to target the absolute position of that element 
+                         -->
 
+                    <span class="new">New</span>
 
+                    <!-- below - for the image in the Restaurant card -->
                     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                         <!-- 
+                            The images in the Restaurant cards
+                                -> the second element in this card is the image -> the three main elements are the New label, the image tag and the subtitle content
+                                -> this is a standard image tag for that image
+                                -> the file tree for the project needs to be structured correctly, or when you type in the relative file path of the image, it won't 
+                                    render correctly in the browser 
+                                -> the selector which was used to target these images for the Restaurant cards was the 'restaurants_image' class
+                                    -> em units were used for this (you have the parent container which uses a default font size, em is referring to x times that default 
+                                        font size etc)
+                                        -> m is a wide letter (relative to its width for example, but w is the widest letter)
+                                    -> the object fit property was also used when defining this class -> to ensure that the image resizes to fit the container,
+                                        meanwhile maintaining its aspect ratio
+                                -> how this class does widths and heights 
+                                    -> the width of the image was defined to take up 100% of the width of the parent container 
+                                    -> this width is handled using media queries set in the class which is placed around all of the Restaurant cards 
+                                    -> this class targets the height of the image differently, since media queries were used for the widths but not for the heights 
+                                    -> the max-height property was used for this
+                          -->
+
                     <img class="restaurants_image"
                         src="./assets/images/restaurants/circle-dish-with-hand.jpg"
-                        alt="photo de restaurant chic">
+                        alt="An image of food">
 
-
+                    <!-- below -> for the subtitle content of the card -->
                     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                     <div class="restaurant_descript">
                         <div class="restaurants_name">
@@ -361,7 +399,7 @@
                     </div>
 
 
-
+                    
                 </a>
             </div>
 
@@ -371,11 +409,9 @@
                      its content and image -->
             <div class="restaurants__card">
                 <a href="./page/INSERT.html">
-                    <div class="button_card">
-                        <span class="new">New</span>
-                    </div>
+                    <span class="new">New</span>
                     <img class="restaurants_image" src="./assets/images/restaurants/circle-from-above-dish.jpg"
-                        alt="image d'une assiette magnifique du restaurant">
+                        alt="An image of food">
                     <div class="restaurant_descript">
                         <div class="restaurants_name">
                             <h3>Elderflower
@@ -400,7 +436,7 @@
                     </div>
                     <img class="restaurants_image"
                         src="./assets/images/restaurants/circle-from-the-side-dish.jpg"
-                        alt="image d'une belle assiette bien dressé ">
+                        alt="An image of food">
                     <div class="restaurant_descript">
                         <div class="restaurants_name">
                             <h3>Shoreditch Canteen
@@ -424,7 +460,7 @@
                     </div>
                     <img class="restaurants_image"
                         src="./assets/images/restaurants/rectangle-dish.jpg"
-                        alt="image d'une belle assiette en forme de bateau bien dressé">
+                        alt="An image of food">
                     <div class="restaurant_descript">
                         <div class="restaurants_name">
                             <h3>The Bay Leaf
