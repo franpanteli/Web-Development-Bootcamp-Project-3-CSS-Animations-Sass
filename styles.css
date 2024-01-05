@@ -199,6 +199,8 @@ li {
   position: absolute;
   right: 5%;
   top: 5%;
+  width:50px;
+  padding-left: 18px;
 }
 
 .subtile_card {
