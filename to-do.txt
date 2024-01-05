@@ -1,0 +1,4 @@
+-> get in the content for the menu pages 
+    -> aka, paste them in from the comments section in those files 
+-> then add comments onto the three menu pages (which aren't the tamplate) to explain to refer to the template file for more info 
+-> then fix the new labels so they take up more width 
