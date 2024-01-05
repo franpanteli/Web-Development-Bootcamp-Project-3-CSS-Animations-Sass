@@ -609,14 +609,59 @@
 <!-- FOOTER -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-    <!-- WEDNESAAY -> this section -->
     <footer>
+        <!-- 
+            The 'footer' class
+                -> the footer was created entirely from list elements, which were formatted in css
+                -> each of the elements in the footer is a list element contained in an <li> tag, with multiple lines of html 
+                -> the footer class is placed around this list, to format its elements into a footer 
+                -> this flexes those elements into a row, justifies them onto the right of the page, then aligns them into the middle 
+                    -> one challenge encountered when defining this class was justifying the items over to the right of the footer  
+                    -> this was achieved using the flex-direction: row-reverse property 
+                        -> this is shorthand for setting the display property to flex, and then the flex-direction equal to row
+                        -> we're telling the browser to render the footer elements using flex, and to put them into a row in the same line 
+                        -> and those footer items are elements in the list 
+            
+            Media queries for the footer <- comments explaining this are listed at the end of the html for the last list element in the footer
+         -->
         <div class="footer">
+            
+            <!-- the ohmyfood logo -->
+                <!-- 
+                    -> this was targeted using the 'footer_title' class
+                    -> this only sets the styling for the appearance of the element 
+                    -> fonts were used to style the text into the ohmyfood logo -> rather than using an image of the logo itself
+                        -> this was implemented to achieve faster page loading times 
+                 -->
+
             <a href="#">
-                <div class="footer_title ">
+                <div class="footer_title">
                     <h2>Ohmyfood</h2>
                 </div>
             </a>
+
+            <!-- Suggest a restaurant -->
+                <!-- 
+                    -> each of the footer elements was inserted as a list element 
+                        -> the styling of each of these elements was removed via the list-style-type property (set to none)
+                        -> each <li> element contains multiple lines of html 
+                                -> so the entire footer is a large list which is formatted to resemble the footer in the Figma mockup
+                        -> the structure created for this (first) list element in the footer was 
+                            -> to place a link tag around the entire element <- this was hyperlinked back to the same html page
+                            -> the icon and text are contained in the same <h3> tag (which is embedded under this link)
+                                    -> this is the same approach which was used to create the cards with the purple circles at the top of the page 
+                                        -> using lists to create them
+                                    -> you can have multiple elements in the same <li> tag and in the same <h3> tag
+                                    -> these two elements in the <h3> tag used for this are 
+                                        -> the icon for the footer element <- not all of the footer elements have these 
+                                            -> this was imported from the font awesome libary 
+                                            -> icons, using the <i> html tag when inserted in
+                                        -> then the text 
+                            -> this h3 tag was targeted using the 'footer_logo' class 
+                                -> this flexes the two items in the h3 tag into a row 
+                                -> they were placed in the same row, to ensure that they were aligned 
+                 -->
+
             <ul>
                 <li>
                     <a href="#">
@@ -626,24 +671,51 @@
                         </h3>
                     </a>
                 </li>
+
+
+                <!-- Become a partner -->
+                    <!-- 
+                       -> this is the same structure as the previous footer element (refer to the comments for this element)
+                       -> the content was changed to match the Figma mockup -> this involved changing its associated font awesome icon and content
+                    -->
                 <li>
                     <a href="#">
                         <h3 class="footer_logo">
-                            <i class="fa-solid fa-handshake-angle"></i> Become a partner
+                            <i class="fa-solid fa-handshake-angle"></i> 
+                            Become a partner
                         </h3>
                     </a>
                 </li>
+
+
+                <!-- Legal notice -->
+                    <!-- 
+                        -> the structure of this is the same as the previous footer element,  but without the font awesome <i> icon
+                        -> the the comments around the code for the previous footer elements for a more depth explanation of this 
+                    -->
                 <li>
                     <a href="#">
                         <h3>Legal notice</h3>
                     </a>
                 </li>
+
+                <!-- Contact -->
+                    <!-- 
+                        -> this (Contact) element follows the same structure as the previous footer element 
+                            -> but its conent was changed 
+                    -->
                 <li>
                     <a href="#">
                         <h3>Contact</h3>
                     </a>
                 </li>
             </ul>
+
+            <!-- 
+                Media queries for the footer 
+                    -> 
+             -->
+
         </div>
     </footer>
 </body>
