@@ -713,7 +713,40 @@
 
             <!-- 
                 Media queries for the footer 
-                    -> 
+                    -> the css / Sass which was previously mentioned for the footer class was inserted into a media query
+                        -> i.e, the class which is placed around the entire list is the 'footer' class
+                        -> then this is formatted to take those list elements and justify them onto the right of the page, into a row 
+                        -> the css / Sass which does this was inserted under a media query 
+
+                        Above the tablet breakpoint for the footer list elements 
+                        -> the breakpoint which was used for this was the tablet breakpoint     
+                            -> in other words, when we reach the tablet breakpoint, then the footer elements are no longer stacking (they're 
+                            being placed in a row)
+                            -> so as we expand the page -> it has more space, until we get to the tablet breakpoint and we have enough 
+                                space to start putting those footer list elements onto one row 
+                                    -> this is how the media queries are working on that class 
+                        
+                        Below the tablet breakpoint for the footer list elements
+                            -> the media queries which target the footer elements below the tablet breakpoint were a lot more lenient, in the 
+                                sense that they were not set to justify those elements to the right of the page and into one row 
+                            -> the approach which was used for this was to just flex those footer elements into a row, below the tablet 
+                                breakpoint region 
+                                    -> then those elements start to stack to match the mockup of the footer in Figma 
+                            -> all of the list elements of the footer were being targeted by the same class -> this is what the 
+                                media queries for this section are targeting 
+                        
+                        Combining these two to make the footer have a responsive design
+                                -> in other words -> from the mobile to the tablet region -> we are just flexing those list elements into a row 
+                                    -> since it's the mobile region, those elements start to stack in the footer (as per the Figma mockup)
+                                    -> they don't flow over the top of the footer, because the stylings and dimensions for the mockup were used for 
+                                        this 
+                                -> then as we're expanding the page into the tablet breakpoint region, the media queries which target the class 
+                                    around these elements become stricter
+                                    -> since we have the space on the page, we're now justifying all of those elements into a row, and pushing them 
+                                        to the right using media queries <- in the shorthand notation mentioned previously
+                                        -> and these media queries have all been set for the same class <- which is the footer class
+                                            -> in other words, the one which targets the <ul> tags which are placed around the entire footer, 
+                                                constructed from its list elements 
              -->
 
         </div>
