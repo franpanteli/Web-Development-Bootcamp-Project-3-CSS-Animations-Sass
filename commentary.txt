@@ -122,9 +122,3 @@ GRAVEYARD OF OTHER COMMENTARY
                 set to use the same stylesheet)
     -> the approach which worked was to reuse as many sections from the homepage for the project as possible 
         -> including the transition effect on the hearts on this html file, and the three which derive off it 
-    -> 
-        
-
-
-        -> </head> <- the other three need head closing tags 
-
