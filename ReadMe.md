@@ -3,7 +3,8 @@
 <h3>3i ohmyfood Course Notes</h3>
 <p>'ohmyfood' is the third web development project I completed during this bootcamp. This was produced to integrate Sass animations with the HTML and CSS skills building from the previous project. The primary aim of this was to develop these skills by completing the course material and apply them by [INSERT START] , using GitHub, using GitHub, using GitHub, using GitHubconverting the mockup of a travel agency called Booki into a webpage. This mockup was provided in Figma. [INSERT END] </p>
 <p>
-
+<p>
+This was used as the template for the menu pages of the project. The kitchen West menu was -> and it's loaded with comments which explain the various parts 
 </p>
 For this, three further courses were first completed on the OpenClassrooms platform. My notes from these may be found in the folder called '3i ohmyfood Course Notes by Fran_Panteli.' Further information about these courses is detailed below.
 
