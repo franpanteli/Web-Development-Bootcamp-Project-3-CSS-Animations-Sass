@@ -1,0 +1,130 @@
+Questions to get clear on 
+	#1 -> how the media queries for the beige section in the middle of the menu pages were done
+		How they are working when you inspect the responsively of the middle section of the menu pages 
+		-> it's hitting at the tablet breakpoint <- the same as the footer elements 
+		-> taking up 100% of the width of the page, and then once the tablet breakpoint is hit, it takes up x% of the width of the page and has fixed margins
+		-> so any extra space given by expanding the screen goes to increasing the width of that section (rather than being added to the margins on either side of it, as with the second project)
+
+		And then in the compiled css <- for the entire beige sections of the menu pages  
+		-> the css / Sass for the media queries for the large beige divs on the menu pages 
+			-> which class they target and if they work as we thought they did 
+			-> above the tablet breakpoint, add these margins to this section 
+				-> it's for the container class, which is around the entire beige section on the menu page 
+				-> for that section above the tablet breakpoint -> add in these margins
+				-> the width of that container also isn't specified, which means that when the page is being expanded -> the extra space gets added to that beige container (and the widths of the margins around it stay fixed)
+				-> media queries were added around the entire beige section 
+					-> and then they were also added in for the title at the top of it -> margin-left: auto; and margin-right: auto; <- this is what was done for the second project 
+					-> this is different, because the width of the margins are fixed, and the width of the content is changing as the page expands (rather than the other way round)
+					-> so in this case, in the media queries above the tablet breakpoint region for the beige section in the menu pages -> the width of the content isn't specified, just the widths of the margins which we want to in 
+					-> those are specified for the media queries above the tablet breakpoint region, and nothing is specified for everything below that point 
+					-> so as the webpage expands, the extra space which is given by its expansion will go to the content (and the margins will remain fixed in this case)
+				-> these media queries (this time) are also targeting one section of the webpage (the beige for the menu html pages), rather than the entire content of the page 
+
+		And then in the compiled css <- for the titles in the beige sections of the menu webpages 
+			Which section is being targeted by these media queries 
+			-> we were given the appearance for this title in the mockup of the menu pages on Figma, for the mobile and the desktop versions 
+			-> the tablet breakpoint was used throughout the project as the point which the media queries targeted when making the webpage responsive 
+			-> media queries for the footer of the menu pages were the same, and the headers didn't require them 
+			-> in the beige section of the menu pages (the middle), one media query was added around that entire section 
+				-> and then another was added to the header of those menus (inside the beige section)
+				-> this is explaining the media queries for the header section inside those beige sections of the menu pages 
+
+			How this is being targeted 
+			-> the tablet breakpoint was again used (1024px)
+			-> the class which this is used to target is the container_banner (this is the class which is placed around this header element, inside the beige menu section)
+			-> above the tablet breakpoint region, this content is then being centred 
+				-> there are already margins which are added to the left of the icons in this header <- so they spread apart when they are justified into the centre of the page for this region 
+				-> below this point, the items in this element are placed in a div without this query 
+
+	#2 -> which class and where adds in the keyframe for the transition on the middle beige section of the menu pages 
+		-> and is the keyframe for it defined before or after that class in the compiled css (basically where is the keyframe defined in relation to where the class has been used)
+
+Animating the content for the menu class 
+	-> the menu class targets the div which is placed around the content for the menu 
+	-> in the beige section of the menu pages, the div which is placed around all of the content 
+	-> a transition is added onto this class 
+		-> so, all of the content in the beige section is surrounded by a div
+		-> that div is targeted with the menu class 
+		-> this is the class which is being targeted for an animation 
+		-> that animation was done with keyframes and not transitions (unlike the heart animation used throughout the project)
+			-> this animation does not have a trigger (the trigger for the heart animation is the user hovering over that element) <- that's an event 
+			-> the event which triggers the animation which is created by this class for the content of the menu is triggered when the page reloads 
+			-> which is why keyframes (and not transitions were used to create it)
+	-> in the compiled css for this 
+		-> we have the menu class <- the class which targets the div which is placed around all of the content in the beige section of the menu pages 
+			-> also note how this is reused across the 4 menu pages (they were all based off of the same template, which was initialised in the html file for the Kitchen West menu)
+		-> so in the compiled css, we have the menu class 
+			-> then we have the animation which is being added to it <- this is being done in two stages 
+				-> the first is to define the keyframes for its transition (this is called menuFadeIn) 
+					-> this includes two points, 0% of the way through the animation and 100% of the way through the animation 
+					-> 0% of the way through the animation, the opacity of the elements it's being applied to is 0, and 100% of the way through the animation, the content its being applied to becomes completely opaque  
+				-> the second is to use that keyframe on the class which is placed around the div for the elements we want to target 
+					-> in this case it's the menu class <- because this is placed around the content in the beige part of the menu pages which we want the animation to apply to 
+					-> this is done in the css (using the keyframe animation) by the line 'animation: menuFadeIn 4s forwards;' <- under the menu section of the webpage, use this keyframe, make the animation take 4 seconds and run it forwards (start with the content transparent and make it opaque, rather than the other way round)
+	-> the important points are 
+		-> the reason a keyframe and not a transition is being used for this is because the trigger event for the start of the animation is the reloading of the page, not a user interacting with it 
+			-> you don't have two states to transition between -> just an animation you want to apply when the page reloads (rather than before and after a user has interacted with it, like the heart element)
+		-> then there is how it's defined and used 
+			-> the content we want to animate on the html page is surrounded by a div -> that div has a class which is associated with it 
+			-> we define the keyframe at the end of the compiled css / Sass <- and then we apply it to the class which targets the content in html which we want to annotate 
+				-> and we target it using the animation property 
+				-> the keyframe for this was defined at the end of the compiled css / Sass for organisational reasons (rather than specificity in this case) <- this is detailed in the Sass notes for the third project in this repository 
+
+	#3 The heart transition for the menu pages
+		-> the heart transitions for the menu pages were the same as the ones in the homepage 
+		-> these were created by taking two font awesome icons and adding the transition for the element while in its hover state
+		-> these two icons represent the appearance of the heart before and after the transition has happened, and were placed on top of each other using absolute positioning 
+		-> refer to the comments for this animated element in the index.html file for the project homepage 
+		-> all of the menu pages use this same element 
+
+	#4 The file tree structure which enabled this image to be used
+		About
+			-> the files for the project were initially structured in a way which included the images in an assets folder, the html files, Sass files and others
+			-> all of the content was in the project folder, although when using <img> tags to import the images in this folder - these weren't showing on the page when rendered in the browser 
+			-> to rectify this challenge, the file tree structure for the contents of the project folder was changed to be more in line with the second project 
+			-> the file tree for the second bootcamp project and this, the third therefore have commonalities, although the third project file structure has extra content (namely its sass directory)
+		What the file tree for this project and the file tree for the second bootcamp project (Booki) have in common
+			-> file tree <- opening a terminal, typing tree, dropping the project folder over the terminal for its directory and then hitting enter 
+			-> the folder which contains the project images is placed in the same layer of the tree as the index.html file for the project
+				-> so we have the index.html file for the project -> and then in the same level of the tree is the folder which contains the images for the project <- the html file is importing from that folder  
+			-> this was the same approach used for the other html files for the third project 
+				-> all of these html files were other pages of the website (one html file per page of the website)
+				-> the other html files for the project were contained in their own folder 
+				-> that was included relative to the main index.html file for the project in the same way that the directory which contained the image files was 
+				-> this index.html file (in this case, for the third project) was the homepage for the website <- and the second project only contained one html file (the index.html file)
+			-> problems weren't encountered with the styles.css file (the second project included this one layer into the file tree relative to the index.html file, and the third project included this in the same level of indentation) 
+			-> the directory which contains the sass files for the project was also included on the same level of indentation as the index.html file, relatively speaking (although the second project didn't have sass)
+
+	#5 -> how a little rectangle with the mint animation was done 
+
+
+
+
+
+
+
+
+GRAVEYARD OF OTHER COMMENTARY 
+-> the footer was reused from the homepage 
+    -> there are more in depth comments about how that works there 
+    -> it's the same for the entire project -> across all of the webpages
+-> it starts with a header section 
+    -> that imports the css styles which are used to format the page
+        -> from the compiled css 
+        -> which Sass compiles 
+        -> which imports from the partials which were created from breaking down 
+            the css of the homepage
+    -> it's the same head which is being used in the homepage html file for the project 
+        -> refer to the annotations around this 
+        -> all html five html files in the project are linking back to the same compiled css file 
+            -> meaning that if changes are made to the sass which compiles into it -> then those 
+                changes will be coherent across the entire website (all five webpages of it, they've been 
+                set to use the same stylesheet)
+    -> the approach which worked was to reuse as many sections from the homepage for the project as possible 
+        -> including the transition effect on the hearts on this html file, and the three which derive off it 
+    -> 
+        
+
+
+        -> </head> <- the other three need head closing tags 
+
