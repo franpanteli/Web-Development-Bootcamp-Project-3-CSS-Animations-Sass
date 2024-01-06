@@ -1,0 +1,15 @@
+-> after doing the Kitchen West menu comments etc 
+
+OTHER THINGS WE NEED TO ADD TO IT (BESIDES THE OBVIOUS, AND WHICH AREN'T COMMENTS) 
+  -> the transition needs to target the entire page 
+      -> the transitions should be around the entire page, not just the section in the middle 
+          <- those transitions are for out and in of the page (not just in) -> so there's one 
+          playing it forwards and one playing it backwards 
+      -> you could recompile the Sass and make those changes (to the new label as well) 
+      -> understanding what we have, and then changing it to match the brief as well as possible, 
+          making sure it matches the requirements
+      -> then emailing the mentor 
+      -> then booking and preparing for the assessment <- the writeup for the third project 
+          readme after this
+  -> the comments which we already have need spell checking 
+ 
