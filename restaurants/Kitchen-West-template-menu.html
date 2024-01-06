@@ -1,104 +1,70 @@
-<!-- Questions to get clear on 
-
-COMMENTS FOR THE MINT RECTANGLES <- THIS NEEDS STRUCTUING, MORE ADDING TO IT (FOR THE CLASSES) AND SPELL CHECKING 
-	#5 -> how a little rectangle with the mint animation was done 
-    -> we haven't actually written anything out for it <- but we've looked at it 
-
-    -> the margins et al in the two elements which were flexed into a column 
-    -> then the animation for the green one to the RHS 
-      -> either its a transition or a keyframe <- would guess transition, because it's triggered by a user interaction (the hover state)
-      -> take apart the html of that element <- it's been placed in the same div
-        -> how was the width of that div done
-        -> targeting the hover state of that entire div 
-        -> transitioning the width of the right most element -> for the hover state of the entire div which it's contained in 
-    -> we are transitioning the margins of that element 
-    -> the width of the left most (first) element in the html for each of these cards was automatically determined 
-    -> so when we transition the green boxes with the icons in -> the width of of the left most box decreases to accommodate it 
-      -> so they're all fitting into the same div 
-    -> this transition is triggered for the hover state of the entire div (around all three of them)
-      -> the width of that div remains the same 
-    -> the green box which is being transitioned in is a font awesome tick icon 
-      -> this was placed inside a div <-- this div formats the icon to be in the centre of a green box 
-      -> the right margin of that div is also negative
-        -> the value of that margin equals the width of the green container for the icon 
-        -> that green icon is on the right hand side of the containing div which it's being placed in 
-        -> so giving its right margin a negative value moves it out of the box 
-        -> in other words, the green div has been placed to the right of the containing div, and then been given negative margins in order 
-          to shift it out of that box 
-          -> the amount it's been shifted out by those negative margins is the same as its width -> so the entire thing disappears out of the 
-            larger containing div which it's in 
-        -> this is the value of that margin -> when the larger div which contains all three of those items isn't being hovered over 
-          -> the green div is there, it's just been moved out of the div which contains it so it's invisible 
-          -> and the left-most (first) element in that containing div has a width which is set to auto 
-          -> so if an element is transitioned into that entire div -> then the width of this first element will decrease to accommodate it 
-    -> the width of the div which contains all three elements doesn't change when it's being hovered over 
-      -> it's width is fixed
-      -> when the div which contains all three of those elements is in its hover state -> then the right-most element is being transitioned 
-          in (i.e, the icon surrounded by the green container)
-      -> in other words, anywhere over this entire div can be hovered over -> then this transition is triggered for the right margin of the green 
-          div 
-      -> when the green div of that element has a margin which is equal to zero -> this is when that element is visible on the page
-      -> when the margin of that green containing div is negative -> this is its default state -> which transitions it off of the page 
-      -> so when the larger containing div is hovered over -> this is when the margins of the green div which contains the icon is transitioned 
-          to be 0 
-        -> in other words -> it's no longer being pushed out of the larger div which contains it 
-        -> so we have the hover state for the larger containing div which is around all three elements for that section 
-        -> when that is in its hover state -> then we are transitioning the right margin of the green div to be 0
-
-
-
-
-
-
-		
-		-> then start looking at the classes for it -> in the compiled css / sass <- at the transition which is targeting it 
-    -> the comments which we already have need spell checking 
-
-
-
-GRAVEYARD OF OTHER COMMENTARY 
-
--> it starts with a header section 
-    -> that imports the css styles which are used to format the page
-        -> from the compiled css 
-        -> which Sass compiles 
-        -> which imports from the partials which were created from breaking down 
-            the css of the homepage
-    -> it's the same head which is being used in the homepage html file for the project 
-        -> refer to the annotations around this 
-        -> all html five html files in the project are linking back to the same compiled css file 
-            -> meaning that if changes are made to the sass which compiles into it -> then those 
-                changes will be coherent across the entire website (all five webpages of it, they've been 
-                set to use the same stylesheet)
-    -> the approach which worked was to reuse as many sections from the homepage for the project as possible 
-        -> including the transition effect on the hearts on this html file, and the three which derive off it 
-
-
-
--> the transitions should be around the entire page, not just the section in the middle <- those transitions are for out and in of the page (not just in) -> so there's one playing it forwards and one playing it backwards 
-	-> you could recompile the Sass and make those changes (to the new label as well) 
-	-> understanding what we have, and then changing it to match the brief as well as possible, making sure it matches the requirements
-	-> then emailing the mentor 
-	-> then booking and preparing for the assessment <- the writeup for the third project readme after this
+<!-- OTHER THINGS WE NEED TO ADD TO IT (BESIDES THE OBVIOUS, AND WHICH AREN'T COMMENTS)
+  -> the transition needs to target the entire page 
+      -> the transitions should be around the entire page, not just the section in the middle 
+          <- those transitions are for out and in of the page (not just in) -> so there's one 
+          playing it forwards and one playing it backwards 
+      -> you could recompile the Sass and make those changes (to the new label as well) 
+      -> understanding what we have, and then changing it to match the brief as well as possible, 
+          making sure it matches the requirements
+      -> then emailing the mentor 
+      -> then booking and preparing for the assessment <- the writeup for the third project 
+          readme after this
+  -> the comments which we already have need spell checking 
  -->
 
 <!DOCTYPE html>
 <html lang="en-GB">
+
+<!-- HEAD / DOC TYPE ETC -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- below - this is the text which shows in the tab for the webpage -->
   <title>Kitchen West Menu</title>
+
+  <!-- import fonts -->
+    <!-- -> these fonts were the same as the ones used in the project mockup in Figma and were exported from google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+  <!-- icon compatibility -->
+    <!-- this html allows the icons from the  font awesome library to be used throughout the project, and was taken from looking 
+        up 'font awesome cdn' in a browser -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- linking to CSSS -->
+    <!-- 
+      -> all of the partial scss files are being imported into the main scss file for the project
+      -> then that main css file is compiled into the styles.css file, which all of the html pages in the project are linking back to 
+      -> this is the line in this html file which links to this compiled css file for the project  
+    -->
   <link rel="stylesheet" href="../styles.css">
+
+  <!--
+     Reusing sections of the webpage as an approach to problem solve
+      -> all html five html files in the project are linking back to the same compiled css file 
+      -> meaning that if changes are made to the sass which compiles into it -> then those 
+          changes will be coherent across the entire website (all five webpages of it, they've been 
+          set to use the same stylesheet)
+        -> the approach which worked was to reuse as many sections from the homepage for the project as possible 
+            -> including the transition effect on the hearts on this html file, and the three which derive off it 
+  -->
 </head>
+
+<!-- BODY SECTION -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 <!-- Animating the content for this webpage <- transitioning in
     -> note 
@@ -219,7 +185,9 @@ GRAVEYARD OF OTHER COMMENTARY
     </div>
 
     <!--  BEIGE SECTION OF THE MENU (WITH ITS DISHES ET AL) -->
-    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      <!-- 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
     <!-- How the media queries for the beige section in the middle of the menu pages were created for this project 
 		
           How they are working when you inspect the responsively of the middle section of the menu pages 
@@ -276,6 +244,53 @@ GRAVEYARD OF OTHER COMMENTARY
           <div class="category__name--line"></div>
         </div>
         <div class="choice">
+
+      <!-- FOR ONE OF THE REGTANGLES WHICH IS GREEN AND BEING ANIMATED -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+          <!-- COMMENTS FOR THE MINT RECTANGLES <- THIS NEEDS STRUCTUING, MORE ADDING TO IT (FOR THE CLASSES) AND SPELL CHECKING
+              -> how a little rectangle with the mint animation was done 
+                -> we haven't actually written anything out for it <- but we've looked at it 
+
+                -> the margins et al in the two elements which were flexed into a column 
+                -> then the animation for the green one to the RHS 
+                  -> either its a transition or a keyframe <- would guess transition, because it's triggered by a user interaction (the hover state)
+                  -> take apart the html of that element <- it's been placed in the same div
+                    -> how was the width of that div done
+                    -> targeting the hover state of that entire div 
+                    -> transitioning the width of the right most element -> for the hover state of the entire div which it's contained in 
+                -> we are transitioning the margins of that element 
+                -> the width of the left most (first) element in the html for each of these cards was automatically determined 
+                -> so when we transition the green boxes with the icons in -> the width of of the left most box decreases to accommodate it 
+                  -> so they're all fitting into the same div 
+                -> this transition is triggered for the hover state of the entire div (around all three of them)
+                  -> the width of that div remains the same 
+                -> the green box which is being transitioned in is a font awesome tick icon 
+                  -> this was placed inside a div <-- this div formats the icon to be in the centre of a green box 
+                  -> the right margin of that div is also negative
+                    -> the value of that margin equals the width of the green container for the icon 
+                    -> that green icon is on the right hand side of the containing div which it's being placed in 
+                    -> so giving its right margin a negative value moves it out of the box 
+                    -> in other words, the green div has been placed to the right of the containing div, and then been given negative margins in order 
+                      to shift it out of that box 
+                      -> the amount it's been shifted out by those negative margins is the same as its width -> so the entire thing disappears out of the 
+                        larger containing div which it's in 
+                    -> this is the value of that margin -> when the larger div which contains all three of those items isn't being hovered over 
+                      -> the green div is there, it's just been moved out of the div which contains it so it's invisible 
+                      -> and the left-most (first) element in that containing div has a width which is set to auto 
+                      -> so if an element is transitioned into that entire div -> then the width of this first element will decrease to accommodate it 
+                -> the width of the div which contains all three elements doesn't change when it's being hovered over 
+                  -> it's width is fixed
+                  -> when the div which contains all three of those elements is in its hover state -> then the right-most element is being transitioned 
+                      in (i.e, the icon surrounded by the green container)
+                  -> in other words, anywhere over this entire div can be hovered over -> then this transition is triggered for the right margin of the green 
+                      div 
+                  -> when the green div of that element has a margin which is equal to zero -> this is when that element is visible on the page
+                  -> when the margin of that green containing div is negative -> this is its default state -> which transitions it off of the page 
+                  -> so when the larger containing div is hovered over -> this is when the margins of the green div which contains the icon is transitioned 
+                      to be 0 
+                    -> in other words -> it's no longer being pushed out of the larger div which contains it 
+                    -> so we have the hover state for the larger containing div which is around all three elements for that section 
+                    -> when that is in its hover state -> then we are transitioning the right margin of the green div to be 0 -->
 
           <div class="choice__card">
             <div class="choice__card__txt">
@@ -417,13 +432,24 @@ GRAVEYARD OF OTHER COMMENTARY
       </div>
     </div>
 
+    <!-- The 'Order' buton -->
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
+      <!-- 
+        -> this button is the same as the one which was used in the homepage 
+        -> the fonts et al are the same (except the contents of the button has changed)
+        -> for more information about how this button was designed, see the the comments around the button on for the index.html file of the project 
+          (the homepage of the ohmyfood website)
+       -->
 
     <div class="command">
       <button class="command__button">Order</button>
     </div>
   </div>
 
-  <!--  FOOTER -->
+<!-- FOOTER -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   
     <!-- 
       The footer for the four menu pages were there same as the homepage 
@@ -472,5 +498,9 @@ GRAVEYARD OF OTHER COMMENTARY
     </div>
   </footer>
 </body>
-
 </html>
+
+<!-- DOCUMENT END -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
