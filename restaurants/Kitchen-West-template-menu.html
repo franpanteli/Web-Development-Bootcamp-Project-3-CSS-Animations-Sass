@@ -1,11 +1,13 @@
  <!-- DOCUMENT CONTENTS -->
+
 <!-- 
-    1. HEAD / DOC TYPE ETC
-    2. BEIGE SECTION OF THE MENU (WITH ITS DISHES ET AL)
-    3. THE STARTERS BLOCK WITH THREE CHOICE CARDS
-    4. THE MAINS BLOCK WITH THREE CHOICE CARDS 
-    5. THE DESERTS BLOCK WITH THREE CHOICE CARDS
-    6. FOOTER
+  1. HEAD / DOC TYPE ETC 
+  2. HEADER SECTION OF THE MENU -> WITH CONTENT 
+  3. BEIGE SECTION OF THE MENU (WITH ITS DISHES ET AL) 
+  4. THE STARTERS BLOCK WITH THREE CHOICE CARDS 
+  5. THE MAINS BLOCK WITH THREE CHOICE CARDS 
+  6. THE DESERTS BLOCK WITH THREE CHOICE CARDS 
+  7. FOOTER 
  -->
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -61,7 +63,7 @@
   -->
 </head>
 
-<!-- BEIGE SECTION OF THE MENU (WITH ITS DISHES ET AL) -->
+<!-- HEADER SECTION OF THE MENU -> WITH CONTENT -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!-- 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -160,6 +162,11 @@
         -->
 
   </div>
+
+<!-- BEIGE SECTION OF THE MENU (WITH ITS DISHES ET AL) -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   <div class="container">
     <div class="container_banner">
       <div class="container_title">
@@ -184,10 +191,6 @@
       </div>
     </div>
 
-    <!-- THE STARTERS BLOCK WITH THREE CHOICE CARDS --> 
-      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-      <!-- 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->
-      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
     <!-- How the media queries for the beige section in the middle of the menu pages were created for this project 
 		
           How they are working when you inspect the responsively of the middle section of the menu pages 
@@ -239,6 +242,11 @@
 
     <div class="menu">
       <div class="menu__block">
+
+      <!-- THE STARTERS BLOCK WITH THREE CHOICE CARDS --> 
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      <!-- 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444 -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <div class="category">
           <h3 class="category__name">Starters</h3>
           <div class="category__name--line"></div>
@@ -246,9 +254,44 @@
 
         <div class="choice">
 
-      <!-- FOR ONE OF THE REGTANGLES WHICH IS GREEN AND BEING ANIMATED -->
-      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-          <!-- COMMENTS FOR THE MINT RECTANGLES <- THIS NEEDS STRUCTUING, MORE ADDING TO IT (FOR THE CLASSES) AND SPELL CHECKING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="choice__card">
+
+            <div class="choice__card__txt">
+              <h3 class="choice__card__txt--title">Smoked salmon</h3>
+              <p class="choice__card__txt--description">With beetroot and horseradish</p>
+            </div>
+
+
+            <div class="choice__card__price">
+              <span>£25</span>
+            </div>
+
+            <!-- THE GREEN REGTANGLE WHICH IS BEING ANIMATED -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <div class="choice__card__check">
+              <i class="fas fa-lg fa-circle-check"></i>
+            </div>
+
+              <!-- COMMENTS FOR THE MINT RECTANGLES <- THIS NEEDS STRUCTUING, MORE ADDING TO IT (FOR THE CLASSES) AND SPELL CHECKING
               -> how a little rectangle with the mint animation was done 
                 -> we haven't actually written anything out for it <- but we've looked at it 
 
@@ -293,18 +336,68 @@
                     -> so we have the hover state for the larger containing div which is around all three elements for that section 
                     -> when that is in its hover state -> then we are transitioning the right margin of the green div to be 0 -->
 
-          <div class="choice__card">
-            <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Smoked salmon</h3>
-              <p class="choice__card__txt--description">With beetroot and horseradish</p>
-            </div>
-            <div class="choice__card__price">
-              <span>£25</span>
-            </div>
-            <div class="choice__card__check">
-              <i class="fas fa-lg fa-circle-check"></i>
-            </div>
           </div>
+
+          <!-- THE OTHER TWO CHOICE CARDS IN THE STARTERS BLOCK -->
+          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+           <!-- 
+                -> there are three blocks in each menu <- the starters, mains and desserts
+
+                The next two choice cards 
+                  -> each of those blocks contains three dishes 
+                  -> each of these menu choices is placed on its own card (one card with the green animation, one dish option) <- this is called 
+                      a choice card
+                    -> and there are three of them (in most cases) in each block (starter / main / deserts)
+                  -> the previous choice card was for the first option of the starter block 
+                    -> the next two choice cards are for the second and third menu options in this starter block
+                    -> these two choice cards are the same as the previous one which was deconstructed in the html, except that their content is 
+                        different 
+                  -> the text content for these cards was provided in a separate txt file included in the initial files for the project 
+                    -> these included the image files and the project brief 
+                  -> considering that the following two cards are the same as the previous choice card except for its content, to understand how 
+                      these individual cards work in more depth -> refer to the comments around the previous choice card
+
+                How these next two cards were combined to produce the starters block 
+                  To combine the three starter choices into one block 
+                    -> the approach which was used in the previous project was 
+                      -> define a div of certain height
+                      -> surround the items with that div 
+                      -> flex them apart evenly 
+
+                  The approach which was used here was 
+                    -> define those choice cards 
+                    -> place a div around them 
+                    -> use a gap
+                      -> rather thanscetting the height of the div which surrounded those cards and then flexing them apart evenly inside it, you 
+                          place a div around all of those cards, flex them into a column 
+                      -> but instead of giving the larger div which they're placed in a height and then flexing them apart evenly, you don't give 
+                          the larger div which they're placed in a height -> you give it a gap property 
+                      -> the items inside it aren't spreading apart evenly to fill the height which you give that containing div <- the containing 
+                          div is adjusting its height 
+                        -> you're telling it what the distance between each element in that containing div is (the gap) -> and then its height 
+                            adjusts accordingly 
+                        -> the display is still set to flex 
+                        -> when you use the gap property, there is no space in between the top of the containing div and a) the top of the first 
+                            element inside it and b) the bottom of the last element placed inside it 
+                          -> assuming that the elements we're dealing with are flexed into a column (as with this case)
+
+                  Why use a gap rather than the method from the previous project 
+                    -> there are four menu pages for this project, and a homepage 
+                    -> each of those menu pages has the same blocks (starter, mains and deserts) 
+                    -> but the choices (the number of dishes per block) is √variable on each menu 
+                    -> in every case, each block contains three dishes -> apart from the Elderflower starters section, which has four
+                    -> if the clients add new dishes to their menus, these choices need to be easily addable 
+                    -> using a gap in between the elements allows the height of the containing div to automatically adjust to this 
+                      -> rather than just flexing apart those elements into a column and spacing them evenly <- then you would have to re-calculate 
+                          the height of the entire containing div (rather than having it automatically adjust, which  is what happens when the gap 
+                          property is used)
+                      -> this seems simple to do at small scales (recalculate the heigh of the containing div and add the elements into the html), 
+                          but if we have a lot of different menu pages and a lot of different changes being made to them -> we need a solution which is flexible 
+                      -> i.e, the gap property 
+                      -> this saves us from having to repeat css / Sass, which is in line with the DRY (Do Not Repeat Yourself) principle listed 
+                          in the course material on the OpenClassrooms platform
+                          -> -> the template had to be designed in a way which was flexible
+            -->
 
           <div class="choice__card">
             <div class="choice__card__txt">
@@ -332,13 +425,61 @@
             </div>
           </div>
         </div>
-        <!-- IT HAD TO BE FLEXIBLE (the gap property, rather than flexing then apart) -> THE TEMPLATE WAS REUSED, FOR THIS SECTION (THE STARTERS SECTION -> EVERY WEBPAGE HAS 3 DISHES, APART FROM ELDERFLOWER WHICH HAS 4
-            -> THE TEMPLATE HAD TO BE DESIGNED IN A WAY WHICH MADE IT FLEXIBLE) -->
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <!-- THE MAINS BLOCK WITH THREE CHOICE CARDS -->
       <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-      <!-- 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444 -->
+      <!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
       <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
             
               <!-- 
@@ -397,7 +538,7 @@
 
       <!-- THE DESERTS BLOCK WITH THREE CHOICE CARDS -->
       <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-      <!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+      <!-- 66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 -->
       <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
             
               <!-- 
@@ -471,7 +612,7 @@
 
 <!-- FOOTER -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- 66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 -->
+<!-- 77777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777 -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   
     <!-- 
