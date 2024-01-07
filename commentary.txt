@@ -1,1 +1,2 @@
 
+This commit contains changes to the bottom two cards in the starters section of the Kitchen West menu template.
