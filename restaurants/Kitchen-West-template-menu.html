@@ -278,6 +278,80 @@
 
           <div class="choice__card">
 
+            <!-- Choice card element 1/3 - the div around the two pieces of text  -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+              <!-- 
+                  The first third of the choice card contains the text 
+                    -> the name of the dish <- the <h3>
+                    -> the description of the dish <- the <p>
+                    -> the contents of these two comes from the Figma mockup / txt file which contains the menu content 
+
+                  Both of these these elements are contained in the same div, which flexes them into a column 
+                    -> <h2> and <p> are block elements 
+                    -> the div which is placed around both of these elements flexes them into a column
+                    -> that div itself is flexed into a row, with the other two elements in the choice card
+                      -> but those two text elements inside it are flexed into a column 
+
+                  The height of the div which contains both of those elements 
+                    -> the div which surrounds both of these elements is targeted using the 'choice__card__txt' class
+                      -> this is the class which is flexing the two text elements into a column 
+                      -> this class is also used to hide the overflow of the text <- when the menu shrinks, the text which this div contains 
+                          doesn't flow off of it, and an ellipsis (...) js added to indicate this overflow 
+                    -> this class doesn't target the height of the elements which are inside it 
+                      -> the div is just placed around those two text elements <- and its heigh is adjusting to the height of the content inside 
+                      -> the height of the content inside was controlled by placing classes on those individual elements 
+                      -> since there were two pieces of text, this involved two classes 
+                        -> the class which targets the top piece of text (the 'choice__card__txt--title' class) gives this element a top padding 
+                        -> the class which targets the bottom piece of text (the 'choice__card__txt--description' class) gives the bottom element 
+                            bottom padding 
+                    -> in other words, we're flexing apart those text items in their larger containing div
+                      -> and then on the classes which target them individually -> adding padding onto the top text item and padding onto the 
+                          bottom text item 
+                    -> the height wasn't done by setting the height of the larger containing div for the two pieces of text 
+                      -> it was done by adding in padding onto the top element and the bottom element <- for the two classes which targeted 
+                          them as individual elements 
+                      -> and then flexing apart those items inside that containing div 
+                      -> by changing the padding of the elements inside it (not the height of the entire containing div)
+
+                  The width of the div which contains both of these text elements 
+                    Setting the width of this element, in comparison to the height 
+                      -> this was one of the most important parameters which was changed for this element 
+                      -> so, we have two text elements which are surrounded by this larger div and are being flexed into a column by it 
+                      -> the larger div which surrounds those two elements is targeted by the class called 'choice__card__txt'
+                      -> the width of that div was set very specifically 
+                        -> it's height wasn't set -> it was placed around those two elements of text, which were given their own paddings 
+                        -> the width of that div was set to auto -> with a flex property of 1 
+
+                    The importance of setting this width to auto 
+                      -> the width of this div <- containing the two pieces of text in the choice cards was set to auto 
+                      -> out of all three elements in one of those choice cards (the text, the price and the green icon div), the width of this div 
+                          is the only one which was set to auto 
+                      -> this property allows the width of this element to change, based on what the browser renders 
+                      -> animation compatibility 
+                        -> the animation later added (and what we will explore later in these comments) operates when the div around the entire 
+                            choice card is in its hover state
+                        -> when that entire div is being hovered over, the element to the right of the choice card is being transitioned in 
+                        -> when it is being transitioned in, the width of the entire choice card is remaining the same 
+                        -> so setting the width of the div which is around both of the text elements equal to auto allows it to get smaller when the 
+                            green div is being animated into the choice card on the far right 
+                      -> since the width of the entire choice card is remaining the same, when it's being hovered over and the green icon is being 
+                          transitioned in, the widths of one of the three elements which are in that choice card needs to reduce 
+                      -> since the div with the text around it is the largest div in that entire choice card, setting its width equal to auto tells 
+                          the browser to reduce its width by the width of the green div which is being transitioned in when it's in its hover state 
+                      -> the widths of all of the other two items in that choice card are fixed 
+                      -> giving the div which contains the text a flex value equal to 1 also tells that item to take up all of the rest of the space 
+                          in the choice card
+                        -> we're telling the browser to make its width take up the width of the entire choice card (from the flex value of 1), and 
+                            then to reduce that value in case anything else happens 
+                          -> in other words, ready for the green div to be transitioned in <- the width of that entire choice card remains the same, 
+                              but the width of the div which is around the text the choice card contains is reducing because it's been set to auto 
+                              -> and it's reducing to accommodate the width of the green div which is being transitioned in
+              -->
+
+            <div class="choice__card__txt">
+              <h3 class="choice__card__txt--title">Smoked salmon</h3>
+              <p class="choice__card__txt--description">With beetroot and horseradish</p>
+            </div>
 
 
 
@@ -323,6 +397,40 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Choice card element 2/3 - the div around the cost of the dish -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <div class="choice__card__price">
+              <span>£25</span>
+            </div>
 
 
 
@@ -353,21 +461,6 @@
 
 
             
-            <!-- Choice card element 1/3 - the div around the two pieces of text  -->
-            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-              <!-- 
-
-              -->
-            <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Smoked salmon</h3>
-              <p class="choice__card__txt--description">With beetroot and horseradish</p>
-            </div>
-
-            <!-- Choice card element 2/3 - the div around the cost of the dish -->
-            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-            <div class="choice__card__price">
-              <span>£25</span>
-            </div>
 
             <!-- Choice card element 3/3 - the div around the green animated icon -->
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
