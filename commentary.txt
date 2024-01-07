@@ -1,2 +1,2 @@
+-> -> the items which appear first in the html are the ones which are to the left of the choice card
 
-This commit contains changes to the bottom two cards in the starters section of the Kitchen West menu template.
