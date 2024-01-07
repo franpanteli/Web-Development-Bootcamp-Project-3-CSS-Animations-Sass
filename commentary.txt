@@ -1,5 +1,4 @@
-
-
+This commit alters the html for the text in the first choice card for the Kitchen West menu.
 
 
 
