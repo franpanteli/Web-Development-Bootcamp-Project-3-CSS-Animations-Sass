@@ -353,86 +353,68 @@
               <p class="choice__card__txt--description">With beetroot and horseradish</p>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <!-- Choice card element 2/3 - the div around the cost of the dish -->
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            
+            <!-- 
+              There are three elements in the choice card, and all are flexed into a row 
+                -> the first was the div with the two pieces of text which were flexed into a column 
+                -> all three elements in the choice card were flexed into a row 
+                -> so the second element in it is the price of the dish (this element)
+
+              The 'choice__card__price' class 
+                -> the content for the price of the dish is placed into a span 
+                -> and then the entire span has been wrapped inside a larger div
+                -> that larger div is targeted by the 'choice__card__price' class 
+                  -> when the entire choice card is being hovered over, there is a right padding on this price element 
+                  -> that right padding is the distance in between the cost of the dish and the left of the green div which contains the tick for 
+                      that element 
+                  -> the span which contains the price of the dish was placed in a larger div, and that larger div was formatted into a square 
+                  -> so that its left edges had the same padding as the padding between the price of the dish and the left most side of the green 
+                      containing div 
+                -> top padding was added to this div, to then move down the price contained by the span inside it 
+                -> the width of this div is fixed -> so that the the animated green div comes in, the width of the first element in the choice 
+                    card is forced to change 
+
+              A span was used for this as this is an inline element, although a div could have also been used
+                -> a span is also more semantic / specific to text than a div <- a div can contain an entire card
+                -> if the price uses a span, it's also taking up the width of the content (rather than the entire width of the div which contains 
+                    it) <- so it can be more easily moved around 
+                -> then the div which surrounds that span was used to move the price into its centre in the x, and add padding to its top 
+             -->
+            
             <div class="choice__card__price">
               <span>£25</span>
             </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
 
 
 
