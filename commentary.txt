@@ -1,2 +1,1 @@
--> -> the items which appear first in the html are the ones which are to the left of the choice card
-
+This commit contains an explanation of what a choice card is in the html file for the Kitchen West menu.
