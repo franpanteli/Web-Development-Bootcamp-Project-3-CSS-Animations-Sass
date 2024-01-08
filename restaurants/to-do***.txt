@@ -1,28 +1,26 @@
-
-#1 ORGANISE THIS TO DO LIST <- THIS ENTIRE THING IS FROM NOW UNTIL THE END OF THE PROJECT 
-#2 TAKE ACTION -> THE FIRST THING YOU SHOULD DO IS SPELL CHECK THE COMMENTS FOR THE KITCHEN WEST MENU
-
-  -> the transition needs to target the entire page 
-      -> the transitions should be around the entire page, not just the section in the middle 
-          <- those transitions are for out and in of the page (not just in) -> so there's one 
-          playing it forwards and one playing it backwards 
-      -> you could recompile the Sass and make those changes 
-	-> if you change this for one of the menu pages and get it to work, then it needs to be changed for the other three
-	-> there was a class which did this -> that entire thing only plays the animation forward, and it was placed around he beige section 
-		-> check if this is still around the beige section, which class it is -> then applying it to the entire page
-		-> the trigger for the out -> should be the back arrow being clicked on 
-		-> double check this has comments around it -> can't remember writing about the font awesome icon with the link around it 
-
-  -> checking what we have matches the brief 
-      -> then emailing the mentor 
-      -> then booking and preparing for the assessment <- the writeup for the third project 
-          readme after this
--> update the GitHub readme -> also with the flashcards for the project etc after the oral assessment 
+-> the absolute most basic lasy to do list 
+	-> also check then new label widths 
+	-> the transitions need to go around the entire page, not just the section in the middle 
+		-> for in and out of the page (one forwards and one backwards) <- change the compiled css, not the entire sass and recompile it 
+		-> there are four menu pages it needs to be done for 
+		-> you would expect it to be around the beige sections of the webpage -> take that class and apply it to the entire webpage 
+		-> the trigger is the back arrow being clicked on
+	-> checking what we have matches the brief 
+	-> booking and preparing for the assessment 
+		-> spell checking it when getting ready for the assessment 
 
 
--> check the heart at the top of the Kitchen West menu works -> if not paste it in from one of the meny pages, but change its content in the pasted version and leave the comments in the Kitchen West html file unedited 
--> spell check the comments on the Kitchen West menu html file 
--> media queries for the title at the top / the title at the top?
--> the transition should be for the entire page <- just work with the compiled css
--> also check then new label widths 
--> the url of the page should be fine to check, it's been committed
+
+
+
+
+
+-> extra 
+	-> reading through the comments in the Kitchen West html file <- doing this when preparing for the assessment 
+	-> recompiling the sass and making the changes 
+	-> does the back arrow have comments 
+	-> emailing the mentor 
+	-> the readme for the third project, and uploading everything to git once the entire project is done 
+		-> including the updated readme and the flashcards for the assessment 
+	-> spell check the comments on the Kitchen West menu html file 
+	-> the url of the page should be fine to check, it's been committed
