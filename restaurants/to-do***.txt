@@ -1,5 +1,5 @@
 -> the absolute most basic lasy to do list 
-	-> also check then new label widths 
+	-> the widths of the purple circles 
 	-> the transitions need to go around the entire page, not just the section in the middle 
 		-> for in and out of the page (one forwards and one backwards) <- change the compiled css, not the entire sass and recompile it 
 		-> there are four menu pages it needs to be done for 
