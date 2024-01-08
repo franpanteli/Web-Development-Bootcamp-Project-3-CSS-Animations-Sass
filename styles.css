@@ -356,8 +356,7 @@ footer a {
 .menu {
   margin-left: 1em;
   margin-right: 1em;
-  opacity: 0;
-  animation: menuFadeIn 4s forwards;
+
 }
 @media screen and (min-width: 1024px) {
   .menu {
@@ -559,6 +558,12 @@ footer a {
     transform: rotateY(360deg);
   }
 }
+
+.menu-page-container {
+  animation: menuFadeIn 1.25s forwards;
+  /* animation: menuFadeInOut 2s infinite alternate; */
+}
+
 @keyframes menuFadeIn {
   0% {
     opacity: 0;
@@ -569,3 +574,4 @@ footer a {
     height: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
+

@@ -1,26 +1,14 @@
 -> the absolute most basic lasy to do list 
-	-> the widths of the purple circles 
-	-> the transitions need to go around the entire page, not just the section in the middle 
-		-> for in and out of the page (one forwards and one backwards) <- change the compiled css, not the entire sass and recompile it 
-		-> there are four menu pages it needs to be done for 
-		-> you would expect it to be around the beige sections of the webpage -> take that class and apply it to the entire webpage 
-		-> the trigger is the back arrow being clicked on
 	-> checking what we have matches the brief 
 	-> booking and preparing for the assessment 
 		-> spell checking it when getting ready for the assessment 
 
-
-
-
-
-
-
 -> extra 
 	-> reading through the comments in the Kitchen West html file <- doing this when preparing for the assessment 
-	-> recompiling the sass and making the changes 
 	-> does the back arrow have comments 
 	-> emailing the mentor 
 	-> the readme for the third project, and uploading everything to git once the entire project is done 
 		-> including the updated readme and the flashcards for the assessment 
 	-> spell check the comments on the Kitchen West menu html file 
 	-> the url of the page should be fine to check, it's been committed
+
