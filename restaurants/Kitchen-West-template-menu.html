@@ -387,167 +387,103 @@
               <span>£25</span>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
             <!-- Choice card element 3/3 - the div around the green animated icon -->
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  
+            <!-- 
+            Summary of the animation for the green divs 
+            -> the width of the div which contains all three elements doesn't change when it's being hovered over 
+              -> it's width is fixed
+              -> when the div which contains all three of those elements is in its hover state -> then the right-most element is being transitioned in 
+                (i.e, the icon surrounded by the green container)
+              -> in other words, anywhere over this entire div can be hovered over -> then this transition is triggered for the right margin of the green div 
+              -> when the green div of that element has a margin which is equal to zero -> this is when that element is visible on the page
+              -> when the margin of that green containing div is negative -> this is its default state -> which transitions it off of the page 
+              -> so when the larger containing div is hovered over -> this is when the margins of the green div which contains the icon is transitioned to be 0 
+                -> in other words -> it's no longer being pushed out of the larger div which contains it 
+                -> so we have the hover state for the larger containing div which is around all three elements for that section 
+                -> when that is in its hover state -> then we are transitioning the right margin of the green div to be 0 
+
+            The div with the green tick 
+              The green tick is a font awesome icon inside a div 
+                -> so each choice card contains three elements -> all flexed into a row 
+                -> this is the third element in that row -> the green tick which is inside it 
+                -> this tick was inserted using a font awesome icon 
+                  -> these could be imported into the html pages for the project because of a line which was included in their headers 
+                  -> the html <I> tags represent these icons 
+                -> each of these font awesome ticks was surrounded by a larger div 
+                  -> the larger div is what is targeting that element with the animation, and turning it green 
+                  -> the icon <I> tags inside it are what insert in the icon itself (in grey)
+                  -> then the div which surrounds the icon targets it with a class which is turning it green, centring it and then animating it 
+
+              How the green div was placed in relation to the choice card which contains it  
+                -> the green box which is being transitioned in is a font awesome tick icon 
+                      -> this was placed inside a div <-- this div formats the icon to be in the centre of a green box 
+                      -> the right margin of that div is also negative
+                        -> the value of that margin equals the width of the green container for the icon 
+                        -> that green icon is on the right hand side of the containing div which it's being placed in 
+                        -> so giving its right margin a negative value moves it out of the box 
+                        -> in other words, the green div has been placed to the right of the containing div, and then been given negative margins 
+                          in order to shift it out of that box 
+                          -> the amount it's been shifted out by those negative margins is the same as its width -> so the entire thing disappears 
+                            out of the larger containing div which it's in 
+                        -> this is the value of that margin -> when the larger div which contains all three of those items isn't being hovered over 
+                          -> the green div is there, it's just been moved out of the div which contains it so it's invisible 
+                          -> and the left-most (first) element in that containing div has a width which is set to auto 
+                        -> so if an element is transitioned into that entire div -> then the width of this first element will decrease to 
+                            accommodate it 
+
+            Adding a green animation to that div  
+              What the transition effect used was, functionally   
+                -> the width of the left most (first) element in the html for each of these cards was automatically determined 
+                  -> so when we transition the green boxes with the icons in -> the width of of the left most box decreases to accommodate it 
+                    -> so they're all fitting into the same div 
+                  -> this transition is triggered for the hover state of the entire div (around all three of them)
+                    -> the width of that div remains the same 
+
+              This was done with a transition not a keyframe 
+                -> two methods of adding in animations were listed on the OpenClassrooms platform -> keyframes and transitions 
+                -> transitions were used for the green tick animations on the choice cards 
+                -> transitions are used whenever there is a trigger event for that animation, and with keyframes a lot of the time the user 
+                    interacting with the element doesn't trigger the animation 
+                  -> the trigger event for an animation created using keyframes is often less involved with the user (e.g, a page reload)
+                  -> compare this to an animation created using transitions <- the hover state of the entire choice card for this is (in this 
+                      case) the trigger event 
+                -> the width of the entire choice card is always the same 
+                  -> the trigger event is when the mouse hovers anywhere over that choice card
+                  -> so we have two states <- the entire choice card is being hovered over, or it's not being hovered over 
+                  -> we are transitioning the green icon under either of those conditions 
+                  -> we are adding in a transition to get from the first state to the second, and then another to get from the second state to the 
+                      first 
+
+              The right margins of the green tick element are being transitioned  
+                -> the element being transitioned was placed in a div
+                -> we are transitioning the margins of that element, during the hover state of the entire choice card 
+                -> that element is given negative right margins -> which move it out the right of the choice card
+                -> in the hover state for the entire choice card, the right margins of this element are being transitioned to 0 
+                -> in other words -> it's being transitioned from out the right of the card, to be in it 
+                -> we are transitioning the right margins of that element 
+                -> when they transition to 0, the entire green div fits into the choice card 
+                  -> the reduction in space which is given by transiting the entire green div back into the choice card (and not off the right of 
+                      it) gets taken out of the left most element in that choice card -> chose with was set to auto 
+                  -> in other words -> in this case transitioning in the green div onto that choice card won't result in an overall change in the 
+                      width of the choice card
+                    -> the green div was placed off the right of the choice card to begin with 
+                    -> and then when it's added in there is an automatic reduction in width of the first element in that choice card 
+                    -> so overall the width of the entire card stays the same
+                -> in other words, when the entire choice card is in its hover state -> then we are transitioning the right margins of the green 
+                    div to 0 
+                  -> this way the green div now fits into the choice card
+                  -> in its normal state, we give this div negative margins, in order to transition it off of the right of the choice card completely 
+                  -> and then when the entire choice card is in the hover state -> we transition the right margin of the green div back to 0, so the 
+                      entire thing fits onto one page  
+              -->
+            
             <div class="choice__card__check">
               <i class="fas fa-lg fa-circle-check"></i>
             </div>
 
-              <!-- COMMENTS FOR THE MINT RECTANGLES <- THIS NEEDS STRUCTUING, MORE ADDING TO IT (FOR THE CLASSES) AND SPELL CHECKING
-              -> how a little rectangle with the mint animation was done 
-                -> we haven't actually written anything out for it <- but we've looked at it 
-
-                -> the margins et al in the two elements which were flexed into a column 
-                -> then the animation for the green one to the RHS 
-                  -> either its a transition or a keyframe <- would guess transition, because it's triggered by a user interaction (the hover state)
-                  -> take apart the html of that element <- it's been placed in the same div
-                    -> how was the width of that div done
-                    -> targeting the hover state of that entire div 
-                    -> transitioning the width of the right most element -> for the hover state of the entire div which it's contained in 
-                -> we are transitioning the margins of that element 
-                -> the width of the left most (first) element in the html for each of these cards was automatically determined 
-                -> so when we transition the green boxes with the icons in -> the width of of the left most box decreases to accommodate it 
-                  -> so they're all fitting into the same div 
-                -> this transition is triggered for the hover state of the entire div (around all three of them)
-                  -> the width of that div remains the same 
-                -> the green box which is being transitioned in is a font awesome tick icon 
-                  -> this was placed inside a div <-- this div formats the icon to be in the centre of a green box 
-                  -> the right margin of that div is also negative
-                    -> the value of that margin equals the width of the green container for the icon 
-                    -> that green icon is on the right hand side of the containing div which it's being placed in 
-                    -> so giving its right margin a negative value moves it out of the box 
-                    -> in other words, the green div has been placed to the right of the containing div, and then been given negative margins in order 
-                      to shift it out of that box 
-                      -> the amount it's been shifted out by those negative margins is the same as its width -> so the entire thing disappears out of the 
-                        larger containing div which it's in 
-                    -> this is the value of that margin -> when the larger div which contains all three of those items isn't being hovered over 
-                      -> the green div is there, it's just been moved out of the div which contains it so it's invisible 
-                      -> and the left-most (first) element in that containing div has a width which is set to auto 
-                      -> so if an element is transitioned into that entire div -> then the width of this first element will decrease to accommodate it 
-                -> the width of the div which contains all three elements doesn't change when it's being hovered over 
-                  -> it's width is fixed
-                  -> when the div which contains all three of those elements is in its hover state -> then the right-most element is being transitioned 
-                      in (i.e, the icon surrounded by the green container)
-                  -> in other words, anywhere over this entire div can be hovered over -> then this transition is triggered for the right margin of the green 
-                      div 
-                  -> when the green div of that element has a margin which is equal to zero -> this is when that element is visible on the page
-                  -> when the margin of that green containing div is negative -> this is its default state -> which transitions it off of the page 
-                  -> so when the larger containing div is hovered over -> this is when the margins of the green div which contains the icon is transitioned 
-                      to be 0 
-                    -> in other words -> it's no longer being pushed out of the larger div which contains it 
-                    -> so we have the hover state for the larger containing div which is around all three elements for that section 
-                    -> when that is in its hover state -> then we are transitioning the right margin of the green div to be 0 -->
-
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           <!-- THE OTHER TWO CHOICE CARDS IN THE STARTERS BLOCK -->
           <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
