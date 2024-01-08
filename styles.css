@@ -189,17 +189,22 @@ li {
 .subtile_card p {
   font-size: 17px;
   font-weight: 300;
+  margin-top: 10px;
 }
 
 .new {
   color: #008766;
   background-color: #99E2D0;
   border: 5px solid #99E2D0;
-  border-radius: 5px;
+  border-radius: 2px;
   position: absolute;
   right: 5%;
   top: 5%;
-  width: 50px;
+  width: 80px;
+  height: 24px;
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
 }
 
 .subtile_card {
