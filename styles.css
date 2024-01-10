@@ -492,18 +492,17 @@ footer a {
   position: fixed;
   display: grid;
   place-items: center;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: radial-gradient(circle, #9356DC, #99E2D0);  
   height: 100vh;
   inset: 0;
   z-index: 1;
-  opacity: 0.9;
-  animation: disappear 0.3s 3.5s forwards;
+  animation: go-away 0s 3.5s forwards;
 }
 
 .word {
   display: inline-block;
-  font-size: 48px;
-  color: yellow;
+  font-size: 80px;
+  color: #FF79DA;
   text-shadow: 3px 3px 3px black;
   font-family: shrikhand;
 }
@@ -545,17 +544,15 @@ footer a {
   animation-delay: 1.4s;
 }
 
-@keyframes disappear {
+@keyframes go-away {
   0% {
-    transform: scale(1);
+    opacity: 1;
+    z-index: -1;
+  
   }
   100% {
-    transform: scale(0);
-  }
-}
-@keyframes spin {
-  to {
-    transform: rotateY(360deg);
+    opacity: 0;
+    z-index: -1;
   }
 }
 
