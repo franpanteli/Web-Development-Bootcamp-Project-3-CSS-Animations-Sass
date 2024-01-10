@@ -151,9 +151,10 @@ The full contents of my notes from this bootcamp is below
 - [8ii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8ii%20Create%20Modern%20CSS%20Animations.pdf)
 - [8iii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iii%20Create%20Modern%20CSS%20Animations.pdf)
 - [8iv Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iv%20Create%20Modern%20CSS%20Animations.pdf)
+
 <h3>Raw project file tree </h3>
+
 <p>The file tree for this project is below and was included as an extension to the project. The second project in the bootcamp included basic starter files, although this did not. This was the solution for the file tree which was devised for this project. This was produced by studying the course material and project milestone guide. This was a more complex problem to solve for this project, given that it introduced Sass and versioning with git in tandem here.</p>
-## Directory Structure
 
 ```plaintext
 ├── Bootcamp Course Notes by Fran_Panteli
