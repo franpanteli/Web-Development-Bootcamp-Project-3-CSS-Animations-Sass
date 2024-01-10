@@ -32,7 +32,7 @@
 - [8iii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iii%20Create%20Modern%20CSS%20Animations.pdf)
 - [8iv Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iv%20Create%20Modern%20CSS%20Animations.pdf)
 
-<h3>For loader</h3>
+<h3>For the Loader</h3>
 <p> This contains a list of resources for reference which was provided during a live session incluced as part of the bootcamp. It was suggested to refer to these resources when adding in the laoder for the homepage of the phmyfood website (in the index.html file for the project)</p>
 <ul>
   <li> https://loading.io/css/ <- for loaders with html and CSS which can be used</li>
