@@ -1,8 +1,9 @@
-<h1>MOST URGENT PROBLEMS</h1>
+<h1>MOST URGENT PROBLEMS
   <ul>
     <li>THE LOADER IS COMPLTETE SHIT</li>
     <li>THE GREEN TICKS TAKE WAY TOO LONG, THEY'RE NOT SNAPPY ENOUGH</li>
   </ul>
+</h1>
   
 <h1> Project 3 - ohmyfood </h1>
 <h3>Abstract</h3>
