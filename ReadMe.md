@@ -33,23 +33,19 @@
 
 <h3>Project File Tree (Extension)</h3>
 
-<p>The file tree for this project is below and was included as an extension to the project. The second project in the bootcamp included basic starter files, although this did not. This was the solution for the file tree which was devised for this project. This was produced by studying the course material and project milestone guide. This was a more complex problem to solve for this project, given that it introduced Sass and versioning with git in tandem here.</p>
-
-<p>The file tree for this project is below and was included as an extension to the project. The second project in the bootcamp included basic starter files, although this did not. This was the solution for the file tree which was devised for this project. This was produced by studying the course material and project milestone guide. This was a more complex problem to solve for this project, given that it introduced Sass and versioning with git in tandem here.</p>
-
-<p>This is the same project file tree, in more depth. These annotations explain what each section does and the thought processes behind structuring the project using this approach.</p>
+<p>The file tree for this project is below and was included as an extension to the project. The file tree for the second project was included in its starter files, although this was not the case for this project. This file tree was produced by studying the course material and project milestone guide. This was a more complex problem to solve, given that this project introduced Sass, versioning with GitHub and had five html pages in comparison to the second project which had one. This tree is annotated with the thought processes used to structure it.</p>
 
 ```plaintext
 ├── Bootcamp Course Notes by Fran_Panteli <- a directory of my notes on the bootcamp course material covered on the OpenClassrooms platform
-│   ├── 1 Set Up Your Front-End Development Environment.pdf <- courses in the first bootcamp project (Riding Cities)
+│   ├── 1 Set Up Your Front-End Development Environment.pdf <- courses for the first bootcamp project (Riding Cities)
 │   ├── 2 Build Your First Web Pages With HTML and CSS.pdf
 │   ├── 3 Design a Mock-up for Web Development With Figma.pdf
 │   ├── 4i Create Web Page Layouts With CSS.pdf 
 │   ├── 4ii Create Web Page Layouts With CSS.pdf
-│   ├── 5i Break Down and Integrate a Mockup.pdf <- courses in the second bootcamp project (Booki)
+│   ├── 5i Break Down and Integrate a Mockup.pdf <- courses for the second bootcamp project (Booki)
 │   ├── 5ii Break Down and Integrate a Mockup.pdf
 │   ├── 5iii Break Down and Integrate a Mockup.pdf
-│   ├── 6 Manage Your Code Project With Git and GitHub.pdf <- courses in the third bootcamp project (ohmyfood)
+│   ├── 6 Manage Your Code Project With Git and GitHub.pdf <- courses for the third bootcamp project (ohmyfood)
 │   ├── 7i Produce Maintainable CSS With Sass.pdf
 │   ├── 7ii Produce Maintainable CSS With Sass.pdf
 │   ├── 7iii Produce Maintainable CSS With Sass.pdf
@@ -58,7 +54,7 @@
 │   ├── 8iii Create Modern CSS Animations.pdf
 │   └── 8iv Create Modern CSS Animations.pdf
 ├── ReadMe.md <- this ReadMe file, produced in the GitHub MEditor.md UI
-├── assets <- images for the project, these files were provided on the OpenClassrooms platform and renamed here based on their contents
+├── assets <- images for the project, these files were provided on the OpenClassrooms platform and renamed based on their contents
 │   └── images
 │       └── restaurants
 │           ├── circle-dish-with-hand.jpg
@@ -66,11 +62,10 @@
 │           ├── circle-from-the-side-dish.jpg
 │           └── rectangle-dish.jpg
 ├── index.html <- this contains the html for the project homepage. This has in-depth comments which explain the thought processes and problem-solving approaches used to produce this
-├── main.css.map <- files produced from compiling the Sass partials into CSS
 ├── main.scss <- this imports the Sass partials into the main Sass file, importing them in the order listed in the course notes for the project
 ├── restaurants <- there are four restaurant pages and a main homepage for the project. Each of these restaurant pages is an html file in this directory, and each is named after the restaurant it represents
 │   ├── Elderflower.html
-│   ├── Kitchen-West-template-menu.html <- this was used as the template for the other four menu pages. There were four menu pages and a homepage. This contains in depth comments explaing the thought processes and approaches used to produce these menu pages
+│   ├── Kitchen-West-template-menu.html <- this was used as the template for the other four menu pages. There were four menu pages and a homepage. This contains in depth comments explaining the thought processes and approaches used to produce these menu pages
 │   ├── Shoreditch-Canteen.html
 │   ├── The–Bay-Leaf.html
 ├── sass <- this is the file which contains the partials for the Sass. These partials are structured according to the 7:1 file structure explored in the course material found in my notes from parts 7i to 7iii of the course
@@ -88,5 +83,5 @@
 │       ├── _keyframes.scss
 │       ├── _mixins.scss
 │       └── _variables.scss
-├── styles.css <- this file contains the compiled css. All five of the html pages for the project link back to this same. This was produced by from compiling the Sass using the terminal functionality in VSCode
-└── styles.css.map <- file contains the compiled CSS. All five of the html pages for the project link back to this same fuke. This was produced by compiling the Sass using the terminal functionality in VSCode
+├── styles.css <- this file contains the compiled css. All five of the html pages for the project link back to this same file. This was produced by compiling the Sass using the terminal functionality in VSCode
+└── styles.css.map <- this is a file which was produced when compiling the Sass partials into CSS
