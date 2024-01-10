@@ -8,7 +8,7 @@
 <p>I normally deploy my projects using Netlify and had initially deployed the project using this platform. Since the project milestone guide suggests using GitHub Pages to deploy the project, this has project has been deployed twice for the sake of practice. The links to these two deployments are below, although GitHub Pages is suggested as the preferred method as part of this training course. 
 <ul>
   <li>Netlify: fran-web-dev-bootcamp-project-3.netlify.app </li>
-  <li>https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-Menu-Website/</li>
+  <li>GitHub Pages: https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-Menu-Website/</li>
 </ul>
   
 <h3>Web Development Bootcamp Notes (Extension)</h3>
