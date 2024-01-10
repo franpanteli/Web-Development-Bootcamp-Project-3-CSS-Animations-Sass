@@ -5,16 +5,6 @@
 </p>
 
 
-<h3>Web development bootcamp notes (extension)</h3>
-<p>Three new courses were covered as part of this project. These are detailed below and were provided on the OpenClassrooms platform to develop Sass, versioning and animation skills with CSS.Their contents are described below</p>
-<ul>
-  <li><strong>Manage Your Code Project With Git and GitHub </strong> - the first course was a 6-hour long course on Git and GitHub. This was taught by Max Wardeh and covered Git commands, branching systems, using Git Reset and troubleshooting</li>
-  <li><strong>Produce Maintainable CSS With Sass</strong> - the second was a 15-hour long course which included 7-1 file patterning, BEM selectors, specificity, CSS Preprocessors, Sass variables / extensions / functions, mixins, conditionals, advanced Sass data types, loops, breakpoints, and Autoprefixer. This course was produced by Pat Gerke</li>
-
-  <li><strong>Create Modern CSS Animations</strong> - this was a 15-hour-long course covering CSS transitions / transformations, the 12 principles of animation, timing functions, opacity, anchor points using transform-origin, Chrome DevTools, CSS keyframes and Chrome's Animation tool. This course was also produced by Pat Gerke</li>
-</ul> 
-The full contents of my notes from this bootcamp is below 
-
 
 
 <h3>Raw project file tree </h3>
@@ -104,7 +94,7 @@ The full contents of my notes from this bootcamp is below
 ├── main.scss  *<u> <- this imports the Sass partials into the main Sass file, importing them in the order listed in the course notes for the project </u>*
 ├── restaurants *<u> <- there are four restaurant pages and a main homepage for the project. Each of these restaurant pages is an html file in this directory, and each is named after the restaurant it represents </u>*
 │   ├── Elderflower.html
-│   ├── Kitchen-West-template-menu.html  *<u> <- this was used as the template for the other four menu pages. There were four menu pages and a homepage. This contains in depth comments explaing the thought proccesses and approaches used to produce these menu pages</u>*
+│   ├── Kitchen-West-template-menu.html  *<u> <- this was used as the template for the other four menu pages. There were four menu pages and a homepage. This contains in depth comments explaing the thought processes and approaches used to produce these menu pages</u>*
 │   ├── Shoreditch-Canteen.html
 │   ├── The–Bay-Leaf.html
 ├── sass *<u> <- this is the file which contains the partials for the Sass. These partials are structured according to the 7:1 file structure explored in the course material found in my notes from parts 7i to 7iii of the course</u>*
@@ -135,8 +125,17 @@ The full contents of my notes from this bootcamp is below
 
 
 ## Directory Structure
+<h3>Web development bootcamp notes (extension)</h3>
+<p>Three new courses were covered as part of this project. These are detailed below and were provided on the OpenClassrooms platform to develop Sass, versioning and animation skills with CSS.Their contents are described below</p>
+<ul>
+  <li><strong>Manage Your Code Project With Git and GitHub </strong> - the first course was a 6-hour long course on Git and GitHub. This was taught by Max Wardeh and covered Git commands, branching systems, using Git Reset and troubleshooting</li>
+  <li><strong>Produce Maintainable CSS With Sass</strong> - the second was a 15-hour long course which included 7-1 file patterning, BEM selectors, specificity, CSS Preprocessors, Sass variables / extensions / functions, mixins, conditionals, advanced Sass data types, loops, breakpoints, and Autoprefixer. This course was produced by Pat Gerke</li>
 
-```plaintext
+  <li><strong>Create Modern CSS Animations</strong> - this was a 15-hour-long course covering CSS transitions / transformations, the 12 principles of animation, timing functions, opacity, anchor points using transform-origin, Chrome DevTools, CSS keyframes and Chrome's Animation tool. This course was also produced by Pat Gerke</li>
+</ul> 
+The full contents of my notes from this bootcamp is below 
+# Bootcamp Course Notes by Fran_Panteli
+
 - [1 Set Up Your Front-End Development Environment.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/1%20Set%20Up%20Your%20Front-End%20Development%20Environment.pdf)
 - [2 Build Your First Web Pages With HTML and CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/2%20Build%20Your%20First%20Web%20Pages%20With%20HTML%20and%20CSS.pdf)
 - [3 Design a Mock-up for Web Development With Figma.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/3%20Design%20a%20Mock-up%20for%20Web%20Development%20With%20Figma.pdf)
@@ -154,6 +153,9 @@ The full contents of my notes from this bootcamp is below
 - [8iii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iii%20Create%20Modern%20CSS%20Animations.pdf)
 - [8iv Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iv%20Create%20Modern%20CSS%20Animations.pdf)
 
+## Directory Structure
+
+```plaintext
 ├── Bootcamp Course Notes by Fran_Panteli
 │   ├── 1 Set Up Your Front-End Development Environment.pdf
 │   ├── 2 Build Your First Web Pages With HTML and CSS.pdf
@@ -204,5 +206,6 @@ The full contents of my notes from this bootcamp is below
 │       └── _variables.scss
 ├── styles.css
 └── styles.css.map
+
 
 
