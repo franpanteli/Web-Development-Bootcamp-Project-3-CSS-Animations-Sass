@@ -121,3 +121,81 @@
 └── styles.css.map *<u> <- file contains the compiled CSS. All five of the html pages for the project link back to this same fuke. This was produced by compiling the Sass using the terminal functionality in VSCode</u>*
 </p>
 
+
+
+
+
+# Bootcamp Course Notes by Fran_Panteli
+
+- [1 Set Up Your Front-End Development Environment.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/1%20Set%20Up%20Your%20Front-End%20Development%20Environment.pdf)
+- [2 Build Your First Web Pages With HTML and CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/2%20Build%20Your%20First%20Web%20Pages%20With%20HTML%20and%20CSS.pdf)
+- [3 Design a Mock-up for Web Development With Figma.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/3%20Design%20a%20Mock-up%20for%20Web%20Development%20With%20Figma.pdf)
+- [4i Create Web Page Layouts With CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/4i%20Create%20Web%20Page%20Layouts%20With%20CSS.pdf)
+- [4ii Create Web Page Layouts With CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/4ii%20Create%20Web%20Page%20Layouts%20With%20CSS.pdf)
+- [5i Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5i%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [5ii Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5ii%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [5iii Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5iii%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [6 Manage Your Code Project With Git and GitHub.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/6%20Manage%20Your%20Code%20Project%20With%20Git%20and%20GitHub.pdf)
+- [7i Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7i%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [7ii Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7ii%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [7iii Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7iii%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [8i Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8i%20Create%20Modern%20CSS%20Animations.pdf)
+- [8ii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8ii%20Create%20Modern%20CSS%20Animations.pdf)
+- [8iii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iii%20Create%20Modern%20CSS%20Animations.pdf)
+- [8iv Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iv%20Create%20Modern%20CSS%20Animations.pdf)
+
+## Directory Structure
+
+```plaintext
+├── Bootcamp Course Notes by Fran_Panteli
+│   ├── 1 Set Up Your Front-End Development Environment.pdf
+│   ├── 2 Build Your First Web Pages With HTML and CSS.pdf
+│   ├── 3 Design a Mock-up for Web Development With Figma.pdf
+│   ├── 4i Create Web Page Layouts With CSS.pdf
+│   ├── 4ii Create Web Page Layouts With CSS.pdf
+│   ├── 5i Break Down and Integrate a Mockup.pdf
+│   ├── 5ii Break Down and Integrate a Mockup.pdf
+│   ├── 5iii Break Down and Integrate a Mockup.pdf
+│   ├── 6 Manage Your Code Project With Git and GitHub.pdf
+│   ├── 7i Produce Maintainable CSS With Sass.pdf
+│   ├── 7ii Produce Maintainable CSS With Sass.pdf
+│   ├── 7iii Produce Maintainable CSS With Sass.pdf
+│   ├── 8i Create Modern CSS Animations.pdf
+│   ├── 8ii Create Modern CSS Animations.pdf
+│   ├── 8iii Create Modern CSS Animations.pdf
+│   └── 8iv Create Modern CSS Animations.pdf
+├── ReadMe.md
+├── assets
+│   └── images
+│       └── restaurants
+│           ├── circle-dish-with-hand.jpg
+│           ├── circle-from-above-dish.jpg
+│           ├── circle-from-the-side-dish.jpg
+│           └── rectangle-dish.jpg
+├── index.html
+├── main.css.map
+├── main.scss
+├── restaurants
+│   ├── Elderflower.html
+│   ├── Kitchen-West-template-menu.html
+│   ├── Shoreditch-Canteen.html
+│   └── The–Bay-Leaf.html
+├── sass
+│   ├── base
+│   │   └── _root.scss
+│   ├── components
+│   │   ├── _more_potential_animation_files.scss
+│   │   └── _restaurant_cards.scss
+│   ├── layouts
+│   │   ├── _footer.scss
+│   │   ├── _header.scss
+│   │   ├── _loading_animations.scss
+│   │   └── _pages.scss
+│   └── utils
+│       ├── _keyframes.scss
+│       ├── _mixins.scss
+│       └── _variables.scss
+├── styles.css
+└── styles.css.map
+
+
