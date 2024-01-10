@@ -4,14 +4,33 @@
 <p>'ohmyfood' is the third web development project I completed during this bootcamp. This was produced to integrate Sass animations with the HTML and CSS skills acquired from the previous project. The primary aim of this was to develop these skills by completing the course material and to apply them by producing a webpage for a gourmet restaurant app with various animations created using CSS (Sass). This project was versioned using GitHub and was created by converting the mockup of the webpage into a mobile-first web application. This mockup was provided in Figma and problem-solving sessions were conducted for this project during mentoring sessions and webinars included as part of the bootcamp. This was finally assessed in a 15-minute oral presentation conducted on the OpenClassrooms platform. </p>
 </p>
 
-<ul>
+
 <h3>Web development bootcamp notes (extension)</h3>
-<p>Three new courses were covered as part of this project. These are detailed below and were provided on the OpenClassrooms platform to develop Sass, versioning and animation skills with CSS. I produced in depth notes on these which are included in this repository. Their contents are described below</p>
+<p>Three new courses were covered as part of this project. These are detailed below and were provided on the OpenClassrooms platform to develop Sass, versioning and animation skills with CSS.Their contents are described below</p>
+<ul>
   <li><strong>Manage Your Code Project With Git and GitHub </strong> - the first course was a 6-hour long course on Git and GitHub. This was taught by Max Wardeh and covered Git commands, branching systems, using Git Reset and troubleshooting</li>
   <li><strong>Produce Maintainable CSS With Sass</strong> - the second was a 15-hour long course which included 7-1 file patterning, BEM selectors, specificity, CSS Preprocessors, Sass variables / extensions / functions, mixins, conditionals, advanced Sass data types, loops, breakpoints, and Autoprefixer. This course was produced by Pat Gerke</li>
 
   <li><strong>Create Modern CSS Animations</strong> - this was a 15-hour-long course covering CSS transitions / transformations, the 12 principles of animation, timing functions, opacity, anchor points using transform-origin, Chrome DevTools, CSS keyframes and Chrome's Animation tool. This course was also produced by Pat Gerke</li>
-  </ul> 
+</ul> 
+The full contents of my notes from this bootcamp is below 
+- [1 Set Up Your Front-End Development Environment.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/1%20Set%20Up%20Your%20Front-End%20Development%20Environment.pdf)
+- [2 Build Your First Web Pages With HTML and CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/2%20Build%20Your%20First%20Web%20Pages%20With%20HTML%20and%20CSS.pdf)
+- [3 Design a Mock-up for Web Development With Figma.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/3%20Design%20a%20Mock-up%20for%20Web%20Development%20With%20Figma.pdf)
+- [4i Create Web Page Layouts With CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/4i%20Create%20Web%20Page%20Layouts%20With%20CSS.pdf)
+- [4ii Create Web Page Layouts With CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/4ii%20Create%20Web%20Page%20Layouts%20With%20CSS.pdf)
+- [5i Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5i%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [5ii Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5ii%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [5iii Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5iii%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [6 Manage Your Code Project With Git and GitHub.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/6%20Manage%20Your%20Code%20Project%20With%20Git%20and%20GitHub.pdf)
+- [7i Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7i%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [7ii Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7ii%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [7iii Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7iii%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [8i Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8i%20Create%20Modern%20CSS%20Animations.pdf)
+- [8ii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8ii%20Create%20Modern%20CSS%20Animations.pdf)
+- [8iii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iii%20Create%20Modern%20CSS%20Animations.pdf)
+- [8iv Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iv%20Create%20Modern%20CSS%20Animations.pdf)
+
 <h3>Raw project file tree </h3>
 <p>The file tree for this project is below and was included as an extension to the project. The second project in the bootcamp included basic starter files, although this did not. This was the solution for the file tree which was devised for this project. This was produced by studying the course material and project milestone guide. This was a more complex problem to solve for this project, given that it introduced Sass and versioning with git in tandem here.</p>
 <p>
@@ -127,22 +146,7 @@
 
 # Bootcamp Course Notes by Fran_Panteli
 
-- [1 Set Up Your Front-End Development Environment.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/1%20Set%20Up%20Your%20Front-End%20Development%20Environment.pdf)
-- [2 Build Your First Web Pages With HTML and CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/2%20Build%20Your%20First%20Web%20Pages%20With%20HTML%20and%20CSS.pdf)
-- [3 Design a Mock-up for Web Development With Figma.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/3%20Design%20a%20Mock-up%20for%20Web%20Development%20With%20Figma.pdf)
-- [4i Create Web Page Layouts With CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/4i%20Create%20Web%20Page%20Layouts%20With%20CSS.pdf)
-- [4ii Create Web Page Layouts With CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/4ii%20Create%20Web%20Page%20Layouts%20With%20CSS.pdf)
-- [5i Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5i%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
-- [5ii Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5ii%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
-- [5iii Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5iii%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
-- [6 Manage Your Code Project With Git and GitHub.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/6%20Manage%20Your%20Code%20Project%20With%20Git%20and%20GitHub.pdf)
-- [7i Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7i%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
-- [7ii Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7ii%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
-- [7iii Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7iii%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
-- [8i Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8i%20Create%20Modern%20CSS%20Animations.pdf)
-- [8ii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8ii%20Create%20Modern%20CSS%20Animations.pdf)
-- [8iii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iii%20Create%20Modern%20CSS%20Animations.pdf)
-- [8iv Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iv%20Create%20Modern%20CSS%20Animations.pdf)
+
 
 ## Directory Structure
 
