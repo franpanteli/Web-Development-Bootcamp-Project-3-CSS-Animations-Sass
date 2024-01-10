@@ -208,5 +208,61 @@ The full contents of my notes from this bootcamp is below
 ├── styles.css
 └── styles.css.map
 
+<h3>Raw project file tree </h3>
+
+<p>The file tree for this project is below and was included as an extension to the project. The second project in the bootcamp included basic starter files, although this did not. This was the solution for the file tree which was devised for this project. This was produced by studying the course material and project milestone guide. This was a more complex problem to solve for this project, given that it introduced Sass and versioning with git in tandem here.</p>
+
+```plaintext
+├── Bootcamp Course Notes by Fran_Panteli
+│   ├── 1 Set Up Your Front-End Development Environment.pdf
+│   ├── 2 Build Your First Web Pages With HTML and CSS.pdf
+│   ├── 3 Design a Mock-up for Web Development With Figma.pdf
+│   ├── 4i Create Web Page Layouts With CSS.pdf
+│   ├── 4ii Create Web Page Layouts With CSS.pdf
+│   ├── 5i Break Down and Integrate a Mockup.pdf
+│   ├── 5ii Break Down and Integrate a Mockup.pdf
+│   ├── 5iii Break Down and Integrate a Mockup.pdf
+│   ├── 6 Manage Your Code Project With Git and GitHub.pdf
+│   ├── 7i Produce Maintainable CSS With Sass.pdf
+│   ├── 7ii Produce Maintainable CSS With Sass.pdf
+│   ├── 7iii Produce Maintainable CSS With Sass.pdf
+│   ├── 8i Create Modern CSS Animations.pdf
+│   ├── 8ii Create Modern CSS Animations.pdf
+│   ├── 8iii Create Modern CSS Animations.pdf
+│   └── 8iv Create Modern CSS Animations.pdf
+├── ReadMe.md
+├── assets
+│   └── images
+│       └── restaurants
+│           ├── circle-dish-with-hand.jpg
+│           ├── circle-from-above-dish.jpg
+│           ├── circle-from-the-side-dish.jpg
+│           └── rectangle-dish.jpg
+├── index.html
+├── main.css.map
+├── main.scss
+├── restaurants
+│   ├── Elderflower.html
+│   ├── Kitchen-West-template-menu.html
+│   ├── Shoreditch-Canteen.html
+│   └── The–Bay-Leaf.html
+├── sass
+│   ├── base
+│   │   └── _root.scss
+│   ├── components
+│   │   ├── _more_potential_animation_files.scss
+│   │   └── _restaurant_cards.scss
+│   ├── layouts
+│   │   ├── _footer.scss
+│   │   ├── _header.scss
+│   │   ├── _loading_animations.scss
+│   │   └── _pages.scss
+│   └── utils
+│       ├── _keyframes.scss
+│       ├── _mixins.scss
+│       └── _variables.scss
+├── styles.css
+└── styles.css.map
+
 
 
