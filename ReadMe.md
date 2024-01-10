@@ -1,5 +1,6 @@
 <h1><DO GITHUB PAGES, LOADER/h1>
-<h1>fran-web-dev-bootcamp-project-3.netlify.app </h1>
+<h1>Netlify: fran-web-dev-bootcamp-project-3.netlify.app </h1>
+<h1>GitHub Pages: https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-Menu-Website/</h1>
 <h2> Project 3 - ohmyfood </h2>
 <h3>Abstract</h3>
 <p>'ohmyfood' is the third web development project I completed during the twelve-week AMSxOpenClassrooms web development skills bootcamp. This was produced to integrate Sass animations with the HTML and CSS skills acquired from the previous project. The primary aim of this was to develop these skills by completing the course material and to apply them by producing a webpage for a gourmet restaurant app, with various animations created using CSS (Sass). This project was versioned using GitHub and was created by converting the mockup of the webpage into a mobile-first web application. This mockup was provided in Figma and problem solving sessions were conducted for this project during mentoring sessions and webinars included as part of the bootcamp. This was finally assessed in a 15-minute oral presentation conducted on the OpenClassrooms platform. </p>
