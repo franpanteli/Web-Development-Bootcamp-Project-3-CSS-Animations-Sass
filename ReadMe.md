@@ -266,16 +266,16 @@ The full contents of my notes from this bootcamp is below
 
 
 
-├── Bootcamp Course Notes by Fran_Panteli  *<u> <- a directory of my notes on the bootcamp course material covered on the OpenClassrooms platform</u>*
-│   ├── 1 Set Up Your Front-End Development Environment.pdf  *<u> <- courses in the first bootcamp project (Riding Cities)</u>*
+├── Bootcamp Course Notes by Fran_Panteli <- a directory of my notes on the bootcamp course material covered on the OpenClassrooms platform
+│   ├── 1 Set Up Your Front-End Development Environment.pdf <- courses in the first bootcamp project (Riding Cities)
 │   ├── 2 Build Your First Web Pages With HTML and CSS.pdf
 │   ├── 3 Design a Mock-up for Web Development With Figma.pdf
 │   ├── 4i Create Web Page Layouts With CSS.pdf 
 │   ├── 4ii Create Web Page Layouts With CSS.pdf
-│   ├── 5i Break Down and Integrate a Mockup.pdf  *<u> <- courses in the second bootcamp project (Booki)</u>*
+│   ├── 5i Break Down and Integrate a Mockup.pdf <- courses in the second bootcamp project (Booki)
 │   ├── 5ii Break Down and Integrate a Mockup.pdf
 │   ├── 5iii Break Down and Integrate a Mockup.pdf
-│   ├── 6 Manage Your Code Project With Git and GitHub.pdf *<u> <- courses in the third bootcamp project (ohmyfood)</u>*
+│   ├── 6 Manage Your Code Project With Git and GitHub.pdf <- courses in the third bootcamp project (ohmyfood)
 │   ├── 7i Produce Maintainable CSS With Sass.pdf
 │   ├── 7ii Produce Maintainable CSS With Sass.pdf
 │   ├── 7iii Produce Maintainable CSS With Sass.pdf
@@ -283,39 +283,36 @@ The full contents of my notes from this bootcamp is below
 │   ├── 8ii Create Modern CSS Animations.pdf
 │   ├── 8iii Create Modern CSS Animations.pdf
 │   └── 8iv Create Modern CSS Animations.pdf
-├── ReadMe.md *<u> <- this ReadMe file, produced in the GitHub MEditor.md UI</u>*
-├── assets *<u> <- images for the project, these files were provided on the OpenClassrooms platform and renamed here based on their contents</u>*
+├── ReadMe.md <- this ReadMe file, produced in the GitHub MEditor.md UI
+├── assets <- images for the project, these files were provided on the OpenClassrooms platform and renamed here based on their contents
 │   └── images
 │       └── restaurants
 │           ├── circle-dish-with-hand.jpg
 │           ├── circle-from-above-dish.jpg
 │           ├── circle-from-the-side-dish.jpg
 │           └── rectangle-dish.jpg
-├── index.html *<u> <- this contains the html for the project homepage. This has in-depth comments which explain the thought processes and problem-solving approaches used to produce this</u>*
-├── main.css.map  *<u> <- files produced from compiling the Sass partials into CSS</u>*
-├── main.scss  *<u> <- this imports the Sass partials into the main Sass file, importing them in the order listed in the course notes for the project </u>*
-├── restaurants *<u> <- there are four restaurant pages and a main homepage for the project. Each of these restaurant pages is an html file in this directory, and each is named after the restaurant it represents </u>*
+├── index.html <- this contains the html for the project homepage. This has in-depth comments which explain the thought processes and problem-solving approaches used to produce this
+├── main.css.map <- files produced from compiling the Sass partials into CSS
+├── main.scss <- this imports the Sass partials into the main Sass file, importing them in the order listed in the course notes for the project
+├── restaurants <- there are four restaurant pages and a main homepage for the project. Each of these restaurant pages is an html file in this directory, and each is named after the restaurant it represents
 │   ├── Elderflower.html
-│   ├── Kitchen-West-template-menu.html  *<u> <- this was used as the template for the other four menu pages. There were four menu pages and a homepage. This contains in depth comments explaing the thought processes and approaches used to produce these menu pages</u>*
+│   ├── Kitchen-West-template-menu.html <- this was used as the template for the other four menu pages. There were four menu pages and a homepage. This contains in depth comments explaing the thought processes and approaches used to produce these menu pages
 │   ├── Shoreditch-Canteen.html
 │   ├── The–Bay-Leaf.html
-├── sass *<u> <- this is the file which contains the partials for the Sass. These partials are structured according to the 7:1 file structure explored in the course material found in my notes from parts 7i to 7iii of the course</u>*
-│   ├── base *<u> <- this contains the files that define the foundation of the site, such as the typography etc which are applied site-wide (all of the html files in the webpage have these in common)</u>*
+├── sass *<u> <- this is the file which contains the partials for the Sass. These partials are structured according to the 7:1 file structure explored in the course material found in my notes from parts 7i to 7iii of the course
+│   ├── base <- this contains the files that define the foundation of the site, such as the typography etc which are applied site-wide (all of the html files in the webpage have these in common)
 │   │   └── _root.scss
-│   ├── components *<u> <- this is where Sass for BEM blocks that are more self-contained is stored -> such as Sass for buttons</u>*
+│   ├── components <- this is where Sass for BEM blocks that are more self-contained is stored -> such as Sass for buttons
 │   │   ├── _more_potential_animation_files.scss
 │   │   └── _restaurant_cards.scss
-│   ├── layouts *<u> <- is where BEM blocks which contain reusable elements for the webpage are stored -> e.g a form or header for large layouts</u>*
+│   ├── layouts <- is where BEM blocks which contain reusable elements for the webpage are stored -> e.g a form or header for large layouts
 │   │   ├── _footer.scss
 │   │   ├── _header.scss
 │   │   ├── _loading_animations.scss
 │   │   └── _pages.scss
-│   └── utils *<u> <- this is where variables, functions, mixins, and %placeholders for extensions are stored, if used. The order of @imports for the files this directory contains in comparison to the one the main directory contains has to be -> variables, functions, mixins, placeholders</u>*
+│   └── utils <- this is where variables, functions, mixins, and %placeholders for extensions are stored, if used. The order of @imports for the files this directory contains in comparison to the one the main directory contains has to be -> variables, functions, mixins, placeholders
 │       ├── _keyframes.scss
 │       ├── _mixins.scss
 │       └── _variables.scss
-├── styles.css *<u> <- this file contains the compiled css. All five of the html pages for the project link back to this same. This was produced by from compiling the Sass using the terminal functionality in VSCode</u>*
-└── styles.css.map *<u> <- file contains the compiled CSS. All five of the html pages for the project link back to this same fuke. This was produced by compiling the Sass using the terminal functionality in VSCode</u>*
-
-
-
+├── styles.css <- this file contains the compiled css. All five of the html pages for the project link back to this same. This was produced by from compiling the Sass using the terminal functionality in VSCode
+└── styles.css.map <- file contains the compiled CSS. All five of the html pages for the project link back to this same fuke. This was produced by compiling the Sass using the terminal functionality in VSCode
