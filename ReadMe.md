@@ -32,6 +32,14 @@
 - [8iii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iii%20Create%20Modern%20CSS%20Animations.pdf)
 - [8iv Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iv%20Create%20Modern%20CSS%20Animations.pdf)
 
+<h3>For loader</h3>
+<p> This contains a list of resources for reference which was provided during a live session incluced as part of the bootcamp.</p>
+<ul>
+  <li> https://loading.io/css/ <- for loaders with html and CSS which can be used</li>
+  <li> [https://loading.io/css/](https://css2sass.herokuapp.com/) <- to convert CSS into Sass </li>
+  <li> https://codebeautify.org/css-to-sass-converter <- to convert CSS into Sass </li>
+</ul>
+
 <h3>Project File Tree (Extension)</h3>
 
 <p>The file tree for this project is below and was included as an extension to the project. The file tree for the second project was included in its starter files, although this was not the case for this project. This file tree was produced by studying the course material and project milestone guide. This was a more complex problem to solve, given that this project introduced Sass, versioning with GitHub and had five html pages in comparison to the second project which had one. This tree is annotated with the thought processes used to structure it.</p>
@@ -86,11 +94,3 @@
 │       └── _variables.scss
 ├── styles.css <- this file contains the compiled css. All five of the html pages for the project link back to this same file. This was produced by compiling the Sass using the terminal functionality in VSCode
 └── styles.css.map <- this is a file which was produced when compiling the Sass partials into CSS
-
-<h3>For loader</h3>
-<p> This contains a list of resources for reference which was provided during a live session incluced as part of the bootcamp.</p>
-<ul>
-  <li> https://loading.io/css/ <- for loaders with html and CSS which can be used</li>
-  <li> [https://loading.io/css/](https://css2sass.herokuapp.com/) <- to convert CSS into Sass </li>
-  <li> https://codebeautify.org/css-to-sass-converter <- to convert CSS into Sass </li>
-</ul>
