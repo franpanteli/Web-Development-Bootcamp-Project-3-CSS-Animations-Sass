@@ -1,3 +1,4 @@
+<h1><DO GITHUB PAGES, LOADER/h1>
 <h1>fran-web-dev-bootcamp-project-3.netlify.app </h1>
 <h2> Project 3 - ohmyfood </h2>
 <h3>Abstract</h3>
@@ -85,3 +86,11 @@
 │       └── _variables.scss
 ├── styles.css <- this file contains the compiled css. All five of the html pages for the project link back to this same file. This was produced by compiling the Sass using the terminal functionality in VSCode
 └── styles.css.map <- this is a file which was produced when compiling the Sass partials into CSS
+
+<h3>For loader</h3>
+<p> This contains a list of resources for reference which was provided during a live session incluced as part of the bootcamp.</p>
+<ul>
+  <li> https://loading.io/css/ <- for loaders with html and CSS which can be used</li>
+  <li> [https://loading.io/css/](https://css2sass.herokuapp.com/) <- to convert CSS into Sass </li>
+  <li> https://codebeautify.org/css-to-sass-converter <- to convert CSS into Sass </li>
+</ul>
