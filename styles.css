@@ -462,7 +462,7 @@ footer a {
   padding-top: 1em;
 }
 .command__button {
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   color: white;
   height: 50px;
