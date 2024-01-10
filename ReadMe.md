@@ -1,48 +1,108 @@
-<h1>fran-web-dev-bootcamp-project-3.netlify.app </h1>
-<h2> Project 3 - ohmyfood </h2>
-<h3>3i ohmyfood Course Notes</h3>
-<p>'ohmyfood' is the third web development project I completed during this bootcamp. This was produced to integrate Sass animations with the HTML and CSS skills building from the previous project. The primary aim of this was to develop these skills by completing the course material and apply them by [INSERT START] , using GitHub, using GitHub, using GitHub, using GitHubconverting the mockup of a travel agency called Booki into a webpage. This mockup was provided in Figma. [INSERT END] </p>
-<p>
-<p>
-This was used as the template for the menu pages of the project. The kitchen West menu was -> and it's loaded with comments which explain the various parts 
-</p>
-For this, three further courses were first completed on the OpenClassrooms platform. My notes from these may be found in the folder called '3i ohmyfood Course Notes by Fran_Panteli.' Further information about these courses is detailed below.
-
+<h1>MOST URGENT PROBLEMS
   <ul>
+    <li>THE LOADER</li>
+    <li>THE GREEN TICKS TAKE TOO LONG, THEY'RE NOT SNAPPY ENOUGH</li>
+  </ul>
+</h1>
+  
+<h1> Project 3 - ohmyfood </h1>
+<h3>Abstract</h3>
+<p>'ohmyfood' is the third web development project I completed during the twelve-week AMSxOpenClassrooms web development skills bootcamp. This was produced to integrate Sass animations with the HTML and CSS skills acquired from the previous project. The primary aim of this was to develop these skills by completing the course material and to apply them by producing a webpage for a gourmet restaurant app, with various animations created using CSS (Sass). This project was versioned using GitHub and was created by converting the mockup of the webpage into a mobile-first web application. This mockup was provided in Figma and problem solving sessions were conducted for this project during mentoring sessions and webinars included as part of the bootcamp. This was finally assessed in a 15-minute oral presentation conducted on the OpenClassrooms platform. </p>
+</p>
+
+<h3>Webpage Links</h3>
+<p>I normally deploy my projects using Netlify and had initially deployed the project using this platform. Since the project milestone guide suggests using GitHub Pages to deploy the project, this has project has been deployed twice for the sake of practice. The links to its two deployments are below, although GitHub Pages is the preferred method as part of this skills bootcamp. 
+<ul>
+  <li>Netlify: fran-web-dev-bootcamp-project-3.netlify.app </li>
+  <li>GitHub Pages: https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-Menu-Website/</li>
+</ul>
+  
+<h3>Web Development Bootcamp Notes (Extension)</h3>
+<p>Three new courses were covered as part of this project. These are detailed below and were provided on the OpenClassrooms platform to develop Sass, versioning and animation skills with CSS.Their contents are described below</p>
+<ul>
   <li><strong>Manage Your Code Project With Git and GitHub </strong> - the first course was a 6-hour long course on Git and GitHub. This was taught by Max Wardeh and covered Git commands, branching systems, using Git Reset and troubleshooting</li>
   <li><strong>Produce Maintainable CSS With Sass</strong> - the second was a 15-hour long course which included 7-1 file patterning, BEM selectors, specificity, CSS Preprocessors, Sass variables / extensions / functions, mixins, conditionals, advanced Sass data types, loops, breakpoints, and Autoprefixer. This course was produced by Pat Gerke</li>
 
   <li><strong>Create Modern CSS Animations</strong> - this was a 15-hour-long course covering CSS transitions / transformations, the 12 principles of animation, timing functions, opacity, anchor points using transform-origin, Chrome DevTools, CSS keyframes and Chrome's Animation tool. This course was also produced by Pat Gerke</li>
-  </ul> 
-<h3> 3ii ohmyfood Website</h3>
-<p><strong>ohmyfood: </strong> the third project this bootcamp entailed was ohmyfood. This was a six-week project, with the aim of developing and applying skills in SaaS, GitHub and applying animations to webpages.</p>
-<h1>Ohmyfood</h1>
-<ul>
-	<li> index.html <- this is the html for the main webpage 
-	<li> assets <- this is the directory which contains the assets (the CSS file and images for the page)
-	<li> Sass <- this is the directory which contains the Sass files for the project. This contains seven directories, listed below. The Sass file names within these take the format of '_variables.scss' and are prefixed with an underscore because they are partials included as part of a larger codebase 
-	<ol>	
-		<li>Base <- this contains the files that define the foundation of the site, such as the typography etc which are applied site-wide (all of the html files in the webpage have these in common) </li>
-		<li>Utils <- is where variables, functions, mixins, and %placeholders for extensions are stored, if used. The order of @imports for the files this directory contains in comparison to the one the main directory contains has to be -> variables, functions, mixins, placeholders </li>
-		<li>Layout <- is where BEM blocks which contain reusable elements for the webpage are stored -> e.g a form or header for large layouts</li>
-		<li>Components <- this is where Sass for BEM blocks that are more self-contained is stored -> such as Sass for buttons</li>
-		<li>Pages <- this contains blocks of code that only apply to a single page. E.g if the homepage has an element on it which does not apply elsewhere to the page -> elements which are unique to one of the pages on the site</li>
-		<li>Themes <- this is where code which styles the webpage e.g for different holiday themes is stored -> these styles are defined in this directory, and then applied at the required times</li>
-		<li>Vendors <- this contains Sass from third party vendors which is used in the project. These vendors include libaries such as Bootstrap or jquery UI -> essentially  any CSS that has originated from outside of the project, which is used to speed up the site creation</li>
-	</ol>
-	<li> restaurants <- this is the directory which contains the html files for the restaurant pages in the project (ohmyfood is a site where clients can order food from restauraunts, four different ones in this case and one for the desktop version)
-<ul>
+</ul> 
+<p>The full contents of my notes from this bootcamp are below:</p> 
 
-In VSCode 
+- [1 Set Up Your Front-End Development Environment.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/1%20Set%20Up%20Your%20Front-End%20Development%20Environment.pdf)
+- [2 Build Your First Web Pages With HTML and CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/2%20Build%20Your%20First%20Web%20Pages%20With%20HTML%20and%20CSS.pdf)
+- [3 Design a Mock-up for Web Development With Figma.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/3%20Design%20a%20Mock-up%20for%20Web%20Development%20With%20Figma.pdf)
+- [4i Create Web Page Layouts With CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/4i%20Create%20Web%20Page%20Layouts%20With%20CSS.pdf)
+- [4ii Create Web Page Layouts With CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/4ii%20Create%20Web%20Page%20Layouts%20With%20CSS.pdf)
+- [5i Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5i%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [5ii Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5ii%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [5iii Break Down and Integrate a Mockup.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/5iii%20Break%20Down%20and%20Integrate%20a%20Mockup.pdf)
+- [6 Manage Your Code Project With Git and GitHub.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/6%20Manage%20Your%20Code%20Project%20With%20Git%20and%20GitHub.pdf)
+- [7i Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7i%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [7ii Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7ii%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [7iii Produce Maintainable CSS With Sass.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/7iii%20Produce%20Maintainable%20CSS%20With%20Sass.pdf)
+- [8i Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8i%20Create%20Modern%20CSS%20Animations.pdf)
+- [8ii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8ii%20Create%20Modern%20CSS%20Animations.pdf)
+- [8iii Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iii%20Create%20Modern%20CSS%20Animations.pdf)
+- [8iv Create Modern CSS Animations.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/8iv%20Create%20Modern%20CSS%20Animations.pdf)
+
+<h3>For the Loader</h3>
+<p>This contains a list of resources for reference which was provided during a live session included as part of the bootcamp. It was suggested to refer to these resources when adding in the loader for the homepage of the ohmyfood website (in the index.html file for the project). These resources are listed below </p>
 <ul>
-	<li>To open the terminal -> command shift p -> create new terminal</li>
-	<li><u>To open a file using the terminal (in VSCode)</u> -> cd into that directory with the file, then <u> 'open file_name' </u><- chatGPT says to use 'code file_name' for this,  but it doesn't work -> the suggestion which does is 'open file_name''</li>
+  <li> https://loading.io/css/ <- for loaders with html and CSS which can be used</li>
+  <li> [https://loading.io/css/](https://css2sass.herokuapp.com/) <- to convert CSS into Sass </li>
+  <li> https://codebeautify.org/css-to-sass-converter <- to convert CSS into Sass </li>
 </ul>
 
-The assets folder 
-<ul>
-	<li>This file contains the styles.css file, and the styles.map file which is produced when this is compiled from the main.scss file</li>
-	<li>This also includes the images for the project and the ohmyfood logo</li>
-</ul>
+<h3>Project File Tree (Extension)</h3>
 
+<p>The file tree for this project is below and was included as an extension to the project. The file tree for the second project was included in its starter files, although this was not the case for this project. This file tree was produced by studying the course material and project milestone guide. This was a more complex problem to solve, given that this project introduced Sass, versioning with GitHub and had five html pages in comparison to the second project which had one. This tree is annotated with the thought processes used to structure it.</p>
 
+```plaintext
+├── Bootcamp Course Notes by Fran_Panteli <- a directory of my notes on the bootcamp course material covered on the OpenClassrooms platform
+│   ├── 1 Set Up Your Front-End Development Environment.pdf <- courses for the first bootcamp project (Riding Cities)
+│   ├── 2 Build Your First Web Pages With HTML and CSS.pdf
+│   ├── 3 Design a Mock-up for Web Development With Figma.pdf
+│   ├── 4i Create Web Page Layouts With CSS.pdf 
+│   ├── 4ii Create Web Page Layouts With CSS.pdf
+│   ├── 5i Break Down and Integrate a Mockup.pdf <- courses for the second bootcamp project (Booki)
+│   ├── 5ii Break Down and Integrate a Mockup.pdf
+│   ├── 5iii Break Down and Integrate a Mockup.pdf
+│   ├── 6 Manage Your Code Project With Git and GitHub.pdf <- courses for the third bootcamp project (ohmyfood)
+│   ├── 7i Produce Maintainable CSS With Sass.pdf
+│   ├── 7ii Produce Maintainable CSS With Sass.pdf
+│   ├── 7iii Produce Maintainable CSS With Sass.pdf
+│   ├── 8i Create Modern CSS Animations.pdf
+│   ├── 8ii Create Modern CSS Animations.pdf
+│   ├── 8iii Create Modern CSS Animations.pdf
+│   └── 8iv Create Modern CSS Animations.pdf
+├── ReadMe.md <- this ReadMe file, produced in the GitHub MEditor.md UI
+├── assets <- images for the project, these files were provided on the OpenClassrooms platform and renamed based on their contents
+│   └── images
+│       └── restaurants
+│           ├── circle-dish-with-hand.jpg
+│           ├── circle-from-above-dish.jpg
+│           ├── circle-from-the-side-dish.jpg
+│           └── rectangle-dish.jpg
+├── index.html <- this contains the html for the project homepage. This has in-depth comments which explain the thought processes and problem-solving approaches used to produce this
+├── main.scss <- this imports the Sass partials into the main Sass file, importing them in the order listed in the course notes for the project
+├── restaurants <- there are four restaurant pages and a main homepage for the project. Each of these restaurant pages is an html file in this directory, and each is named after the restaurant it represents
+│   ├── Elderflower.html
+│   ├── Kitchen-West-template-menu.html <- this was used as the template for the other four menu pages. There were four menu pages and a homepage. This contains in depth comments explaining the thought processes and approaches used to produce these menu pages
+│   ├── Shoreditch-Canteen.html
+│   ├── The–Bay-Leaf.html
+├── sass <- this is the file which contains the partials for the Sass. These partials are structured according to the 7:1 file structure explored in the course material found in my notes from parts 7i to 7iii of the course
+│   ├── base <- this contains the files that define the foundation of the site, such as the typography etc which are applied site-wide (all of the html files in the webpage have these in common)
+│   │   └── _root.scss
+│   ├── components <- this is where Sass for BEM blocks that are more self-contained is stored -> such as Sass for buttons
+│   │   ├── _more_potential_animation_files.scss
+│   │   └── _restaurant_cards.scss
+│   ├── layouts <- is where BEM blocks which contain reusable elements for the webpage are stored -> e.g a form or header for large layouts
+│   │   ├── _footer.scss
+│   │   ├── _header.scss
+│   │   ├── _loading_animations.scss
+│   │   └── _pages.scss
+│   └── utils <- this is where variables, functions, mixins, and %placeholders for extensions are stored, if used. The order of @imports for the files this directory contains in comparison to the one the main directory contains has to be -> variables, functions, mixins, placeholders
+│       ├── _keyframes.scss
+│       ├── _mixins.scss
+│       └── _variables.scss
+├── styles.css <- this file contains the compiled css. All five of the html pages for the project link back to this same file. This was produced by compiling the Sass using the terminal functionality in VSCode
+└── styles.css.map <- this is a file which was produced when compiling the Sass partials into CSS
