@@ -19,7 +19,7 @@
   <li><strong>Create Modern CSS Animations</strong> - this was a 15-hour-long course covering CSS transitions / transformations, the 12 principles of animation, timing functions, opacity, anchor points using transform-origin, Chrome DevTools, CSS keyframes and Chrome's Animation tool. This course was also produced by Pat Gerke</li>
 </ul> 
 The full contents of my notes from this bootcamp is below 
-# Bootcamp Course Notes by Fran_Panteli
+
 
 - [1 Set Up Your Front-End Development Environment.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/1%20Set%20Up%20Your%20Front-End%20Development%20Environment.pdf)
 - [2 Build Your First Web Pages With HTML and CSS.pdf](./Bootcamp%20Course%20Notes%20by%20Fran_Panteli/2%20Build%20Your%20First%20Web%20Pages%20With%20HTML%20and%20CSS.pdf)
