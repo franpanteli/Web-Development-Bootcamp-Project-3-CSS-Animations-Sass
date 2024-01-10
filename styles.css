@@ -443,13 +443,13 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-duration: 0.3s;
+  transition-duration: 0.4s;
   cursor: pointer;
 }
 
 .choice__card:hover .choice__card__check {
   margin: 0;
-  transition: margin 0.8s;
+  transition: margin 0.4s;
 }
 
 .fa-circle-check {
@@ -493,7 +493,7 @@ footer a {
   display: grid;
   place-items: center;
   background: radial-gradient(circle, #9356DC, #99E2D0);  
-  height: 100vh;
+  height: 100%;
   inset: 0;
   z-index: 1;
   animation: go-away 0s 3.5s forwards;
