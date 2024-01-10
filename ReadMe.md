@@ -4,12 +4,6 @@
 <p>'ohmyfood' is the third web development project I completed during this bootcamp. This was produced to integrate Sass animations with the HTML and CSS skills acquired from the previous project. The primary aim of this was to develop these skills by completing the course material and to apply them by producing a webpage for a gourmet restaurant app with various animations created using CSS (Sass). This project was versioned using GitHub and was created by converting the mockup of the webpage into a mobile-first web application. This mockup was provided in Figma and problem-solving sessions were conducted for this project during mentoring sessions and webinars included as part of the bootcamp. This was finally assessed in a 15-minute oral presentation conducted on the OpenClassrooms platform. </p>
 </p>
 
-<h3>Project file tree extended</h3>
-<p>This is the same project file tree, in more depth. These annotations explain what each section does and the thought processes behind structuring the project using this approach.</p>
-
-# Bootcamp Course Notes by Fran_Panteli
-
-## Directory Structure
 <h3>Web development bootcamp notes (extension)</h3>
 <p>Three new courses were covered as part of this project. These are detailed below and were provided on the OpenClassrooms platform to develop Sass, versioning and animation skills with CSS.Their contents are described below</p>
 <ul>
@@ -42,6 +36,8 @@
 <p>The file tree for this project is below and was included as an extension to the project. The second project in the bootcamp included basic starter files, although this did not. This was the solution for the file tree which was devised for this project. This was produced by studying the course material and project milestone guide. This was a more complex problem to solve for this project, given that it introduced Sass and versioning with git in tandem here.</p>
 
 <p>The file tree for this project is below and was included as an extension to the project. The second project in the bootcamp included basic starter files, although this did not. This was the solution for the file tree which was devised for this project. This was produced by studying the course material and project milestone guide. This was a more complex problem to solve for this project, given that it introduced Sass and versioning with git in tandem here.</p>
+
+<p>This is the same project file tree, in more depth. These annotations explain what each section does and the thought processes behind structuring the project using this approach.</p>
 
 ```plaintext
 ├── Bootcamp Course Notes by Fran_Panteli <- a directory of my notes on the bootcamp course material covered on the OpenClassrooms platform
