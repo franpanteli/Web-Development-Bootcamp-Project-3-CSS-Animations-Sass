@@ -7,8 +7,11 @@
 </p>
 
 <h3>Webpage Links</h3>
-<p>I normally deploy my projects using Netlify and had initially deployed the project using this, at: fran-web-dev-bootcamp-project-3.netlify.app </p>
-<p>Since the project milestone guide suggests using GitHub Pages to deploy the project, this has project has been deployed twice for the sake of practice. The link to its GitHub Pages is: https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-Menu-Website/ </p>
+<p>I normally deploy my projects using Netlify and had initially deployed the project using this platform. Since the project milestone guide suggests using GitHub Pages to deploy the project, this has project has been deployed twice for the sake of practice. The links to these two deployments are below, although GitHub Pages is suggested as the preferred method as part of this training course. 
+<ul>
+  <li>Netlify: fran-web-dev-bootcamp-project-3.netlify.app </li>
+  <li><https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-Menu-Website//li>
+</ul>
   
 <h3>Web Development Bootcamp Notes (Extension)</h3>
 <p>Three new courses were covered as part of this project. These are detailed below and were provided on the OpenClassrooms platform to develop Sass, versioning and animation skills with CSS.Their contents are described below</p>
