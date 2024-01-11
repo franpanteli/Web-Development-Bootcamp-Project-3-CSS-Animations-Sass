@@ -493,62 +493,22 @@ footer a {
   display: grid;
   place-items: center;
   background: radial-gradient(circle, #9356DC, #99E2D0);  
-  height: 100%;
   inset: 0;
   z-index: 1;
-  animation: go-away 0s 3.5s forwards;
+  animation: go-away 0s 2.9s forwards;
 }
 
 .word {
-  display: inline-block;
   font-size: 80px;
   color: #FF79DA;
   text-shadow: 3px 3px 3px black;
   font-family: shrikhand;
 }
 
-.word span {
-  display: inline-block;
-  animation: spin 3s;
-}
-
-.word span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.word span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.word span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.word span:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.word span:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-.word span:nth-child(6) {
-  animation-delay: 1s;
-}
-
-.word span:nth-child(7) {
-  animation-delay: 1.2s;
-}
-
-.word span:nth-child(8) {
-  animation-delay: 1.4s;
-}
-
 @keyframes go-away {
   0% {
     opacity: 1;
     z-index: -1;
-  
   }
   100% {
     opacity: 0;
@@ -558,7 +518,6 @@ footer a {
 
 .menu-page-container {
   animation: menuFadeIn 1.25s forwards;
-  /* animation: menuFadeInOut 2s infinite alternate; */
 }
 
 @keyframes menuFadeIn {

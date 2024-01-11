@@ -51,13 +51,93 @@
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 <body class="menu-page-container">
-    <!-- the loading animation -->
+
+    <!-- The thought process used to create the loading animation -->
     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <!--
+            The suggested approach 
+                -> it was suggested in a live skills session to use a loading animation for the page from the LOADING.IO (Pure CSS Loader) site
+                -> to convert the css from this into Sass using an online converter 
+                -> this project uses text rather than this method, as this allows for more specific design choices 
+
+            Design choices which were selected for this loader
+                -> the colour themes used
+                    -> there were three colours listed in the creative brief for the project 
+                    -> two of these were used in a radial gradient for the background of the loading animation 
+                        -> this produces a more symmetrical appearance than using a linear gradient 
+                    -> the third was used in the text for this animation 
+                -> the text
+                    -> the font used for the homepage loader text is the same as the ohmyfood logo 
+                        -> this creates homogeneity across the site 
+                    -> content 
+                        -> the timing for this animation is long enough for customers to read it 
+                        -> this text said "Hungry? We've got gourmet" in a prototyped version of the project, since this project lists fine-dining 
+                            restaurants 
+                            -> this was changed to "Loading", since the webpage is a mobile-first application and the text was not fitting in the 
+                                centre of the page
+                            -> using less text in this way was a simpler solution in comparison to re-altering the Sass for its positioning 
+
+            The approach used to create this
+                Two divs were created, one embedded inside the other 
+                    -> a div was created with a class which specially targets the background 
+                        -> this class is called the "loader" class  
+                    -> another div was created which targets the text for that loading animation 	
+                        -> this class is called the "word" class 
+
+                The "loader" class 
+                    -> this is the class which targets the entire loading background 
+                    -> positioning 
+                        -> of the entire background -> the position of this element was fixed -> so that the background obstructs the entire screen if the 
+                            users scroll 
+                        -> of the elements in that background -> the text which is contained in this background is a block element (it's contained in a div), 
+                            so a grid was used to position it into the centre of the page 
+                    -> background colour 
+                        -> see the notes for the design section above (radial gradient, in the colour scheme detailed in the creative brief)
+                        -> this was entirely opaque -> to avoid the homepage being distracting 
+                    -> inset 
+                        -> the inset of 0 <- this class property sets the background for the loader to take up 100% of the height and width of the viewport 
+                            for the browser window (stack overflow)
+                    -> z-index 
+                        -> this line positions the background of the loader animation to be in front of the homepage 
+                
+                The "word" class
+                    -> this is the class which formats the text for the loading animation 
+                    -> this sets its colour and font size, explained above in the comments for "design choices used"
+                    -> since this class was embedded in the class which set the background for the loading animation, the class which targets the text itself 
+                        is a lot more simple
+                        -> the animation isn't directly applied to this class <- it's applied to the class which targets the div which is placed around the 
+                            background 
+                        -> this div just targets the text, because it's embedded inside the div which targets the loading effect on the background 
+
+                Animating the "loader" class 
+                    Why a keyframe was used for the loader animation 
+                        -> this is the class for the background of the loading animation 
+                        -> the z-index of this class was originally set to 1 (so it was in front of the content for the webpage)
+                        -> a keyframe -> rather than transition was used for this animation 
+                        -> since the trigger event is the reloading of the page (rather than a user interaction)
+                        -> in the Sass for the loader animation -> this is where the keyframe which animates it was used 
+                            -> the keyframe itself (go-away) was also defined later in the compiled css (Sass)
+
+                    The keyframe which makes the background disappear (go-away)
+                        -> this keyframe takes 0 seconds to complete (the loader background disappears immediately), and after a time delay of 2.9s
+                            -> in between the requested time limit of 1.5 and 3s for this loading animation 
+                        -> this moves the background of the loading animation to be behind the content of the page (transitioning its z index from 1 to -1)
+                        -> this also transitions the opacity of this element to 0
+                        -> in other words -> it makes the background of the loader disappear -> by moving it behind the content of the homepage and making it 
+                            transparent 
+                        -> this takes no time to run, but if its duration were increased, then the styles which are applied 0% of the way through this 
+                            keyframe would be more relevant (you can get rid of the styling 0% of the way through the keyframe for this and it does nothing)
+                        -> go-away and the background 
+                            -> go-away was used to target the "loader" class, not the "word" class
+                            -> the "loader" class targets the entire background
+                            -> in other words, we're taking the entire background, waiting 2.9 seconds and then using this animation to move the entire 
+                                thing behind the homepage and make it transparent  
+    -->
+
     <div class="loader">
-        <div class="word">
-            <!-- this is the text which plays during the loading animation  -->
-            <div>Hungry? We've got gourmet</div>
-        </div>
+            <!-- this is the text that plays during the loading animation 
+                    -> if there is too much text here then it won't centre in the mobile version of the project -->
+        <div class="word">Loading</div>
     </div>
 
     <header>
