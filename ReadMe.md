@@ -49,6 +49,8 @@
 
 <p>The file tree for this project is below and was included as an extension to the project. The file tree for the second project was included in its starter files, although this was not the case for this project. This file tree was produced by studying the course material and project milestone guide. This was a more complex problem to solve, given that this project introduced Sass, versioning with GitHub and had five html pages in comparison to the second project which had one. This tree is annotated with the thought processes used to structure it.</p>
 
+<p>Note: this is an earlier version of the file tree for the project (further updates were later added). The styles.css file was also initially in the assets folder as suggested in the project milestone guide, although this was causing issues with compiling the Sass. To resolve this issue, a solution was devised where the compiled css was placed at the same level in the file tree as the index.html file. This resulted in Sass which compiled into this css file and the html files linking correctly to it.</p>
+
 ```plaintext
 ├── Bootcamp Course Notes by Fran_Panteli <- a directory of my notes on the bootcamp course material covered on the OpenClassrooms platform
 │   ├── 1 Set Up Your Front-End Development Environment.pdf <- courses for the first bootcamp project (Riding Cities)
