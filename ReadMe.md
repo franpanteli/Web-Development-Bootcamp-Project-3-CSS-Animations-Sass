@@ -44,7 +44,7 @@
   <li> [https://loading.io/css/](https://css2sass.herokuapp.com/) <- to convert CSS into Sass </li>
   <li> https://codebeautify.org/css-to-sass-converter <- to convert CSS into Sass </li>
 </ul>
-
+<p>There are in-depth comments in the index.html file of the project which detail the problem-solving thought processes used to create this loader for the homepage of the project.</p>
 <h3>Project File Tree (Extension)</h3>
 
 <p>The file tree for this project is below and was included as an extension to the project. The file tree for the second project was included in its starter files, although this was not the case for this project. This file tree was produced by studying the course material and project milestone guide. This was a more complex problem to solve, given that this project introduced Sass, versioning with GitHub and had five html pages in comparison to the second project which had one. This tree is annotated with the thought processes used to structure it.</p>
