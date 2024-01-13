@@ -157,6 +157,7 @@ li {
   position: relative;
   background: #ffffff;
   height: 16em;
+  cursor: pointer;
 }
 
 .restaurants_image {
