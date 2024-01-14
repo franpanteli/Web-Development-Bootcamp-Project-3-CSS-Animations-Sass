@@ -8,6 +8,9 @@ h1 {
   font-family: "Shrikhand", cursive;
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 a {
@@ -305,6 +308,7 @@ footer a {
 .banner_title {
   flex-basis: 90%;
   text-align: center;
+  margin: 22px 0px 30px 0px;
 }
 
 .menu_pix {
