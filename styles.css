@@ -285,6 +285,7 @@ footer a {
   .footer li {
     margin-bottom: 0.5em;
     padding-left: 1em;
+    padding-left: 52px;
   }
 }
 
