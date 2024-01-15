@@ -243,6 +243,29 @@
                 -> there are already margins which are added to the left of the icons in this header <- so they spread apart when they are justified 
                   into the centre of the page for this region 
                 -> below this point, the items in this element are placed in a div without this query  
+      
+          When the user arrives on the menu page, the dishes must appear gradually over time. They can appear either one by one or in groups - “Starters,” “Mains” and “Desserts”
+          -> we want he starters, then mains and desserts to fade in 
+          -> you would use a keyframe and not a transition -> the trigger is the reloading page
+            -> you only need it to work one way (not two)
+          -> since every menu has a starters, mains and desserts section, it makes sense to define one keyframe which fades in the starters, another which fades in the mains and another which fades in the desserts
+            -> one section of one of the menu pages has four dishes and another has three
+            -> you could define one animation which faded in a choice card -> and then fade in all of the choice cards but with time delays 
+              -> this could involve a loop (as per the animations in the course notes in the same repo as this project)
+          -> a more simple approach would be to define three keyframes
+            -> each keyframe fades in different sections -> a keyframe for the starters, a keyframe for the mains and a keyframe for the desserts <- this method wouldn't require having to loop through different times 	
+            -> the keyframes would be defined at the end of the compiled Sass
+            -> three -> one for the starters, mains and another for the desserts
+            -> then they would be applied on the individual menu pages 
+            -> on the classes which are placed around each of the starters, mains and then desserts 
+          -> I would take a menu block and give it another class -> I would call the class starters e.g 
+            -> and define a fade in keyframe later down in the compiled css 
+            -> then apply that keyframe to the class which was targeting that element 
+            -> then refresh the page to see if it worked
+            -> then set them on the other menu sections -> but on a time delay 
+            -> then once you have something which works -> move the entire thing into the Sass
+            -> then apply those animations to the other menu pages 
+            -> but start with the starters on the Kitchen West menu -> considering that this is the project template
     -->
 
     <div class="menu">
