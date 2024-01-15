@@ -341,6 +341,7 @@ footer a {
   align-items: center;
   height: 51px;
   padding-top: 40px;
+  padding-left: 17px;
 }
 @media screen and (min-width: 1024px) {
   .container_banner {
