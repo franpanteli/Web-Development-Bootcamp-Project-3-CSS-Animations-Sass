@@ -521,22 +521,22 @@ footer a {
 }
 
 .menu-page-container {
-  animation: menuFadeIn 1s forwards;
+  animation: fadeInMenu 0.9s forwards;
 }
 
 .menu__block-startersFadeIn {
-  animation: menuFadeIn 1.5s forwards;
+  animation: fadeInMenu 1.5s forwards;
 }
 
 .menu__block-mainsFadeIn {
-  animation: menuFadeIn 3s forwards;
+  animation: fadeInMenu 3s forwards;
 }
 
 .menu__block-dessertsFadeIn {
-  animation: menuFadeIn 4s forwards;
+  animation: fadeInMenu 4s forwards;
 }
 
-@keyframes menuFadeIn {
+@keyframes fadeInMenu {
   0% {
     opacity: 0;
     height: 0;
