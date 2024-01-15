@@ -521,7 +521,19 @@ footer a {
 }
 
 .menu-page-container {
-  animation: menuFadeIn 1.25s forwards;
+  animation: menuFadeIn 1s forwards;
+}
+
+.menu__block-startersFadeIn {
+  animation: menuFadeIn 1.5s forwards;
+}
+
+.menu__block-mainsFadeIn {
+  animation: menuFadeIn 3s forwards;
+}
+
+.menu__block-dessertsFadeIn {
+  animation: menuFadeIn 4s forwards;
 }
 
 @keyframes menuFadeIn {
@@ -534,4 +546,3 @@ footer a {
     height: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
-
