@@ -1,4 +1,9 @@
- <!-- DOCUMENT CONTENTS -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+
+   <!-- DOCUMENT CONTENTS -->
 
 <!-- 
   1. HEAD / DOC TYPE ETC 
@@ -14,16 +19,10 @@
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-<!DOCTYPE html>
-<html lang="en-GB">
-
 <!-- HEAD / DOC TYPE ETC -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!-- 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-<head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- below - this is the text which shows in the tab for the webpage -->
   <title>Kitchen West Menu</title>
@@ -33,7 +32,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
 
@@ -330,8 +328,8 @@
                       -> the div is just placed around those two text elements <- and its heigh is adjusting to the height of the content inside 
                       -> the height of the content inside was controlled by placing classes on those individual elements 
                       -> since there were two pieces of text, this involved two classes 
-                        -> the class which targets the top piece of text (the 'choice__card__txt--title' class) gives this element a top padding 
-                        -> the class which targets the bottom piece of text (the 'choice__card__txt--description' class) gives the bottom element 
+                        -> the class which targets the top piece of text (the 'choice__card__txt-title' class) gives this element a top padding 
+                        -> the class which targets the bottom piece of text (the 'choice__card__txt-description' class) gives the bottom element 
                             bottom padding 
                     -> in other words, we're flexing apart those text items in their larger containing div
                       -> and then on the classes which target them individually -> adding padding onto the top text item and padding onto the 
@@ -447,7 +445,7 @@
 
               How the green div was placed in relation to the choice card which contains it  
                 -> the green box which is being transitioned in is a font awesome tick icon 
-                      -> this was placed inside a div <-- this div formats the icon to be in the centre of a green box 
+                      -> this was placed inside a div <- this div formats the icon to be in the centre of a green box 
                       -> the right margin of that div is also negative
                         -> the value of that margin equals the width of the green container for the icon 
                         -> that green icon is on the right hand side of the containing div which it's being placed in 
