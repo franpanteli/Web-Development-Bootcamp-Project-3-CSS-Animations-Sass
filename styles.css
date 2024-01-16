@@ -500,17 +500,19 @@ footer a {
   background: radial-gradient(circle, #9356DC, #99E2D0);  
   inset: 0;
   z-index: 1;
-  animation: go-away 0s 2.9s forwards;
+  animation: goAway 0s 2.9s forwards;
 }
 
 .word {
-  font-size: 80px;
+  font-size: 79px;
+  opacity: 0.9;
   color: #FF79DA;
   text-shadow: 3px 3px 3px black;
   font-family: shrikhand;
+  animation: textExpand 2.9s forwards ease-out;
 }
 
-@keyframes go-away {
+@keyframes goAway {
   0% {
     opacity: 1;
     z-index: -1;
@@ -518,6 +520,13 @@ footer a {
   100% {
     opacity: 0;
     z-index: -1;
+  }
+}
+
+@keyframes textExpand {
+  100% {
+    font-size: 90px;
+    opacity: 1;
   }
 }
 
