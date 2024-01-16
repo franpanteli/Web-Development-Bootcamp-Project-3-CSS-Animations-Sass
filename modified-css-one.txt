@@ -466,4 +466,4 @@ footer a {
   opacity: 1;
   transition: opacity 250ms, transform 250ms ease-in-out;
   width: 186px;
-}
+ 
