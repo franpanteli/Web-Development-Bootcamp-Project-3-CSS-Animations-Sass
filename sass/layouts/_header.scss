@@ -1,3 +1,7 @@
+// Imports 
+@import '../utils/variables';
+
+// Sass 
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -35,7 +39,7 @@ li {
 
 .introduction {
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: $quaternary-color;
 
   &__title {
     color: #000;
@@ -49,7 +53,7 @@ li {
   }
 
   .button {
-    background-image: linear-gradient(to top, #9356dc, #ff79da);
+    background-image: linear-gradient(to top, $primary-color, $secondary-color);
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
     color: white;
     height: 50px;
@@ -81,7 +85,7 @@ li {
 .functioning {
   margin-bottom: 50px;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $breakpoint) {
     padding: 0 5em 0 5em;
   }
 
@@ -93,7 +97,7 @@ li {
   &__list {
     padding-left: 0;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $breakpoint) {
       display: flex;
       justify-content: space-between;
     }
@@ -109,15 +113,15 @@ li {
       font-weight: 500;
       border-radius: 25px;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-      background-color: #f6f6f6;
+      background-color: $quaternary-color;
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: $breakpoint) {
         width: 20em;
       }
     }
 
     &--number {
-      background-color: #9356dc;
+      background-color: $primary-color;
       color: white;
       border-radius: 50%;
       padding: 0.2em;
@@ -141,5 +145,5 @@ li {
 }
 
 .fa-store {
-  color: #9356dc;
+  color: $primary-color;
 }

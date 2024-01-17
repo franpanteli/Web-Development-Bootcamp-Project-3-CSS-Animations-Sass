@@ -1,8 +1,12 @@
+//  Imports 
+@import '../utils/variables';
+
+// Sass
 .my-heart-full {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient($secondary-color, $primary-color);
   -webkit-background-clip: text;
   background-clip: text;
 

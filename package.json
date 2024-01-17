@@ -1,0 +1,21 @@
+{
+    "name": "francesca-panteli-sass-project",
+    "version": "1.0.0",
+    "description": "Personal project by Francesca Panteli - Front-End Development with Sass",
+    "main": "index.html",
+    "scripts": {
+      "start": "your-start-command",
+      "build": "npm-run-all compile-sass autoprefixer",
+      "compile-sass": "node-sass sass/main.scss -o .",
+      "autoprefixer": "autoprefixer --cascade --browsers 'last 2 versions' styles.css"
+    },
+    "keywords": ["front-end", "sass", "web development"],
+    "author": "Francesca Panteli",
+    "license": "MIT",
+    "devDependencies": {
+      "autoprefixer": "^10.4.0",
+      "node-sass": "^6.0.1",
+      "npm-run-all": "^4.1.5"
+    }
+  }
+  

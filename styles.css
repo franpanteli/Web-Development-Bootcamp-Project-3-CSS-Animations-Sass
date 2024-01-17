@@ -34,7 +34,7 @@ li {
 
 .introduction {
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 .introduction__title {
   color: #000;
@@ -46,7 +46,7 @@ li {
   font-size: 18px;
 }
 .introduction .button {
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   color: white;
   height: 50px;
@@ -104,7 +104,7 @@ li {
   font-weight: 500;
   border-radius: 25px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 @media screen and (min-width: 1024px) {
   .functioning__list li {
@@ -112,7 +112,7 @@ li {
   }
 }
 .functioning__list--number {
-  background-color: #9356dc;
+  background-color: #9356DC;
   color: white;
   border-radius: 50%;
   padding: 0.2em;
@@ -134,14 +134,14 @@ li {
 }
 
 .fa-store {
-  color: #9356dc;
+  color: #9356DC;
 }
 
 .restaurants {
   display: flex;
   flex-direction: column;
   margin-top: 5em;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding: 2em 0em 3em 0em;
 }
 @media screen and (min-width: 1024px) {
@@ -194,8 +194,8 @@ li {
 }
 .restaurant__card .new {
   color: #008766;
-  background-color: #99e2d0;
-  border: 5px solid #99e2d0;
+  background-color: #99E2D0;
+  border: 5px solid #99E2D0;
   border-radius: 2px;
   position: absolute;
   right: 2.6%;
@@ -319,7 +319,7 @@ footer a {
 }
 
 .container {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   margin-top: -3em;
   border-radius: 25px 25px 0 0;
   position: relative;

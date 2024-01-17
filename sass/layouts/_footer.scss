@@ -1,9 +1,13 @@
+// Imports 
+@import '../utils/variables';
+
+// Sass 
 .footer {
   background-color: #353535;
   color: white;
   padding: 1em 0em 1em 0em;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $breakpoint) {
     display: flex;
     flex-direction: row-reverse;
     padding-right: 7em;
@@ -27,13 +31,13 @@ footer a {
   color: white;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $breakpoint) {
   .footer ul {
     display: flex;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $breakpoint) {
   .footer li {
     margin-bottom: 0.5em;
     padding-left: 1em;
