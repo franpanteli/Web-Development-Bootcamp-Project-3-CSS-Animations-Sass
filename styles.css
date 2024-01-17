@@ -57,6 +57,7 @@ li {
   margin-top: 1.5em;
   margin-bottom: 3em;
   opacity: 1;
+  font-size: 16px;
   transition: opacity 250ms, transform 250ms ease-in-out;
   width: 218px;
 }
@@ -73,28 +74,28 @@ li {
   font-weight: 700;
 }
 
-.functionning {
+.functioning {
   margin-bottom: 50px;
 }
 @media screen and (min-width: 1024px) {
-  .functionning {
+  .functioning {
     padding: 0 5em 0 5em;
   }
 }
-.functionning h2 {
+.functioning h2 {
   padding: 20px;
   font-size: 24px;
 }
-.functionning__list {
+.functioning__list {
   padding-left: 0;
 }
 @media screen and (min-width: 1024px) {
-  .functionning__list {
+  .functioning__list {
     display: flex;
     justify-content: space-between;
   }
 }
-.functionning__list li {
+.functioning__list li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -108,11 +109,11 @@ li {
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 1024px) {
-  .functionning__list li {
+  .functioning__list li {
     width: 20em;
   }
 }
-.functionning__list--number {
+.functioning__list--number {
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
@@ -153,7 +154,7 @@ li {
 .restaurants__title {
   padding-left: 2em;
 }
-.restaurants__card {
+.restaurant__card {
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px #0000001A;
   margin: 1em;
@@ -163,7 +164,7 @@ li {
   cursor: pointer;
 }
 
-.restaurants_image {
+.restaurant_image {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0px 0px;
@@ -188,7 +189,7 @@ li {
   font-weight: 700;
 }
 
-.subtile_card p {
+.subtitle_card p {
   font-size: 17px;
   font-weight: 300;
   margin-top: 10px;
@@ -210,11 +211,11 @@ li {
   box-shadow: 0px 2px 4px 0px #00000026;
 }
 
-.subtile_card {
+.subtitle_card {
   padding-left: 1.25em;
 }
 
-.restaurant_descript {
+.restaurant_description {
   line-height: 0;
 }
 
@@ -312,10 +313,10 @@ footer a {
   margin-bottom: 17.14px;
 }
 
-.menu_pix {
+.menu_image {
   box-sizing: border-box;
 }
-.menu_pix img {
+.menu_image img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -460,12 +461,12 @@ footer a {
   color: white;
 }
 
-.command {
+.order {
   display: flex;
   justify-content: center;
   padding-top: 1em;
 }
-.command__button {
+.order__button {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   color: white;
@@ -480,7 +481,7 @@ footer a {
   width: 186px;
   display: inline-block;
 }
-.command__button:hover {
+.order__button:hover {
   box-shadow: 0px 4px 16px rgb(0, 0, 0);
   opacity: 0.85;
   transition: all 250ms ease-in-out;
@@ -534,15 +535,15 @@ footer a {
   animation: fadeInMenu 2.9s forwards;
 }
 
-.menu__block-startersFadeIn {
+.menu__block--startersFadeIn {
   animation: fadeInMenu 1.5s forwards;
 }
 
-.menu__block-mainsFadeIn {
+.menu__block--mainsFadeIn {
   animation: fadeInMenu 3s forwards;
 }
 
-.menu__block-dessertsFadeIn {
+.menu__block--dessertsFadeIn {
   animation: fadeInMenu 4s forwards;
 }
 

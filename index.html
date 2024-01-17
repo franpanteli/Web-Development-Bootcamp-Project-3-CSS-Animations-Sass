@@ -289,7 +289,7 @@
             -> the entire section (the block), then the elements and which part they modify          
  -->
 
-    <section class="functionning">
+    <section class="functioning">
         <!-- below - this is the text before the cards are defined -->
         <h2>How it works</h2>
 
@@ -307,7 +307,7 @@
                         padding below them to match the Figma mockup of the page 
             -->
 
-        <ul class="functionning__list">
+        <ul class="functioning__list">
             <!-- 'Choose a restaurant' card -->
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
             <!-- 
@@ -345,7 +345,7 @@
                             -> since the list elements were flexed, increasing their widths at this point of the page resizing would enable them to start 
                                 stacking
                 -->
-                <div class="functionning__list--number">1</div>
+                <div class="functioning__list--number">1</div>
 
                 <!--  
                     -> the second elements are the icons 
@@ -362,13 +362,13 @@
             <!-- the remaining two cards in this section have the same structure and different content -->
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
             <li>
-                <div class="functionning__list--number">2</div>
+                <div class="functioning__list--number">2</div>
                 <div><i class="fas fa-list"></i></div>
                 <p>Build your meal</p>
             </li>
 
             <li>
-                <div class="functionning__list--number">3</div>
+                <div class="functioning__list--number">3</div>
                 <div><i class="fas fa-store"></i></div>
                 <p>Enjoy your meal at the restaurant</p>
             </li>
@@ -425,14 +425,14 @@
             -> it was previously mentioned that each of the Restaurant cards was given by a little div contained in this larger div 
             -> this section of this html file explores the solution which was devised for one Restaurant card (a little div)
         
-        The restaurants__card class
+        The restaurant__card class
             -> this class was placed around the entire little div, and was used to create the card
             -> this contains parameters for the dimensions et al of the little div, except for its width 
             -> the width of this little div was targeted using the media queries which were placed around all of the Restaurant 
                 cards
     -->
 
-            <div class="restaurants__card">
+            <div class="restaurant__card">
 
                 <!--         
                     Links around the Restaurant cards 
@@ -474,7 +474,7 @@
                                 -> this is a standard image tag for that image
                                 -> the file tree for the project needs to be structured correctly, or when you type in the relative file path of the image, it won't 
                                     render correctly in the browser 
-                                -> the selector which was used to target these images for the Restaurant cards was the 'restaurants_image' class
+                                -> the selector which was used to target these images for the Restaurant cards was the 'restaurant_image' class
                                     -> em units were used for this (you have the parent container which uses a default font size, em is referring to x times that default 
                                         font size etc)
                                         -> m is a wide letter (relative to its width for example, but w is the widest letter)
@@ -487,7 +487,7 @@
                                     -> the max-height property was used for this
                           -->
 
-                    <img class="restaurants_image"
+                    <img class="restaurant_image"
                         src="./assets/images/restaurants/circle-dish-with-hand.jpg"
                         alt="An image of food">
 
@@ -495,7 +495,7 @@
                     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                     <!-- 
                         The subtitles for the Restaurant cards
-                            -> a div has been placed around the entire subtitle -> this is targeted using the 'restaurant_descript' selector 
+                            -> a div has been placed around the entire subtitle -> this is targeted using the 'restaurant_description' selector 
                                 -> this class resets the line height for the subtitle text 
                                 -> this removes the vertical spacing between the top and bottom lines of text in the subtitle 
                                     -> there are default margins to the h3 element used for the top subtitle element, which cause issues otherwise
@@ -513,7 +513,7 @@
                                         done in this case to align the elements inside it
                      -->
 
-                    <div class="restaurant_descript">
+                    <div class="restaurant_description">
 
                         <!-- 
                             The code for the top line of the subtitle contents in the Restaurant cards
@@ -629,7 +629,7 @@
                                     using the standard properties which could be taken from the mockup of the element in Figma 
                          -->
 
-                        <div class="subtile_card">
+                        <div class="subtitle_card">
                             <p>Angel</p>
                         </div>
                     </div>
@@ -641,19 +641,19 @@
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
                 <!-- this is similar to the Kitchen West card (with a New label) and was created from coppying this card and changing 
                      its content and image -->
-            <div class="restaurants__card">
+            <div class="restaurant__card">
                 <a href="./restaurants/Elderflower.html">
                     <span class="new">New</span>
-                    <img class="restaurants_image" src="./assets/images/restaurants/circle-from-above-dish.jpg"
+                    <img class="restaurant_image" src="./assets/images/restaurants/circle-from-above-dish.jpg"
                         alt="An image of food">
-                    <div class="restaurant_descript">
+                    <div class="restaurant_description">
                         <div class="restaurants_name">
                             <h3>Elderflower
                                 <i class="fa-regular fa-heart"></i>
                                 <i class="fa-solid fa-heart my-heart-full"></i>
                             </h3>
                         </div>
-                        <div class="subtile_card">
+                        <div class="subtitle_card">
                             <p>Old Street</p>
                         </div>
                     </div>
@@ -664,14 +664,14 @@
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                     <!-- the 'Shoreditch Canteen' and 'The Bay Leaf' cards don't have New labels -> and so these two cards have been created
                         in a similar fashion in comparison to the first two -->
-            <div class="restaurants__card">
+            <div class="restaurant__card">
                 <a href="./restaurants/Shoreditch-Canteen.html">
                     <div class="button_card">
                     </div>
-                    <img class="restaurants_image"
+                    <img class="restaurant_image"
                         src="./assets/images/restaurants/circle-from-the-side-dish.jpg"
                         alt="An image of food">
-                    <div class="restaurant_descript">
+                    <div class="restaurant_description">
                         <div class="restaurants_name">
                             <h3>
                                 Shoreditch Canteen
@@ -679,7 +679,7 @@
                                 <i class="fa-solid fa-heart my-heart-full"></i>
                             </h3>
                         </div>
-                        <div class="subtile_card">
+                        <div class="subtitle_card">
                             <p>Shoreditch</p>
                         </div>
                     </div>
@@ -688,15 +688,15 @@
 
             <!-- BELOW - THE BAY LEAF CARD -->
             <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-            <div class="restaurants__card">
+            <div class="restaurant__card">
                 <a href="./restaurants/The–Bay-Leaf.html">
                     <div class="button_card">
 
                     </div>
-                    <img class="restaurants_image"
+                    <img class="restaurant_image"
                         src="./assets/images/restaurants/rectangle-dish.jpg"
                         alt="An image of food">
-                    <div class="restaurant_descript">
+                    <div class="restaurant_description">
                         <div class="restaurants_name">
                             <h3>
                                 The Bay Leaf
@@ -704,7 +704,7 @@
                                 <i class="fa-solid fa-heart my-heart-full"></i>
                             </h3>
                         </div>
-                        <div class="subtile_card">
+                        <div class="subtitle_card">
                             <p>Hoxton</p>
                         </div>
                     </div>
