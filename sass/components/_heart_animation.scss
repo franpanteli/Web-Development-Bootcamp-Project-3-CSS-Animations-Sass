@@ -5,15 +5,14 @@
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
+
+  &:hover {
+    opacity: 1;
+    background-position: 0% 100%;
+    transition: opacity 1s ease-in-out;
+  }
 }
-  
-.my-heart-full:hover {
-  opacity: 1;
-  background-position: 0% 100%;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  transition: opacity 1s ease-in-out;
-}
-  
+
 .fa-heart {
   position: absolute;
   cursor: pointer;

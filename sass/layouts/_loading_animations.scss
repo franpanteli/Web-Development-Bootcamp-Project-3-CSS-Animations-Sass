@@ -2,10 +2,21 @@
   position: fixed;
   display: grid;
   place-items: center;
-  background: radial-gradient(circle, #9356DC, #99E2D0);  
+  background: radial-gradient(circle, #9356DC, #99E2D0);
   inset: 0;
   z-index: 1;
   animation: goAway 0s 2.9s forwards;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: inherit;
+  }
 }
 
 .word {
@@ -15,4 +26,17 @@
   text-shadow: 3px 3px 3px black;
   font-family: shrikhand;
   animation: textExpand 2.9s forwards ease-out;
+}
+
+@keyframes goAway {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes textExpand {
+  to {
+    transform: scale(1.2);
+  }
 }
