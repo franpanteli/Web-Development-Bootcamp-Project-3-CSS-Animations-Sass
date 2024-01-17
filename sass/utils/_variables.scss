@@ -1,8 +1,11 @@
-/* Variables colors */
-
+// Below - variables for the project colour palette, listed in the project creative brief 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-$quad-color: #f6f6f6;
+$quaternary-color: #F6F6F6;
+$label-font-color: #008766;
 
+// Below -  for the breakpoints of the project (in this case the value of the tablet breakpoint was used) 
+    // the names of the variables used were more generic in case their values changed
 $breakpoint: 1024px;
+

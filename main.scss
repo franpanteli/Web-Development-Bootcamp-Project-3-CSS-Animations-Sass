@@ -21,15 +21,12 @@
 @import "./sass/utils/variables";
 @import "./sass/utils/mixins";
 
-// base 
-@import "./sass/base/root";
-
 // layouts
 @import "./sass/layouts/header";
 
 // components 
 @import "./sass/components/restaurant_cards";
-@import "./sass/components/more_potential_animation_files";
+@import "./sass/components/heart_animation";
 
 // more layouts 
 @import "./sass/layouts/footer";

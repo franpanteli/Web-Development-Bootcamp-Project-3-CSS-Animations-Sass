@@ -1,0 +1,25 @@
+//  Imports 
+@import '../utils/variables';
+@import '../utils/mixins';
+
+// Sass
+.my-heart-full {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient($secondary-color, $primary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  &:hover {
+    opacity: 1;
+    background-position: 0% 100%;
+    transition: opacity 1s ease-in-out;
+  }
+}
+
+.fa-heart {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.2em;
+}

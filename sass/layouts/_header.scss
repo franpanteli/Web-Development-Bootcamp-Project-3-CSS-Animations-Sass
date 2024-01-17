@@ -1,96 +1,150 @@
-.location {
-    display: flex;
-    align-items: baseline;
-    background-color: #EAEAEA;
-    color: #353535;
-    justify-content: center;
+// Imports 
+@import '../utils/variables';
+@import '../utils/mixins';
 
-    .fa-solid {
-        padding-right: 1em;
-    }
+// Sass 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+.location {
+  display: flex;
+  align-items: baseline;
+  background-color: #eaeaea;
+  color: #353535;
+  justify-content: center;
+
+  .fa-solid {
+    padding-right: 1em;
+  }
 }
 
 .introduction {
-    text-align: center;
-    background-color: $quad-color;
+  text-align: center;
+  background-color: $quaternary-color;
 
-    &__title {
-       
-        color: rgb(0, 0, 0);
-        padding-top: 0.7em;
-    }
-
-    &__down-title {
-        color: #353535;
-        font-weight: 300;
-        font-size: 18px;
-    }
-.button{
-    @include button-pink;
-    width: 14em; ;
-}
-}
-
-.introduction__title h2{
-font-size: 24px;
-font-weight: 700;
-}
-
-.functionning{
-    margin-bottom: 50px;
-    @media screen and (min-width: $breakpoint) {
-     padding: 0 5em 0 5em;
+  &__title {
+    color: #000;
+    padding-top: 0.7em;
   }
-  
-    h2 {
-      padding: 20px;
-      font-size: 24px;
+
+  &__down-title {
+    color: #353535;
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .button {
+    background-image: linear-gradient(to top, $primary-color, $secondary-color);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+    color: white;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    padding: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    opacity: 1;
+    font-size: 16px;
+    transition: opacity 250ms, transform 250ms ease-in-out;
+    width: 218px;
+
+    &:hover {
+      box-shadow: 0px 4px 16px rgb(0, 0, 0);
+      opacity: 0.85;
+      transition: all 250ms ease-in-out;
+      transform: scale(1.05);
+      cursor: pointer;
     }
-  
-    &__list {
-        padding-left: 0;
-        @media screen and (min-width: $breakpoint) {
-          display: flex;
-          justify-content: space-between;
-        }
-      li {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: nowrap;
-       padding: 0.5em;
-        margin: 1.5em 1.5em;
-        font-weight: 500;
-        border-radius: 25px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        background-color: $quad-color;
-        @media screen and (min-width: $breakpoint){
-          width: 20em;
-        }
-      }
-        &--number {
-          background-color: $primary-color;
-          color: white;
-          border-radius: 50%;
-          padding: 0.2em;
-          margin-left: -1.3em;
-          width: 1em;
-          text-align: center;
-        }
-      }
+  }
+
+  &__title h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
 
+.functioning {
+  margin-bottom: 50px;
 
-  .fa, .fas {
-   color: grey;
-    margin-left: 1em;
-    margin-right: 1em;
-  
-    &-mobile-alt:before {
-      content: "\f3cd";
+  @media screen and (min-width: $breakpoint) {
+    padding: 0 5em 0 5em;
+  }
+
+  h2 {
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  &__list {
+    padding-left: 0;
+
+    @media screen and (min-width: $breakpoint) {
+      display: flex;
+      justify-content: space-between;
     }
+
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      padding: 0.5em;
+      margin: 1.5em 1.5em;
+      font-weight: 500;
+      border-radius: 25px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      background-color: $quaternary-color;
+
+      @media screen and (min-width: $breakpoint) {
+        width: 20em;
+      }
+    }
+
+    &--number {
+      background-color: $primary-color;
+      color: white;
+      border-radius: 50%;
+      padding: 0.2em;
+      margin-left: -1.3em;
+      text-align: center;
+      width: 24px;
+      height: 20px;
+      padding-top: 4px;
+    }
+  }
 }
-.fa-store{
-    color: $primary-color
+
+.fa, .fas {
+  color: grey;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.fa-mobile-alt:before, .fas-mobile-alt:before {
+  content: "\f3cd";
+}
+
+.fa-store {
+  color: $primary-color;
 }

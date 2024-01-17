@@ -1,31 +1,70 @@
-@mixin font-shri{
-    font-family: shrikhand;
-    font-weight: 400;
-    text-align: center;
-}
-
-@mixin button-pink{
-        background-image: linear-gradient(to top, $primary-color, $secondary-color);
-        box-shadow: 0px 4px 16px rgba(0,0,0,0.30);
-        color: white;
-    height: 50px;
-        border: none;
-        border-radius: 25px;
-        padding: 1em;
-        margin-top: 1.5em;
-        margin-bottom: 3em;
-        opacity: 1;
-        transition: opacity 250ms, transform 250ms ease-in-out;
-            &:hover {
-                box-shadow: 0px 4px 16px rgba(0,0,0,40);
-                opacity: 0.85;
-                transition: all 250ms ease-in-out;
-                transform: scale(1.05);
-                cursor: pointer;
-            }
+// Mixins for the restaurant cards in _restaurant_cards.scss
+@mixin card-styles {
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px #0000001A;
+    margin: 1em;
+    position: relative;
+    background: #ffffff;
+    height: 251px;
+    cursor: pointer;
+  
+    .restaurant_image {
+      -o-object-fit: cover;
+      object-fit: cover;
+      border-radius: 15px 15px 0px 0px;
+      width: 100%;
+      height: 100%;
+      max-height: 11em;
     }
-    @mixin ellipse {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+  
+    .restaurants_name {
+      padding-left: 1.25em;
+      display: flex;
+  
+      h3 {
+        display: flex;
+        align-items: center;
+      }
+  
+      i {
+        right: 1em;
+      }
     }
+  
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  
+    .subtitle_card {
+      p {
+        font-size: 17px;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+    }
+  
+    .new {
+      color: $label-font-color;
+      background-color: $tertiary-color;
+      border: 5px solid $tertiary-color;
+      border-radius: 2px;
+      position: absolute;
+      right: 2.6%;
+      top: 5%;
+      width: 80px;
+      height: 24px;
+      display: flex;
+      padding-top: 5px;
+      justify-content: center;
+      box-shadow: 0px 2px 4px 0px #00000026;
+    }
+  
+    .subtitle_card {
+      padding-left: 1.25em;
+    }
+  
+    .restaurant_description {
+      line-height: 0;
+    }
+  }
