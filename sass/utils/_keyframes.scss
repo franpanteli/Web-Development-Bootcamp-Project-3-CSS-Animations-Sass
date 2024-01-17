@@ -1,48 +1,30 @@
-// Imports 
-@import '../utils/variables';
-
-// Sass 
-@keyframes goAway {
-  0% {
-    opacity: 1;
-    z-index: -1;
+//LOADER//
+@keyframes disappear {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
   }
-  100% {
-    opacity: 0;
-    z-index: -1;
+  
+  @keyframes spin {
+    to {
+      transform: rotateY(360deg);
+    }
   }
-}
+  //LOADER//
 
-@keyframes textExpand {
-  100% {
-    font-size: 90px;
-    opacity: 1;
-  }
-}
+  //MENU//
+  @keyframes menuFadeIn {
+    0% {
+        opacity: 0;
+        height: 0;
+      }
+      100% {
+        opacity: 1;
+        height: 100%;
+      }
+    }    
+  //MENU
 
-.menu-page-container {
-  animation: fadeInMenu 2.9s forwards;
-}
-
-.menu__block--startersFadeIn {
-  animation: fadeInMenu 1.5s forwards;
-}
-
-.menu__block--mainsFadeIn {
-  animation: fadeInMenu 3s forwards;
-}
-
-.menu__block--dessertsFadeIn {
-  animation: fadeInMenu 4s forwards;
-}
-
-@keyframes fadeInMenu {
-  0% {
-    opacity: 0;
-    height: 0;
-  }
-  100% {
-    opacity: 1;
-    height: 100%;
-  }
-}

@@ -24,8 +24,8 @@
                 cursor: pointer;
             }
     }
-@mixin ellipse {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
+    @mixin ellipse {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
