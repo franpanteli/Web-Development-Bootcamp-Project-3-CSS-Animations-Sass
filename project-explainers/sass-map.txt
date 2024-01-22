@@ -1,0 +1,140 @@
+
+ABOUT 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The third project for this bootcamp was the first which included Sass. This involved nine partials (scss files), the compiling into the main css file for the project. To fix problematic elements during the development of the webpage, their code was found and altered. During the second project (without Sass), this involved inspecting problematic elements on the webpage in the console either in Chrome or Firefox. This would indicate where in the compiled css the issues lay. Altering these elements would be a matter of control f in the styles.css file for the project. In this project, however, the styles.css file could not be directly altered during this process - since it was the partial scss files which were compiling into it. Finding the css (sass) for problematic elements would be a matter of looking through the nine partial scss files to find them. This created issues when it came to the time efficiency of the project, especially considering the nature of the project as part of a web development bootcamp. 
+
+One approach which was suggested to address this was to use a Sass converter (code beautify). The css was first written as with the second project (all of the code in the styles.css file for the project), and then this was converted into Sass and divided into partials to compile into this same css. These partials split the Sass into nine different partials. This file was created as a map as to where in the file tree for the final Sass of the project to find which piece of css which compiles into it. This Sass map creates added efficiency when looking to alter specific parts of the css for the project in allowing the person altering it to find the code for the targeted element. 
+
+Note: the thought processes used to create the elements in these scss (Sass) files are explained in depth in the comments of the index.html file for the project homepage and the html file for the Kitchen West page in depth.   
+
+CSS MAP 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The file tree for the final Sass in the wider context of the project is below: 
+.
+├── components
+│   ├── _heart_animation.scss <- ONE 
+│   └── _restaurant_cards.scss <- TWO 
+├── layouts
+│   ├── _footer.scss <- THREE
+│   ├── _header.scss <- FOUR 
+│   ├── _loading_animations.scss <- FIVE 
+│   └── _pages.scss <- SIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+└── utils
+    ├── _keyframes.scss <- SEVEN 
+    ├── _mixins.scss <- EIGHT
+    └── _variables.scss <- NINE 
+
+ONE, "_heart_animation.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-> this partial contains the scss for the animated hearts in the project 
+-> this has three functions 
+	-> to style the hearts in and not in their hover states
+	-> the position the heart which is in its hover state on top of the heart which is not in its hover state 
+
+TWO, "_restaurant_cards.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-> this scss file is for the big box which is around all of the restaurant cards on the project homepage 
+-> the purpose of the scss included in this file is 
+
+	The big box around all of the restaurant cards 
+	-> to set the parameters for the big box -> in its normal state 
+	-> media queries to reduce the padding to the big box below the tablet breakpoint region -> when the cards start stacking  
+
+	The restaurant cards themselves 
+	-> the styling of the restaurant cards 
+	-> then the media queries which put those cards into a flex grid above the tablet breakpoint region 
+
+THREE, "_footer.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-> this scss file is for the footer of the project 
+-> the purpose of the scss included in this file is
+	
+	The big box around the entire footer 
+	-> setting the styles 
+	-> and then media queries for it <- so below the tablet breakpoint, we're stacking everything in a column, and then above the tablet breakpoint we're stacking it into a row 
+	
+	The individual list elements for the footer 
+	-> the footer is made out of list elements <- formatting those list elements to look like footer elements 
+	-> the logo in the footer (made out of text)
+	-> all of these list elements are h3 elements 
+	
+	Media queries for the footer list elements
+	-> there are media queries for the large box which are around all of them -> and then there are media queries for those individual list elements as well
+	-> flexing the elements with an icon and text in them into a row 
+	-> the list elements below the tablet breakpoint -> when they start stacking and have specific styling 
+
+FOUR, "_header.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-> this scss file is for the header of the project index.html file <- everything from the top of the webpage to the bottom of the three cards with the purple circles 
+	-> this is one of the longest scss files of the nine and has more complexity 
+-> the purpose of the scss included in this file is
+	
+	The h1 is for the logo 
+	-> the logo was done using font rather than an svg / png / jpg 
+	-> this was h1 
+	-> the first section of this scss file is targeting h1 html elements -> to format 'ohmyfood' text in the header of the project into the logo text
+
+	For the banner in the header of the index.html file  
+	-> this scss also targets the text which says the location of the restaurants and the maps logo for this 
+
+	The button in this section 
+	-> the thought processes used to create this are explained in the index.html file of the project 
+	-> before and after the transition happens 
+	-> this section of the scss file contains the code for the animation of the button in the header of the index.html file 
+		-> both for it in its regular and hover state 
+
+	The cards with the purple circles 
+	-> the cards with the triple circles were made using list elements 
+	-> this scss targets these list elements 
+	-> the media queries for these three cards <- flexing them into a column above the tablet breakpoint 
+	-> the styling for those elements (turning the list elements into cards)
+	-> and then the styling for the numbers (purple circles) 
+		-> if you want to find the scss for the purple circles -> they are in the index.html file, in it's header -> so you go to the _header.scss file 
+
+FIVE, "_loading_animations.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+-> this scss file creates the loader of the project
+-> the purpose of the scss included in this file is
+	
+	To set the background of the loader 
+	-> to make the loader take up the entire page, and for it to be radial 
+	-> i.e, moving it to the centre of the page and in front all of the content 
+	
+	To target the loader with an animation 
+	-> the loader is targeted with a keyframed animation 
+	-> this scss applies the animation to this loader -> which moves it to the back of the content on the page (rather than being in front of it)
+
+	To set the styles for the text in the loader
+	-> the font styles for this are defined and it is animated using a similar keyframe approach as the background which contains it 
+	-> the text was embedded in the html for the background 
+	
+	To define the animation for the text on the loader 
+	-> the styles of the text are defined, then the animation is used on them 
+	-> and it's defined after using it -> the animation here increases the font size of the text 
+		-> to a point where it will still be able to fit on the page for mobile versions 
+
+	To define the keyframes which create the loader for the animation 
+	-> the background of the loader is targeted with an animation 
+	-> we first set the styles for the background of the loader -> then use the animation which targets it 
+	-> then at the end of the entire partial, we define the keyframe which gives this animation 
+	-> the job of this is to make the background of the loader go away (the go away keyframe) -> more information in the index.html file for the project 
+
+ SIX, "_pages.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+-> this is a longer scss file which as;lkdmflaskdfm pages for the project 
+-> the purpose of the scss included in this file is
+
+
+ 
+
+
+
+
+
+
+
+
+
+
