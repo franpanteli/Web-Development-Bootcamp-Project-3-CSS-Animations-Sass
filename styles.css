@@ -483,6 +483,7 @@ footer a {
   transition: opacity 250ms, transform 250ms ease-in-out;
   width: 186px;
   display: inline-block;
+  background-color: red;
 }
 
 .order__button:hover {

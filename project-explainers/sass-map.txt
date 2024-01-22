@@ -1,16 +1,13 @@
-
 ABOUT 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The third project for this bootcamp was the first which included Sass. This involved nine partials (scss files), compiling into the main css file for the project. To fix problematic elements during the development of the webpage, the css for these elements was found and altered. During the second project (without Sass), this involved inspecting problematic elements on the webpage in the console either in Chrome or Firefox. This would indicate where in the compiled css the issues lay. Altering these elements would be a matter of control f in the styles.css file for the project. In this project, however, the styles.css file could not be directly altered during this process - since partial scss files were compiling into it. Finding the css (sass) for problematic elements would be a matter of looking through the nine partial scss files to find them. This created issues when it came to the time efficiency of the project, especially considering the nature of the project as part of a web development bootcamp. 
 
-The third project for this bootcamp was the first which included Sass. This involved nine partials (scss files), the compiling into the main css file for the project. To fix problematic elements during the development of the webpage, their code was found and altered. During the second project (without Sass), this involved inspecting problematic elements on the webpage in the console either in Chrome or Firefox. This would indicate where in the compiled css the issues lay. Altering these elements would be a matter of control f in the styles.css file for the project. In this project, however, the styles.css file could not be directly altered during this process - since it was the partial scss files which were compiling into it. Finding the css (sass) for problematic elements would be a matter of looking through the nine partial scss files to find them. This created issues when it came to the time efficiency of the project, especially considering the nature of the project as part of a web development bootcamp. 
+One approach which was suggested to address this was to use a Sass converter (code beautify). The css was first written as with the second project (all of the code in the styles.css file for the project), and then this was converted into Sass and divided into partials to compile into this same css. These partials split the Sass into nine different files. This file was created as a map as to where in the file tree for the final Sass of the project to find which piece of css which compiles into it. This Sass map creates added efficiency when looking to alter specific parts of the project css, in allowing the person altering it to find the code for the targeted element. 
 
-One approach which was suggested to address this was to use a Sass converter (code beautify). The css was first written as with the second project (all of the code in the styles.css file for the project), and then this was converted into Sass and divided into partials to compile into this same css. These partials split the Sass into nine different partials. This file was created as a map as to where in the file tree for the final Sass of the project to find which piece of css which compiles into it. This Sass map creates added efficiency when looking to alter specific parts of the css for the project in allowing the person altering it to find the code for the targeted element. 
-
-Note: the thought processes used to create the elements in these scss (Sass) files are explained in depth in the comments of the index.html file for the project homepage and the html file for the Kitchen West page in depth.   
+Note: the thought processes used to create the elements in these scss (Sass) files are explained in depth in the comments of the index.html file for the project homepage and the html file for the Kitchen West page.   
 
 CSS MAP 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 The file tree for the final Sass in the wider context of the project is below: 
 .
 ├── components
@@ -20,20 +17,20 @@ The file tree for the final Sass in the wider context of the project is below:
 │   ├── _footer.scss <- THREE
 │   ├── _header.scss <- FOUR 
 │   ├── _loading_animations.scss <- FIVE 
-│   └── _pages.scss <- SIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+│   └── _pages.scss <- SIX
 └── utils
-    ├── _keyframes.scss <- SEVEN 
+    ├── _keyframes.scss <- SEVEN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     ├── _mixins.scss <- EIGHT
     └── _variables.scss <- NINE 
 
-ONE, "_heart_animation.scss"
+ONE, "_heart_animation.scss" <- THE HEART ANIMATION 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 -> this partial contains the scss for the animated hearts in the project 
 -> this has three functions 
 	-> to style the hearts in and not in their hover states
 	-> the position the heart which is in its hover state on top of the heart which is not in its hover state 
 
-TWO, "_restaurant_cards.scss"
+TWO, "_restaurant_cards.scss" <- THE CARDS ON THE INDEX.HTML FILE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 -> this scss file is for the big box which is around all of the restaurant cards on the project homepage 
 -> the purpose of the scss included in this file is 
@@ -46,7 +43,7 @@ TWO, "_restaurant_cards.scss"
 	-> the styling of the restaurant cards 
 	-> then the media queries which put those cards into a flex grid above the tablet breakpoint region 
 
-THREE, "_footer.scss"
+THREE, "_footer.scss" <- THE FOOTER 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 -> this scss file is for the footer of the project 
 -> the purpose of the scss included in this file is
@@ -65,7 +62,7 @@ THREE, "_footer.scss"
 	-> flexing the elements with an icon and text in them into a row 
 	-> the list elements below the tablet breakpoint -> when they start stacking and have specific styling 
 
-FOUR, "_header.scss"
+FOUR, "_header.scss" <- THE INDEX.HTML PURPLE CIRCLES SECTION 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 -> this scss file is for the header of the project index.html file <- everything from the top of the webpage to the bottom of the three cards with the purple circles 
 	-> this is one of the longest scss files of the nine and has more complexity 
@@ -93,7 +90,7 @@ FOUR, "_header.scss"
 	-> and then the styling for the numbers (purple circles) 
 		-> if you want to find the scss for the purple circles -> they are in the index.html file, in it's header -> so you go to the _header.scss file 
 
-FIVE, "_loading_animations.scss"
+FIVE, "_loading_animations.scss" <- THE PINK LOADER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 -> this scss file creates the loader of the project
 -> the purpose of the scss included in this file is
@@ -121,20 +118,60 @@ FIVE, "_loading_animations.scss"
 	-> then at the end of the entire partial, we define the keyframe which gives this animation 
 	-> the job of this is to make the background of the loader go away (the go away keyframe) -> more information in the index.html file for the project 
 
- SIX, "_pages.scss"
+SIX, "_pages.scss" <- SASS FOR THE PROJECT RESTAURANT PAGES 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
--> this is a longer scss file which as;lkdmflaskdfm pages for the project 
+-> this is a longer scss file -> for the menu pages 
+-> there are 5 html files in the project -> 4 of them are menu pages (four menus) and then there is the main project homepage (its index.html file)
+-> the four menu pages are the same 
+-> this scss file contains the sass for all of those menu (restaurant) pages 
+
 -> the purpose of the scss included in this file is
+	-> to format the header for these restaurant pages 
+		-> the back arrow icon at the top
+		-> the 'ohmyfood' text in the header 
+		-> these individual header elements, and then the larger container which is around them  
+	-> the images on the restaurant pages (their dimensions) 
+	-> the large beige container around all of the choices for the menu cards
+		-> the media queries for that container  
+	-> the smaller div which is in the centre of the beige container
+		-> this is the div which is around all of the menu content 
+		-> there is the beige one -> and then there is another one embedded inside that, which is around all of the content in the centre of the page 
+	-> sass which targets the content inside the beige menu section 
+		-> the title at the top of that section 
+			-> the icon and the text for this 
+		-> the box which is around all of the choice cards (the block) 
+			-> the media queries for that <- the approach used to create this is detailed in in depth comments in the Kitchen West html file  
+			-> the titles for those sections of the block (MAINS, STARTERS)
+			-> each of the individual choice cards with dishes on them  
+		-> the animations for the green ticks 
+		-> the button at the bottom of it 
 
+-> the file contains all of the scss for these restaurant pages 
+-> this is structured so it contains the sass for the top of these pages first -> working downwards 
+-> there are in depth comments which explain the thought process behind the code for this - in the html file of the Kitchen West menu 
 
+SEVEN, "_keyframes.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-> this is a shorter scss file which contains the keyframes for the project 
+-> these are used with transitions to create its animations and are defined in camel case 
+-> the keyframes which this scss file contains are
+	-> goAway <- this keyframe makes the background of the loader fade 
+	-> fadeInMenu
+		-> this is the keyframe which fades in the elements on the project restaurant pages 
+		-> this scss (sass) file both defines and applies this to these sections of the restaurant pages 
  
+EIGHT, "_mixins.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-> this partial contains mixins (styling functions) for the project 
+-> the mixins this file defines are imported into the other partials throughout the project, to ensure they are useable 
+-> the process used to edit a mixin is
+	- find the element which you want to change by inspecting it in the console 
+	- identify where in the sass the css for this element is coming from
+	- if there is a mixin being used on that element via @include in its Sass, then go to this (_mixins.scss) file 
+	- control f for the name of the mixin being used, edit it and recompile the sass 
+		-> this recompile is done via "sass main.scss styles.css"
 
-
-
-
-
-
-
-
-
-
+NINE, "_variables.scss"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-> this scss file contains variables for the project 
+-> these are imported into other scss files throughout the project and include its colour palette and breakpoint value (tablet)
