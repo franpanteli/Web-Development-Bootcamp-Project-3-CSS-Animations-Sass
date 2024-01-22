@@ -41,7 +41,6 @@
 <p>This contains a list of resources for reference which was provided during a live session included as part of the bootcamp. It was suggested to refer to these resources when adding in the loader for the homepage of the ohmyfood website (in the index.html file for the project). These resources are listed below </p>
 <ul>
   <li> https://loading.io/css/ <- for loaders with html and CSS which can be used</li>
-  <li> [https://loading.io/css/](https://css2sass.herokuapp.com/) <- to convert CSS into Sass </li>
   <li> https://codebeautify.org/css-to-sass-converter <- to convert CSS into Sass </li>
 </ul>
 <p>There are in-depth comments in the index.html file of the project which detail the problem-solving thought processes used to create this loader for the homepage of the project.</p>
