@@ -3,7 +3,10 @@
 @import '../utils/mixins';
 
 // Sass
+// no mixins were used here
 .my-heart-full {
+  // styles for the opaque heart <- REGULAR STATE OF THE OPAQUE HEART 
+    // -> going from not hovered to hovered 
   opacity: 0;
   transition: opacity 1s ease-in-out;
   -webkit-text-fill-color: transparent;
@@ -11,13 +14,17 @@
   -webkit-background-clip: text;
   background-clip: text;
 
+  //  styles for the opaque heart <- HOVER STATE OF THE OPAQUE HEART 
   &:hover {
     opacity: 1;
     background-position: 0% 100%;
+      // SO THAT THE HEART ANIMATION WORKS IN REVERSE 
+        // -> going from hovered to not hovered 
     transition: opacity 1s ease-in-out;
   }
 }
 
+  // styles for the transparent heart <- ALL STATES
 .fa-heart {
   position: absolute;
   cursor: pointer;

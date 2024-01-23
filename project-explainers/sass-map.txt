@@ -19,7 +19,7 @@ The file tree for the final Sass in the wider context of the project is below:
 │   ├── _loading_animations.scss <- FIVE 
 │   └── _pages.scss <- SIX
 └── utils
-    ├── _keyframes.scss <- SEVEN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    ├── _keyframes.scss <- SEVEN 
     ├── _mixins.scss <- EIGHT
     └── _variables.scss <- NINE 
 
@@ -42,6 +42,7 @@ TWO, "_restaurant_cards.scss" <- THE CARDS ON THE INDEX.HTML FILE
 	The restaurant cards themselves 
 	-> the styling of the restaurant cards 
 	-> then the media queries which put those cards into a flex grid above the tablet breakpoint region 
+		-> making the homepage into a flex grid 
 
 THREE, "_footer.scss" <- THE FOOTER 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,7 +119,7 @@ FIVE, "_loading_animations.scss" <- THE PINK LOADER
 	-> then at the end of the entire partial, we define the keyframe which gives this animation 
 	-> the job of this is to make the background of the loader go away (the go away keyframe) -> more information in the index.html file for the project 
 
-SIX, "_pages.scss" <- SASS FOR THE PROJECT RESTAURANT PAGES 
+SIX, "_pages.scss" <- SASS FOR THE PROJECT RESTAURANT PAGES (THIS CONTAINS THE SASS FOR THE GREEN TICK ANIMATIONS ON THE MENU PAGES)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 -> this is a longer scss file -> for the menu pages 
 -> there are 5 html files in the project -> 4 of them are menu pages (four menus) and then there is the main project homepage (its index.html file)
@@ -145,10 +146,14 @@ SIX, "_pages.scss" <- SASS FOR THE PROJECT RESTAURANT PAGES
 			-> each of the individual choice cards with dishes on them  
 		-> the animations for the green ticks 
 		-> the button at the bottom of it 
+	-> to use ellipsis to avoid overflowing text <- mobile-first design 
+		-> ellipsis are also used in this sass partial (text-overflow: ellipsis;), to ensure that the menu items are truncated on the mobile version of the project 
+		-> this line is used three times throughout the partial (for the dish items, descriptions and title of the section on the menu which they fall under - mains, desserts, starters etc)
 
 -> the file contains all of the scss for these restaurant pages 
 -> this is structured so it contains the sass for the top of these pages first -> working downwards 
 -> there are in depth comments which explain the thought process behind the code for this - in the html file of the Kitchen West menu 
+
 
 SEVEN, "_keyframes.scss"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,3 +180,13 @@ NINE, "_variables.scss"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 -> this scss file contains variables for the project 
 -> these are imported into other scss files throughout the project and include its colour palette and breakpoint value (tablet)
+
+WHERE THE TRANSITIONS ARE IN THE SASS, AND THEM WORKING IN REVERSE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-> the transitions (not keyframes) which the project uses are 
+	-> the heart animation hover state <- on all pages
+		-> the Sass for this animation is in its own partial 
+	-> the button hover state <- on all pages
+	-> the green tick hover state animations <- on the menu pages 
+		-> making sure that the transitions (all of which are triggered by hover states) work in reverse
+		-> since this animation is in all of the menu pages -> it's found in the Sass partial for the pages 
