@@ -86,7 +86,9 @@ li {
 
 .functioning {
   margin-bottom: 50px;
-
+  // for the media queries around the header of the index.html file -> the three cards with the purple circles 
+    // this is the media query for the container which is around all of the cards and the title in that section of the project homepage 
+    // -> the padding for this entire section is changing (refer to comments around the index.html file for the problem solving approach used for this)
   @media screen and (min-width: $breakpoint) {
     padding: 0 5em 0 5em;
   }
@@ -98,7 +100,10 @@ li {
 
   &__list {
     padding-left: 0;
-
+    // this media query is for the container which is around all of the cards with the purple circles on the project index.html (homepage) file 
+      // not including the text which says "Restaurants"
+      // -> we are flexing the three cards with the purple circles into a row -> under the context of media queries 
+      // -> refer to the comments around the index.html file for the problem-solving approach used for this
     @media screen and (min-width: $breakpoint) {
       display: flex;
       justify-content: space-between;
@@ -117,6 +122,9 @@ li {
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
       background-color: $quaternary-color;
 
+      // this media query dictates the behaviour of each of the cards with the purple circles on the project homepage 
+        // -> we are fixing the widths of the cards on the page -> so they don't stack 
+        // -> refer to the comments around the index.html file for the problem-solving approach used for this
       @media screen and (min-width: $breakpoint) {
         width: 20em;
       }
