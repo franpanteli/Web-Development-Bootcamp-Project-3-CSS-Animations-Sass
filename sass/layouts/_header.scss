@@ -54,29 +54,14 @@ li {
     font-size: 18px;
   }
 
-  .button {
-    background-image: linear-gradient(to top, $primary-color, $secondary-color);
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
-    color: white;
-    height: 50px;
-    border: none;
-    border-radius: 25px;
-    padding: 1em;
-    margin-top: 1.5em;
-    margin-bottom: 3em;
-    opacity: 1;
-    font-size: 16px;
-    transition: opacity 250ms, transform 250ms ease-in-out;
-    width: 218px;
-
-    &:hover {
-      box-shadow: 0px 4px 16px rgb(0, 0, 0);
-      opacity: 0.85;
-      transition: all 250ms ease-in-out;
-      transform: scale(1.05);
-      cursor: pointer;
-    }
-  }
+// below -> 'Explore our restaurants' button 
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  // this button was repeated throughout all of the webpages in the project -> and so was created using a mixin  
+        // this mixin was used twice in the Sass -> the other place it is used is in the pages sass file, which targets the sass for the four menu pages  
+  // below is the use of this mixin on the project homepage (in the index.html file) only, to create this button 
+.button {
+  @include button-styles(218px, linear-gradient(to top, $primary-color, $secondary-color));
+}
 
   &__title h2 {
     font-size: 24px;

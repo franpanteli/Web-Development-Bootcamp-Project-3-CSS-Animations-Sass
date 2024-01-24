@@ -1,70 +1,60 @@
-// Mixins for the restaurant cards in _restaurant_cards.scss
-@mixin card-styles {
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px #0000001A;
-    margin: 1em;
-    position: relative;
-    background: #ffffff;
-    height: 251px;
-    cursor: pointer;
-  
-    .restaurant_image {
-      -o-object-fit: cover;
-      object-fit: cover;
-      border-radius: 15px 15px 0px 0px;
-      width: 100%;
-      height: 100%;
-      max-height: 11em;
-    }
-  
-    .restaurants_name {
-      padding-left: 1.25em;
-      display: flex;
-  
-      h3 {
-        display: flex;
-        align-items: center;
-      }
-  
-      i {
-        right: 1em;
-      }
-    }
-  
-    h3 {
-      font-size: 18px;
-      font-weight: 700;
-    }
-  
-    .subtitle_card {
-      p {
-        font-size: 17px;
-        font-weight: 300;
-        margin-top: 10px;
-      }
-    }
-  
-    .new {
-      color: $label-font-color;
-      background-color: $tertiary-color;
-      border: 5px solid $tertiary-color;
-      border-radius: 2px;
-      position: absolute;
-      right: 2.6%;
-      top: 5%;
-      width: 80px;
-      height: 24px;
-      display: flex;
-      padding-top: 5px;
-      justify-content: center;
-      box-shadow: 0px 2px 4px 0px #00000026;
-    }
-  
-    .subtitle_card {
-      padding-left: 1.25em;
-    }
-  
-    .restaurant_description {
-      line-height: 0;
+// button-styles <- TO CREATE THE PINK BUTTONS
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    // this mixin creates the buttons in the project and is used twice throughout the Sass
+        // -> in the pages sass file (for the four menu pages in the project)
+        // -> in the header sass file (in the header of the project homepage)
+@mixin button-styles($width, $gradient) {
+    
+    // format the buttons 
+    background: $gradient;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+    color: white;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    padding: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    opacity: 1;
+    font-size: 16px;
+    width: $width;
+
+    // add animation 
+        // -> to go from its regular state to its hover state 
+    transition: opacity 250ms, transform 250ms ease-in-out;
+    
+
+    &:hover {
+    // to format the buttons in their hover states 
+      box-shadow: 0px 4px 16px rgb(0, 0, 0);
+      opacity: 0.85;
+      transform: scale(1.05);
+      cursor: pointer;
+
+        // to add in a transition to make the button animation reversible 
+      transition: all 250ms ease-in-out;
     }
   }
+//    note: refer to the in-depth comments around the header section of the project index.html 
+    // file for more information about the problem-solving approach used to create these buttons 
+
+// textEllipsis <- ADDS ELLIPSIS TO TEXT IN THE MENU PAGES
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// -> this mixin is used on the four restaurant pages for the project, and so multiple times 
+    // throughout the _pages.scss partial which styles these pages
+
+@mixin textEllipsis() {
+
+    // below - to force the content to fit onto the choice card when it is shrunk to the mobile breakpoint and below 
+    white-space: nowrap;
+
+    // below - adds in '...'
+    text-overflow: ellipsis;
+
+    // below - to further separate the text in a given choice card from the dish price when the menu pages are 
+        // shrunk to the mobile breakpoint region and below  
+    overflow: hidden;
+}
+
+// note: refer to the in-depth comments around the Kitchen West html file for more information about the problem-solving
+    // approach used to create these features 

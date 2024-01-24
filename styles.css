@@ -46,7 +46,7 @@ li {
   font-size: 18px;
 }
 .introduction .button {
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   color: white;
   height: 50px;
@@ -57,15 +57,15 @@ li {
   margin-bottom: 3em;
   opacity: 1;
   font-size: 16px;
-  transition: opacity 250ms, transform 250ms ease-in-out;
   width: 218px;
+  transition: opacity 250ms, transform 250ms ease-in-out;
 }
 .introduction .button:hover {
   box-shadow: 0px 4px 16px rgb(0, 0, 0);
   opacity: 0.85;
-  transition: all 250ms ease-in-out;
   transform: scale(1.05);
   cursor: pointer;
+  transition: all 250ms ease-in-out;
 }
 .introduction__title h2 {
   font-size: 24px;
@@ -480,17 +480,16 @@ footer a {
   margin-top: 1.5em;
   margin-bottom: 3em;
   opacity: 1;
-  transition: opacity 250ms, transform 250ms ease-in-out;
+  font-size: 16px;
   width: 186px;
-  display: inline-block;
+  transition: opacity 250ms, transform 250ms ease-in-out;
 }
-
 .order__button:hover {
   box-shadow: 0px 4px 16px rgb(0, 0, 0);
   opacity: 0.85;
-  transition: all 250ms ease-in-out;
   transform: scale(1.05);
   cursor: pointer;
+  transition: all 250ms ease-in-out;
 }
 
 .choice__card__txt p,

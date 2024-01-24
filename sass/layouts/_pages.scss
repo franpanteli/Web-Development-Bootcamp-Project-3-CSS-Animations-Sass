@@ -123,24 +123,22 @@
   width: auto;
   flex: 1;
   padding-left: 20px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  
+// below - this mixin adds ellipsis into the project menu pages 
+    // -> this applies to the behaviour of the text in the choice cards for these four pages, to ensure that the text does not overflow out of its container when the menu pages are made smaller (e.g for its mobile version)
+    // -> refer to the comments around the Kitchen West menu for the problem-solving approach used to achieve this 
+  @include textEllipsis();
 }
 
 .choice__card__txt--title {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  @include textEllipsis();
   font-weight: 500;
   font-size: 18px;
   padding-top: 0.8em;
 }
 
 .choice__card__txt--description {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  @include textEllipsis();
   font-weight: 300;
   font-size: 15px;
   padding-bottom: 12px;
@@ -198,28 +196,14 @@
   padding-top: 1em;
 }
 
-.order__button {
-  background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
-  color: white;
-  height: 50px;
-  border: none;
-  border-radius: 25px;
-  padding: 1em;
-  margin-top: 1.5em;
-  margin-bottom: 3em;
-  opacity: 1;
-  transition: opacity 250ms, transform 250ms ease-in-out;
-  width: 186px;
-  display: inline-block; 
-}
 
-.order__button:hover {
-  box-shadow: 0px 4px 16px rgb(0, 0, 0);
-  opacity: 0.85;
-  transition: all 250ms ease-in-out;
-  transform: scale(1.05);
-  cursor: pointer;
+// below -> order button 
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  // this button was repeated throughout all of the webpages in the project -> and so was created using a mixin  
+        // this mixin was used twice in the Sass -> the other place it is used is in the header sass file, which targets the sass for the homepage of the project   
+  // below is the use of this mixin on the project's four restaurant pages, and creates this button on all four of these pages  
+.order__button {
+  @include button-styles(186px, linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%));
 }
 
 .choice__card__txt p,
