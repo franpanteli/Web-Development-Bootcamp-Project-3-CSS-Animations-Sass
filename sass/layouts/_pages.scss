@@ -203,7 +203,7 @@
         // this mixin was used twice in the Sass -> the other place it is used is in the header sass file, which targets the sass for the homepage of the project   
   // below is the use of this mixin on the project's four restaurant pages, and creates this button on all four of these pages  
 .order__button {
-  @include button-styles(186px, linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%));
+  @include buttonStyles(186px, linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%));
 }
 
 .choice__card__txt p,

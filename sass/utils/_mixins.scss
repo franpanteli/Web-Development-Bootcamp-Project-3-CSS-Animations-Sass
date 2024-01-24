@@ -3,7 +3,7 @@
     // this mixin creates the buttons in the project and is used twice throughout the Sass
         // -> in the pages sass file (for the four menu pages in the project)
         // -> in the header sass file (in the header of the project homepage)
-@mixin button-styles($width, $gradient) {
+@mixin buttonStyles($width, $gradient) {
     
     // format the buttons 
     background: $gradient;
