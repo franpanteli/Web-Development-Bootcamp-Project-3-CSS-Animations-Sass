@@ -37,16 +37,16 @@
 
   <!-- icon compatibility -->
     <!-- 
-        this html allows the icons from the font awesome library to be used throughout the project, and was acquired by 
-        searching 'font awesome cdn' in a browser   
-        -> two methods were used for this, to ensure both that the font awesome icons imported correctly and that the code passed the w3c css validator 
+        this html allows the icons from the Font Awesome library to be used throughout the project, and was acquired by 
+        searching 'Font Awesome cdn' in a browser   
+        -> two methods were used for this, to ensure both that the Font Awesome icons imported correctly and that the code passed the w3c css validator 
         -->
 
-  <!-- this first link imports the font awesome icons using cloudfare - this doesn't pass the css validator with w3c but the icons still work and 
+  <!-- this first link imports the Font Awesome icons using cloudfare - this doesn't pass the css validator with w3c but the icons still work and 
         import into the file with this link 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
-  <!--  this second approach imports the font awesome icons into the project with a specific kit. This link was exported from the font awesome site, to 
+  <!--  this second approach imports the Font Awesome icons into the project with a specific kit. This link was exported from the Font Awesome site, to 
       ensure both icon compatibility and that the css validation for the project passes the w3c validator -->
   <script src="https://kit.fontawesome.com/751a7e3219.js" crossorigin="anonymous"></script>
 
@@ -125,7 +125,7 @@
   <header class="banner">
     <div class="banner_arrow">
 
-      <!-- the back arrow for the menu pages was created by using a font awesome icon embedded in a link
+      <!-- the back arrow for the menu pages was created by using a Font Awesome icon embedded in a link
             -> a line was used in the header of this html file so that these icons could be imported in -->
       <a href="../index.html">
         <i class="fa-solid fa-arrow-left"></i>
@@ -184,12 +184,12 @@
         <h2>Kitchen West
   
             <!-- 
-              below - these two lines of html are for font awesome icons 
+              below - these two lines of html are for Font Awesome icons 
                 -> the icon which shows before and after the transition 
        
                 The heart transition for the four menu pages
                   -> the heart transitions for the menu pages were the same as the ones in the homepage 
-                  -> these were created by taking two font awesome icons and adding the transition for the element while in its hover state
+                  -> these were created by taking two Font Awesome icons and adding the transition for the element while in its hover state
                   -> these two icons represent the appearance of the heart before and after the transition has happened, and were placed on 
                       top of each other using absolute positioning 
                   -> refer to the comments for this animated element in the index.html file for the project homepage 
@@ -250,7 +250,7 @@
                   into the centre of the page for this region 
                 -> below this point, the items in this element are placed in a div without this query  
       
-        Thought proccess behind fading in each individual section of the menu:
+        Thought process behind fading in each individual section of the menu:
           When the user arrives on the menu page, the dishes must appear gradually over time. They can appear either one by one or in groups - “Starters,” “Mains” and “Desserts”
           -> we want the starters, then mains and desserts to fade in 
           -> you would use a keyframe and not a transition -> the trigger is the reloading page
@@ -331,9 +331,9 @@
                     -> the div which surrounds both of these elements is targeted using the 'choice__card__txt' class
                       -> this is the class which is flexing the two text elements into a column 
                       -> this class is also used to hide the overflow of the text <- when the menu shrinks, the text which this div contains 
-                          doesn't flow off of it, and an ellipsis (...) js added to indicate this overflow 
+                          doesn't flow off of it, and an ellipsis (...) is added to indicate this overflow 
                     -> this class doesn't target the height of the elements which are inside it 
-                      -> the div is just placed around those two text elements <- and its heigh is adjusting to the height of the content inside 
+                      -> the div is just placed around those two text elements <- and its height is adjusting to the height of the content inside 
                       -> the height of the content inside was controlled by placing classes on those individual elements 
                       -> since there were two pieces of text, this involved two classes 
                         -> the class which targets the top piece of text (the 'choice__card__txt-title' class) gives this element a top padding 
@@ -405,7 +405,7 @@
                   -> that right padding is the distance in between the cost of the dish and the left of the green div which contains the tick for 
                       that element 
                   -> the span which contains the price of the dish was placed in a larger div, and that larger div was formatted into a square 
-                  -> so that its left edges had the same padding as the padding between the price of the dish and the left most side of the green 
+                  -> so that its left edges had the same padding as the padding between the price of the dish and the leftmost side of the green 
                       containing div 
                 -> top padding was added to this div, to then move down the price contained by the span inside it 
                 -> the width of this div is fixed -> so that the the animated green div comes in, the width of the first element in the choice 
@@ -440,23 +440,23 @@
                 -> when that is in its hover state -> then we are transitioning the right margin of the green div to be 0 
 
             The div with the green tick 
-              The green tick is a font awesome icon inside a div 
+              The green tick is a Font Awesome icon inside a div 
                 -> so each choice card contains three elements -> all flexed into a row 
                 -> this is the third element in that row -> the green tick which is inside it 
-                -> this tick was inserted using a font awesome icon 
+                -> this tick was inserted using a Font Awesome icon 
                   -> these could be imported into the html pages for the project because of a line which was included in their headers 
                   -> the html <I> tags represent these icons 
-                -> each of these font awesome ticks was surrounded by a larger div 
+                -> each of these Font Awesome ticks was surrounded by a larger div 
                   -> the larger div is what is targeting that element with the animation, and turning it green 
                   -> the icon <I> tags inside it are what insert in the icon itself (in grey)
                   -> then the div which surrounds the icon targets it with a class which is turning it green, centring it and then animating it 
 
               How the green div was placed in relation to the choice card which contains it  
-                -> the green box which is being transitioned in is a font awesome tick icon 
+                -> the green box which is being transitioned in is a Font Awesome tick icon 
                       -> this was placed inside a div <- this div formats the icon to be in the centre of a green box 
                       -> the right margin of that div is also negative
                         -> the value of that margin equals the width of the green container for the icon 
-                        -> that green icon is on the right hand side of the containing div which it's being placed in 
+                        -> that green icon is on the right-hand side of the containing div which it's being placed in 
                         -> so giving its right margin a negative value moves it out of the box 
                         -> in other words, the green div has been placed to the right of the containing div, and then been given negative margins 
                           in order to shift it out of that box 
@@ -471,7 +471,7 @@
             Adding a green animation to that div  
               What the transition effect used was, functionally   
                 -> the width of the left most (first) element in the html for each of these cards was automatically determined 
-                  -> so when we transition the green boxes with the icons in -> the width of of the left most box decreases to accommodate it 
+                  -> so when we transition the green boxes with the icons in -> the width of the left-most box decreases to accommodate it 
                     -> so they're all fitting into the same div 
                   -> this transition is triggered for the hover state of the entire div (around all three of them)
                     -> the width of that div remains the same 
@@ -500,7 +500,7 @@
                 -> we are transitioning the right margins of that element 
                 -> when they transition to 0, the entire green div fits into the choice card 
                   -> the reduction in space which is given by transiting the entire green div back into the choice card (and not off the right of 
-                      it) gets taken out of the left most element in that choice card -> chose with was set to auto 
+                      it) gets taken out of the leftmost element in that choice card -> chose with was set to auto 
                   -> in other words -> in this case transitioning in the green div onto that choice card won't result in an overall change in the 
                       width of the choice card
                     -> the green div was placed off the right of the choice card to begin with 
@@ -550,7 +550,7 @@
                     -> define those choice cards 
                     -> place a div around them 
                     -> use a gap
-                      -> rather thanscetting the height of the div which surrounded those cards and then flexing them apart evenly inside it, you 
+                      -> rather than setting the height of the div which surrounded those cards and then flexing them apart evenly inside it, you 
                           place a div around all of those cards, flex them into a column 
                       -> but instead of giving the larger div which they're placed in a height and then flexing them apart evenly, you don't give 
                           the larger div which they're placed in a height -> you give it a gap property 
@@ -573,7 +573,7 @@
                       -> rather than just flexing apart those elements into a column and spacing them evenly <- then you would have to re-calculate 
                           the height of the entire containing div (rather than having it automatically adjust, which  is what happens when the gap 
                           property is used)
-                      -> this seems simple to do at small scales (recalculate the heigh of the containing div and add the elements into the html), 
+                      -> this seems simple to do at small scales (recalculate the height of the containing div and add the elements into the html), 
                           but if we have a lot of different menu pages and a lot of different changes being made to them -> we need a solution which is flexible 
                       -> i.e, the gap property 
                       -> this saves us from having to repeat css / Sass, which is in line with the DRY (Do Not Repeat Yourself) principle listed 
@@ -728,7 +728,7 @@
       </div>
     </div>
 
-    <!-- The 'Order' buton -->
+    <!-- The 'Order' button -->
     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
       <!-- 
         -> this button is the same as the one which was used in the homepage 

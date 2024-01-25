@@ -1,0 +1,1 @@
+This directory contains a zip folder. This zip folder contains the project deliverables which were uploaded onto the OpenClassrooms platform prior to its assessment.  
