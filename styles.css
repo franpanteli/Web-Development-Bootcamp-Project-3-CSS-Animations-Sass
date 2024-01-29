@@ -122,12 +122,11 @@ li {
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
-  padding: 0.2em;
   margin-left: -1.3em;
   text-align: center;
   width: 24px;
-  height: 20px;
-  padding-top: 4px;
+  height: 24px;
+  line-height: 24px;
 }
 
 .fa, .fas {
