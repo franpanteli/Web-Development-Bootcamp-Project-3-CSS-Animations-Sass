@@ -346,13 +346,34 @@ footer a {
 }
 
 .container_title i {
-  right: 1em;
+  margin-top: 27px;
+  font-size: 23px;
+  margin-left: -22px;
+}
+
+.container_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 28px;
 }
 @media screen and (min-width: 1024px) {
+  .container_title {
+    justify-content: center;
+  }
+
   .container_title i {
     right: auto;
-    padding-left: 1em;
+    margin-left: 1em;
+    width: 22px;
+    height: 21px;
+    font-size: 23px;
   }
+
+  .container_title h2 {
+    margin-left: 10px;
+  } 
 }
 
 .menu {

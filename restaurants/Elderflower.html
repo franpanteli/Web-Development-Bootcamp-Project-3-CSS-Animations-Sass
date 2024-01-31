@@ -2,79 +2,600 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-  
-  <!-- 
-  About this html file
-      -> this entire project contains five html files -> a homepage and four menu pages
-    -> since the four menu pages all follow a similar structure, a template was first devised for these four pages, based off of the 
-        Kitchen West menu html file
-      -> this menu, once completed, was used as a template/ the basis for the other three menus 
-      -> for more information and a more in-depth breakdown of the approach which was devised to create these menu pages (the template this 
-          html file is based off of), refer to the in depth comments which are around the Kitchen West menu
-        -> this is the menu which the template was originally created on  
-    -> the difference in between the template menu and this html file is the content of the page
-      -> this content was provided in the project files for the third project (ohmyfood) on the OpenClassrooms platform -> in a txt file 
-        -> this template was populated implemented in by way of copying and pasting the information from the provided txt file 
-    -> the comments around this html file are a lot less explanatory (refer to the comments around the Kitchen West menu, this was the file which the 
-      template was created on) 
--->
 
+   <!-- DOCUMENT CONTENTS -->
+
+<!-- 
+  1. HEAD / DOC TYPE ETC 
+  2. HEADER SECTION OF THE MENU -> WITH CONTENT 
+  3. BEIGE SECTION OF THE MENU (WITH ITS DISHES ET AL) 
+  4. THE STARTERS BLOCK WITH THREE CHOICE CARDS 
+  5. THE MAINS BLOCK WITH THREE CHOICE CARDS 
+  6. THE DESSERTS BLOCK WITH THREE CHOICE CARDS 
+  7. FOOTER 
+ -->
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<!-- HEAD / DOC TYPE ETC -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- below - this is the text which shows in the tab for the webpage -->
   <title>Elderflower Menu</title>
+
+  <!-- import fonts -->
+    <!-- -> these fonts were the same as the ones used in the project mockup in Figma and were exported from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <!-- icon compatibility -->
+    <!-- 
+        this html allows the icons from the Font Awesome library to be used throughout the project, and was acquired by 
+        searching 'Font Awesome cdn' in a browser   
+        -> two methods were used for this, to ensure both that the Font Awesome icons imported correctly and that the code passed the w3c css validator 
+        -->
+
+  <!-- this first link imports the Font Awesome icons using cloudfare - this doesn't pass the css validator with w3c but the icons still work and 
+        import into the file with this link 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <!--  this second approach imports the Font Awesome icons into the project with a specific kit. This link was exported from the Font Awesome site, to 
+      ensure both icon compatibility and that the css validation for the project passes the w3c validator -->
   <script src="https://kit.fontawesome.com/751a7e3219.js" crossorigin="anonymous"></script>
-  
+
+  <!-- linking to CSSS -->
+    <!-- 
+      -> all of the partial scss files are being imported into the main scss file for the project
+      -> then that main scss file is compiled into the styles.css file, which all of the html pages in the project are being linked back to 
+      -> this is the line in this html file which links it to this compiled css file for the project  
+    -->
   <link rel="stylesheet" href="../styles.css">
+
+  <!--
+     Reusing sections of the webpage as a problem-solving approach
+      -> all five html files in the project are linking back to the same compiled css file 
+      -> meaning that if changes are made to the sass which compiles into it -> then those 
+          changes will be coherent across the entire website (all five webpages of it, they've been 
+          set to use the same stylesheet)
+        -> the approach which worked was to reuse as many sections from the homepage for the project as possible 
+            -> including the transition effect on the hearts on this html file, and the three which derive off it 
+  -->
 </head>
+
+<!-- HEADER SECTION OF THE MENU -> WITH CONTENT -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<!-- Animating the content for this webpage <- transitioning in 
+    -> note 
+      -> this animation was created using a transition 
+      -> this was initially only added to the content in the beige section in the middle of the menu pages 
+      -> these comments below refer to the menu class -> which is where this effect was initially added
+      -> this was later extended to account for the entire page (but the transition effect is the same)
+        -> this is why these notes refer to the menu section 
+    -> the menu class targets the div which is placed around the content for the menu 
+    -> in the beige section of the menu pages, the div which is placed around all of the content 
+    -> a transition is added onto this class 
+      -> so, all of the content in the beige section is surrounded by a div
+      -> that div is targeted with the menu class 
+      -> this is the class which is being targeted for an animation 
+      -> that animation was done with keyframes and not transitions (unlike the heart animation used throughout the project)
+        -> this animation does not have a trigger (the trigger for the heart animation is the user hovering over that element) <- that's an event 
+        -> the event which triggers the animation which is created by this class for the content of the menu is triggered when the page reloads 
+        -> which is why keyframes (and not transitions were used to create it)
+    -> in the compiled css for this 
+      -> we have the menu class <- the class which targets the div which is placed around all of the content in the beige section of the menu pages 
+        -> also note how this is reused across the 4 menu pages (they were all based off of the same template, which was initialised in the html 
+        file for the Kitchen West menu)
+      -> so in the compiled css, we have the menu class 
+        -> then we have the animation which is being added to it <- this is being done in two stages 
+          -> the first is to define the keyframes for its transition (this is called menuFadeIn) 
+            -> this includes two points, 0% of the way through the animation and 100% of the way through the animation 
+            -> 0% of the way through the animation, the opacity of the elements it's being applied to is 0, and 100% of the way through the animation, 
+            the content its being applied to becomes completely opaque  
+          -> the second is to use that keyframe on the class which is placed around the div for the elements we want to target 
+            -> in this case it's the menu class <- because this is placed around the content in the beige part of the menu pages which we want the 
+                animation to apply to 
+            -> this is done in the css (using the keyframe animation) by the line 'animation: menuFadeIn 4s forwards;' <- under the menu section of 
+              the webpage, use this keyframe, make the animation take 4 seconds and run it forwards (start with the content transparent and make it 
+              opaque, rather than the other way round)
+    -> the important points are 
+      -> the reason a keyframe and not a transition is being used for this is because the trigger event for the start of the animation is the reloading 
+        of the page, not a user interacting with it 
+        -> you don't have two states to transition between -> just an animation you want to apply when the page reloads (rather than before and after 
+          a user has interacted with it, like the heart element)
+      -> then there is how it's defined and used 
+        -> the content we want to animate on the html page is surrounded by a div -> that div has a class which is associated with it 
+        -> we define the keyframe at the end of the compiled css / Sass <- and then we apply it to the class which targets the content in html which 
+          we want to annotate 
+          -> and we target it using the animation property 
+          -> the keyframe for this was defined at the end of the compiled css / Sass for organisational reasons (rather than specificity in this case) 
+            <- this is detailed in the Sass notes for the third project in this repository  
+-->
 
 <body class="menu-page-container">
   <header class="banner">
     <div class="banner_arrow">
+
+      <!-- the back arrow for the menu pages was created by using a Font Awesome icon embedded in a link
+            -> a line was used in the header of this html file so that these icons could be imported in -->
       <a href="../index.html">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
+
+    <!-- this is the text for the ohmyfood logo -> this was created here using text, to ensure faster reloading times for the page -->
     <div class="banner_title">
       <h1>ohmyfood</h1>
     </div>
   </header>
   <div class="menu_image">
-    <img src="../assets/images/restaurants/circle-from-above-dish.jpg"
-      alt="photo d'une belle assiette bien presenté">
+    <img src="../assets/images/restaurants/circle-dish-with-hand.jpg"
+      alt="A photo of a circle dish with a hand">
+
+      <!-- 
+        The file tree structure which enabled this image to be used
+            About
+              -> the files for the project were initially structured in a way which included the images in an assets folder, the html files, 
+                  Sass files and others
+              -> all of the content was in the project folder, although when using <img> tags to import the images in this folder - these
+                  weren't showing on the page 
+                when rendered in the browser 
+              -> to rectify this challenge, the file tree structure for the contents of the project folder was changed to be more in line with 
+                  the second project 
+              -> the file tree for the second bootcamp project and this, the third therefore have commonalities, although the third project 
+                  file structure has extra content (namely its sass directory)
+          
+            What the file tree for this project and the file tree for the second bootcamp project (Booki) have in common
+              -> file tree <- opening a terminal, typing tree, dropping the project folder over the terminal for its directory and then hitting enter 
+              -> the folder which contains the project images is placed in the same layer of the tree as the index.html file for the project
+                -> so we have the index.html file for the project -> and then in the same level of the tree is the folder which contains the images 
+                    for the project <- the html file is importing from that folder  
+              -> this was the same approach used for the other html files for the third project 
+                -> all of these html files were other pages of the website (one html file per page of the website)
+                -> the other html files for the project were contained in their own folder 
+                -> that was included relative to the main index.html file for the project in the same way that the directory which contained the image 
+                  files was 
+                -> this index.html file (in this case, for the third project) was the homepage for the website <- and the second project only contained 
+                    one html file (the index.html file)
+              -> problems weren't encountered with the styles.css file (the second project included this one layer into the file tree relative to the 
+                  index.html file, and the third project included this in the same level of indentation) 
+              -> the directory which contains the sass files for the project was also included on the same level of indentation as the index.html file, 
+                  relatively speaking (although the second project didn't have sass) 
+        -->
+
   </div>
+
+<!-- BEIGE SECTION OF THE MENU (WITH ITS DISHES ET AL) -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
   <div class="container">
     <div class="container_banner">
       <div class="container_title">
+
+
+
         <h2>Elderflower
+  
+            <!-- 
+              below - these two lines of html are for Font Awesome icons 
+                -> the icon which shows before and after the transition 
+       
+                The heart transition for the four menu pages
+                  -> the heart transitions for the menu pages were the same as the ones in the homepage 
+                  -> these were created by taking two Font Awesome icons and adding the transition for the element while in its hover state
+                  -> these two icons represent the appearance of the heart before and after the transition has happened, and were placed on 
+                      top of each other using absolute positioning 
+                  -> refer to the comments for this animated element in the index.html file for the project homepage 
+                  -> all of the menu pages use this same element
+            -->
+
+        </h2>
+
+        <div>
           <i class="fa-regular fa-heart"></i>
           <i class="fa-solid fa-heart my-heart-full"></i>
-        </h2>
+        </div>
+        
       </div>
     </div>
-    <!--  MENU -->
+
+    <!-- How the media queries for the beige section in the middle of the menu pages were created for this project 
+		
+          How they are working when you inspect the responsively of the middle section of the menu pages 
+            -> it's hitting at the tablet breakpoint <- the same as the footer elements 
+            -> taking up 100% of the width of the page, and then once the tablet breakpoint is hit, it takes up x% of the width of the page and has 
+                fixed margins
+            -> so any extra space given by expanding the screen goes to increasing the width of that section (rather than being added to the margins 
+                on either side of it, as with the second project)
+
+          And then in the compiled css <- for the entire beige sections of the menu pages  
+            -> the css / Sass for the media queries for the large beige divs on the menu pages 
+              -> which class they target and if they work as we thought they did 
+              -> above the tablet breakpoint, add these margins to this section 
+                -> it's for the container class, which is around the entire beige section on the menu page 
+                -> for that section above the tablet breakpoint -> add in these margins
+                -> the width of that container also isn't specified, which means that when the page is being expanded -> the extra space gets added to 
+                  that beige container (and the widths of the margins around it stay fixed)
+                -> media queries were added around the entire beige section 
+                  -> and then they were also added in for the title at the top of it -> margin-left: auto; and margin-right: auto; <- this is what was done 
+                    for the second project 
+                  -> this is different, because the width of the margins are fixed, and the width of the content is changing as the page expands (rather than 
+                    the other way round)
+                  -> so in this case, in the media queries above the tablet breakpoint region for the beige section in the menu pages -> the width of the 
+                    content isn't specified, just the widths of the margins which we want to in 
+                  -> those are specified for the media queries above the tablet breakpoint region, and nothing is specified for everything below that point 
+                  -> so as the webpage expands, the extra space which is given by its expansion will go to the content (and the margins will remain fixed in 
+                    this case)
+                -> these media queries (this time) are also targeting one section of the webpage (the beige for the menu html pages), rather than the entire 
+                    content of the page 
+
+          And then in the compiled css <- for the titles in the beige sections of the menu webpages 
+            Which section is being targeted by these media queries 
+              -> we were given the appearance for this title in the mockup of the menu pages on Figma, for the mobile and the desktop versions 
+              -> the tablet breakpoint was used throughout the project as the point which the media queries targeted when making the webpage responsive 
+              -> media queries for the footer of the menu pages were the same, and the headers didn't require them 
+              -> in the beige section of the menu pages (the middle), one media query was added around that entire section 
+                -> and then another was added to the header of those menus (inside the beige section)
+                -> this is explaining the media queries for the header section inside those beige sections of the menu pages 
+
+            How this is being targeted 
+              -> the tablet breakpoint was again used (1024px)
+              -> the class which this is used to target is the container_banner (this is the class which is placed around this header element, inside 
+                the beige menu section)
+              -> above the tablet breakpoint region, this content is then being centred 
+                -> there are already margins which are added to the left of the icons in this header <- so they spread apart when they are justified 
+                  into the centre of the page for this region 
+                -> below this point, the items in this element are placed in a div without this query  
+      
+        Thought process behind fading in each individual section of the menu:
+          When the user arrives on the menu page, the dishes must appear gradually over time. They can appear either one by one or in groups - “Starters,” “Mains” and “Desserts”
+          -> we want the starters, then mains and desserts to fade in 
+          -> you would use a keyframe and not a transition -> the trigger is the reloading page
+            -> you only need it to work one way (not two)
+          -> since every menu has a starters, mains and desserts section, it makes sense to define one keyframe which fades in the starters, another which fades in the mains and another which fades in the desserts
+            -> one section of one of the menu pages has four dishes and another has three
+            -> you could define one animation which faded in a choice card -> and then fade in all of the choice cards but with time delays 
+              -> this could involve a loop (as per the animations in the course notes in the same repo as this project)
+          -> a more simple approach would be to define three keyframes
+            -> each keyframe fades in different sections -> a keyframe for the starters, a keyframe for the mains and a keyframe for the desserts <- this method wouldn't require having to loop through different times 	
+            -> the keyframes would be defined at the end of the compiled Sass
+            -> three -> one for the starters, mains and another for the desserts
+            -> then they would be applied on the individual menu pages 
+            -> on the classes which are placed around each of the starters, mains and then desserts 
+          -> I would take a menu block and give it another class -> I would call the class starters e.g 
+            -> and define a fade in keyframe later down in the compiled css 
+            -> then apply that keyframe to the class which was targeting that element 
+            -> then refresh the page to see if it worked
+            -> then set them on the other menu sections -> but on a time delay 
+            -> then once you have something which works -> move the entire thing into the Sass
+            -> then apply those animations to the other menu pages 
+            -> but start with the starters on the Kitchen West menu -> considering that this is the project template
+    -->
+
     <div class="menu">
       <div class="menu__block menu__block--startersFadeIn">
+
+      <!-- THE STARTERS BLOCK WITH THREE CHOICE CARDS --> 
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      <!-- 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444 -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <div class="category">
           <h3 class="category__name">STARTERS</h3>
           <div class="category__name--line"></div>
         </div>
+
         <div class="choice">
 
+          <!-- 
+            What a choice card is 
+            -> each of the cards with a green animation is a dish on a menu 
+            -> these cards are called choice cards
+            -> there are three of them per block (starter / main / desserts), with notable exceptions later mentioned in these comments 
+        
+          The html for the first choice card is explained 
+            -> the first choice card in the html for the Kitchen West menu starters section is explored here 
+              -> the approach used to create all of the choice cards was the same (and so this is the only one which is explored in depths in the comments)
+              -> how this card was combined with the two other choice cards in the menu block is explored in the section after the explanation for this card 
+        
+          How this choice card is constructed 
+            -> there are three sections to this choice card 
+              -> all of these sections were flexed into a row 
+                -> the items which appear first in the html are the ones which are to the left of the choice card
+              -> these three sections are 
+                1 -> the first part of that row was the div around the two pieces of text 
+                2 -> the second part of that row was the div around the cost of the dish 
+                3 -> the third part of the row was the div around the green animated icon
+              -> each of these items are explored in these comments for the first choice card, according to this structure  
+          -->
+
           <div class="choice__card">
+
+            <!-- Choice card element 1/3 - the div around the two pieces of text  -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+              <!-- 
+                  The first third of the choice card contains the text 
+                    -> the name of the dish <- the <h3>
+                    -> the description of the dish <- the <p>
+                    -> the contents of these two comes from the Figma mockup / txt file which contains the menu content 
+
+                  Both of these these elements are contained in the same div, which flexes them into a column 
+                    -> <h2> and <p> are block elements 
+                    -> the div which is placed around both of these elements flexes them into a column
+                    -> that div itself is flexed into a row, with the other two elements in the choice card
+                      -> but those two text elements inside it are flexed into a column 
+
+                  The height of the div which contains both of those elements 
+                    -> the div which surrounds both of these elements is targeted using the 'choice__card__txt' class
+                      -> this is the class which is flexing the two text elements into a column 
+                      -> this class is also used to hide the overflow of the text <- when the menu shrinks, the text which this div contains 
+                          doesn't flow off of it, and an ellipsis (...) is added to indicate this overflow 
+                    -> this class doesn't target the height of the elements which are inside it 
+                      -> the div is just placed around those two text elements <- and its height is adjusting to the height of the content inside 
+                      -> the height of the content inside was controlled by placing classes on those individual elements 
+                      -> since there were two pieces of text, this involved two classes 
+                        -> the class which targets the top piece of text (the 'choice__card__txt-title' class) gives this element a top padding 
+                        -> the class which targets the bottom piece of text (the 'choice__card__txt-description' class) gives the bottom element 
+                            bottom padding 
+                    -> in other words, we're flexing apart those text items in their larger containing div
+                      -> and then on the classes which target them individually -> adding padding onto the top text item and padding onto the 
+                          bottom text item 
+                    -> the height wasn't done by setting the height of the larger containing div for the two pieces of text 
+                      -> it was done by adding in padding onto the top element and the bottom element <- for the two classes which targeted 
+                          them as individual elements 
+                      -> and then flexing apart those items inside that containing div 
+                      -> by changing the padding of the elements inside it (not the height of the entire containing div)
+
+                  The width of the div which contains both of these text elements 
+                    Setting the width of this element, in comparison to the height 
+                      -> this was one of the most important parameters which was changed for this element 
+                      -> so, we have two text elements which are surrounded by this larger div and are being flexed into a column by it 
+                      -> the larger div which surrounds those two elements is targeted by the class called 'choice__card__txt'
+                      -> the width of that div was set very specifically 
+                        -> it's height wasn't set -> it was placed around those two elements of text, which were given their own paddings 
+                        -> the width of that div was set to auto -> with a flex property of 1 
+
+                    The importance of setting this width to auto 
+                      -> the width of this div <- containing the two pieces of text in the choice cards was set to auto 
+                      -> out of all three elements in one of those choice cards (the text, the price and the green icon div), the width of this div 
+                          is the only one which was set to auto 
+                      -> this property allows the width of this element to change, based on what the browser renders 
+                      -> animation compatibility 
+                        -> the animation later added (and what we will explore later in these comments) operates when the div around the entire 
+                            choice card is in its hover state
+                        -> when that entire div is being hovered over, the element to the right of the choice card is being transitioned in 
+                        -> when it is being transitioned in, the width of the entire choice card is remaining the same 
+                        -> so setting the width of the div which is around both of the text elements equal to auto allows it to get smaller when the 
+                            green div is being animated into the choice card on the far right 
+                      -> since the width of the entire choice card is remaining the same, when it's being hovered over and the green icon is being 
+                          transitioned in, the widths of one of the three elements which are in that choice card needs to reduce 
+                      -> since the div with the text around it is the largest div in that entire choice card, setting its width equal to auto tells 
+                          the browser to reduce its width by the width of the green div which is being transitioned in when it's in its hover state 
+                      -> the widths of all of the other two items in that choice card are fixed 
+                      -> giving the div which contains the text a flex value equal to 1 also tells that item to take up all of the rest of the space 
+                          in the choice card
+                        -> we're telling the browser to make its width take up the width of the entire choice card (from the flex value of 1), and 
+                            then to reduce that value in case anything else happens 
+                          -> in other words, ready for the green div to be transitioned in <- the width of that entire choice card remains the same, 
+                              but the width of the div which is around the text the choice card contains is reducing because it's been set to auto 
+                              -> and it's reducing to accommodate the width of the green div which is being transitioned in
+              -->
+
             <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Brisket ravioli</h3>
-              <p class="choice__card__txt--description">Served with truffle cream</p>
+              <h3 class="choice__card__txt--title">Smoked salmon</h3>
+              <p class="choice__card__txt--description">With beetroot and horseradish</p>
             </div>
+
+            <!-- Choice card element 2/3 - the div around the cost of the dish -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            
+            <!-- 
+              There are three elements in the choice card, and all are flexed into a row 
+                -> the first was the div with the two pieces of text which were flexed into a column 
+                -> all three elements in the choice card were flexed into a row 
+                -> so the second element in it is the price of the dish (this element)
+
+              The 'choice__card__price' class 
+                -> the content for the price of the dish is placed into a span 
+                -> and then the entire span has been wrapped inside a larger div
+                -> that larger div is targeted by the 'choice__card__price' class 
+                  -> when the entire choice card is being hovered over, there is a right padding on this price element 
+                  -> that right padding is the distance in between the cost of the dish and the left of the green div which contains the tick for 
+                      that element 
+                  -> the span which contains the price of the dish was placed in a larger div, and that larger div was formatted into a square 
+                  -> so that its left edges had the same padding as the padding between the price of the dish and the leftmost side of the green 
+                      containing div 
+                -> top padding was added to this div, to then move down the price contained by the span inside it 
+                -> the width of this div is fixed -> so that the the animated green div comes in, the width of the first element in the choice 
+                    card is forced to change 
+
+              A span was used for this as this is an inline element, although a div could have also been used
+                -> a span is also more semantic / specific to text than a div <- a div can contain an entire card
+                -> if the price uses a span, it's also taking up the width of the content (rather than the entire width of the div which contains 
+                    it) <- so it can be more easily moved around 
+                -> then the div which surrounds that span was used to move the price into its centre in the x, and add padding to its top 
+             -->
+            
             <div class="choice__card__price">
               <span>£25</span>
             </div>
+
+            <!-- Choice card element 3/3 - the div around the green animated icon -->
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  
+            <!-- 
+            Summary of the animation for the green divs 
+            -> the width of the div which contains all three elements doesn't change when it's being hovered over 
+              -> it's width is fixed
+              -> when the div which contains all three of those elements is in its hover state -> then the right-most element is being transitioned in 
+                (i.e, the icon surrounded by the green container)
+              -> in other words, anywhere over this entire div can be hovered over -> then this transition is triggered for the right margin of the green div 
+              -> when the green div of that element has a margin which is equal to zero -> this is when that element is visible on the page
+              -> when the margin of that green containing div is negative -> this is its default state -> which transitions it off of the page 
+              -> so when the larger containing div is hovered over -> this is when the margins of the green div which contains the icon is transitioned to be 0 
+                -> in other words -> it's no longer being pushed out of the larger div which contains it 
+                -> so we have the hover state for the larger containing div which is around all three elements for that section 
+                -> when that is in its hover state -> then we are transitioning the right margin of the green div to be 0 
+
+            The div with the green tick 
+              The green tick is a Font Awesome icon inside a div 
+                -> so each choice card contains three elements -> all flexed into a row 
+                -> this is the third element in that row -> the green tick which is inside it 
+                -> this tick was inserted using a Font Awesome icon 
+                  -> these could be imported into the html pages for the project because of a line which was included in their headers 
+                  -> the html <I> tags represent these icons 
+                -> each of these Font Awesome ticks was surrounded by a larger div 
+                  -> the larger div is what is targeting that element with the animation, and turning it green 
+                  -> the icon <I> tags inside it are what insert in the icon itself (in grey)
+                  -> then the div which surrounds the icon targets it with a class which is turning it green, centring it and then animating it 
+
+              How the green div was placed in relation to the choice card which contains it  
+                -> the green box which is being transitioned in is a Font Awesome tick icon 
+                      -> this was placed inside a div <- this div formats the icon to be in the centre of a green box 
+                      -> the right margin of that div is also negative
+                        -> the value of that margin equals the width of the green container for the icon 
+                        -> that green icon is on the right-hand side of the containing div which it's being placed in 
+                        -> so giving its right margin a negative value moves it out of the box 
+                        -> in other words, the green div has been placed to the right of the containing div, and then been given negative margins 
+                          in order to shift it out of that box 
+                          -> the amount it's been shifted out by those negative margins is the same as its width -> so the entire thing disappears 
+                            out of the larger containing div which it's in 
+                        -> this is the value of that margin -> when the larger div which contains all three of those items isn't being hovered over 
+                          -> the green div is there, it's just been moved out of the div which contains it so it's invisible 
+                          -> and the left-most (first) element in that containing div has a width which is set to auto 
+                        -> so if an element is transitioned into that entire div -> then the width of this first element will decrease to 
+                            accommodate it 
+
+            Adding a green animation to that div  
+              What the transition effect used was, functionally   
+                -> the width of the left most (first) element in the html for each of these cards was automatically determined 
+                  -> so when we transition the green boxes with the icons in -> the width of the left-most box decreases to accommodate it 
+                    -> so they're all fitting into the same div 
+                  -> this transition is triggered for the hover state of the entire div (around all three of them)
+                    -> the width of that div remains the same 
+
+              This was done with a transition not a keyframe 
+                -> two methods of adding in animations were listed on the OpenClassrooms platform -> keyframes and transitions 
+                -> transitions were used for the green tick animations on the choice cards 
+                -> transitions are used whenever there is a trigger event for that animation, and with keyframes a lot of the time the user 
+                    interacting with the element doesn't trigger the animation 
+                  -> the trigger event for an animation created using keyframes is often less involved with the user (e.g, a page reload)
+                  -> compare this to an animation created using transitions <- the hover state of the entire choice card for this is (in this 
+                      case) the trigger event 
+                -> the width of the entire choice card is always the same 
+                  -> the trigger event is when the mouse hovers anywhere over that choice card
+                  -> so we have two states <- the entire choice card is being hovered over, or it's not being hovered over 
+                  -> we are transitioning the green icon under either of those conditions 
+                  -> we are adding in a transition to get from the first state to the second, and then another to get from the second state to the 
+                      first 
+
+              The right margins of the green tick element are being transitioned  
+                -> the element being transitioned was placed in a div
+                -> we are transitioning the margins of that element, during the hover state of the entire choice card 
+                -> that element is given negative right margins -> which move it out the right of the choice card
+                -> in the hover state for the entire choice card, the right margins of this element are being transitioned to 0 
+                -> in other words -> it's being transitioned from out the right of the card, to be in it 
+                -> we are transitioning the right margins of that element 
+                -> when they transition to 0, the entire green div fits into the choice card 
+                  -> the reduction in space which is given by transiting the entire green div back into the choice card (and not off the right of 
+                      it) gets taken out of the leftmost element in that choice card -> chose with was set to auto 
+                  -> in other words -> in this case transitioning in the green div onto that choice card won't result in an overall change in the 
+                      width of the choice card
+                    -> the green div was placed off the right of the choice card to begin with 
+                    -> and then when it's added in there is an automatic reduction in width of the first element in that choice card 
+                    -> so overall the width of the entire card stays the same
+                -> in other words, when the entire choice card is in its hover state -> then we are transitioning the right margins of the green 
+                    div to 0 
+                  -> this way the green div now fits into the choice card
+                  -> in its normal state, we give this div negative margins, in order to transition it off of the right of the choice card completely 
+                  -> and then when the entire choice card is in the hover state -> we transition the right margin of the green div back to 0, so the 
+                      entire thing fits onto one page  
+              -->
+            
+            <div class="choice__card__check">
+              <i class="fas fa-lg fa-circle-check"></i>
+            </div>
+
+          </div>
+
+          <!-- THE OTHER TWO CHOICE CARDS IN THE STARTERS BLOCK -->
+          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+           <!-- 
+                -> there are three blocks in each menu <- the starters, mains and desserts
+
+                The next two choice cards 
+                  -> each of those blocks contains three dishes 
+                  -> each of these menu choices is placed on its own card (one card with the green animation, one dish option) <- this is called 
+                      a choice card
+                    -> and there are three of them (in most cases) in each block (starter / main / desserts)
+                  -> the previous choice card was for the first option of the starter block 
+                    -> the next two choice cards are for the second and third menu options in this starter block
+                    -> these two choice cards are the same as the previous one which was deconstructed in the html, except that their content is 
+                        different 
+                  -> the text content for these cards was provided in a separate txt file included in the initial files for the project 
+                    -> these included the image files and the project brief 
+                  -> considering that the following two cards are the same as the previous choice card except for its content, to understand how 
+                      these individual cards work in more depth -> refer to the comments around the previous choice card
+
+                How these next two cards were combined to produce the starters block 
+                  To combine the three starter choices into one block 
+                    -> the approach which was used in the previous project was 
+                      -> define a div of certain height
+                      -> surround the items with that div 
+                      -> flex them apart evenly 
+
+                  The approach which was used here was 
+                    -> define those choice cards 
+                    -> place a div around them 
+                    -> use a gap
+                      -> rather than setting the height of the div which surrounded those cards and then flexing them apart evenly inside it, you 
+                          place a div around all of those cards, flex them into a column 
+                      -> but instead of giving the larger div which they're placed in a height and then flexing them apart evenly, you don't give 
+                          the larger div which they're placed in a height -> you give it a gap property 
+                      -> the items inside it aren't spreading apart evenly to fill the height which you give that containing div <- the containing 
+                          div is adjusting its height 
+                        -> you're telling it what the distance between each element in that containing div is (the gap) -> and then its height 
+                            adjusts accordingly 
+                        -> the display is still set to flex 
+                        -> when you use the gap property, there is no space in between the top of the containing div and a) the top of the first 
+                            element inside it and b) the bottom of the last element placed inside it 
+                          -> assuming that the elements we're dealing with are flexed into a column (as with this case)
+
+                  Why use a gap rather than the method from the previous project 
+                    -> there are four menu pages for this project, and a homepage 
+                    -> each of those menu pages has the same blocks (starter, mains and desserts) 
+                    -> but the choices (the number of dishes per block) is √variable on each menu 
+                    -> in every case, each block contains three dishes -> apart from the Elderflower starters section, which has four
+                    -> if the clients add new dishes to their menus, these choices need to be easily addable 
+                    -> using a gap in between the elements allows the height of the containing div to automatically adjust to this 
+                      -> rather than just flexing apart those elements into a column and spacing them evenly <- then you would have to re-calculate 
+                          the height of the entire containing div (rather than having it automatically adjust, which  is what happens when the gap 
+                          property is used)
+                      -> this seems simple to do at small scales (recalculate the height of the containing div and add the elements into the html), 
+                          but if we have a lot of different menu pages and a lot of different changes being made to them -> we need a solution which is flexible 
+                      -> i.e, the gap property 
+                      -> this saves us from having to repeat css / Sass, which is in line with the DRY (Do Not Repeat Yourself) principle listed 
+                          in the course material on the OpenClassrooms platform
+                          -> -> the template had to be designed in a way which was flexible
+            -->
+
+          <div class="choice__card">
+            <div class="choice__card__txt">
+              <h3 class="choice__card__txt--title">Ham hock terrine</h3>
+              <p class="choice__card__txt--description">With piccalilli</p>
+            </div>
+            <div class="choice__card__price">
+              <span>£35</span>
+            </div>
             <div class="choice__card__check">
               <i class="fas fa-lg fa-circle-check"></i>
             </div>
@@ -82,37 +603,11 @@
 
           <div class="choice__card">
             <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Beluga caviar</h3>
-              <p class="choice__card__txt--description">Served on buckwheat blinis</p>
+              <h3 class="choice__card__txt--title">Poached egg</h3>
+              <p class="choice__card__txt--description">With asparagus and hollandaise</p>
             </div>
             <div class="choice__card__price">
-              <span>£35</span>
-            </div>
-            <div class="choice__card__check">
-              <i class="fas fa-lg fa-circle-check"></i>
-            </div>
-          </div>
-
-          <div class="choice__card">
-            <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Lobster with pumpkin foam</h3>
-              <p class="choice__card__txt--description">And orange zest</p>
-            </div>
-            <div class="choice__card__price">
-              <span>£35</span>
-            </div>
-            <div class="choice__card__check">
-              <i class="fas fa-lg fa-circle-check"></i>
-            </div>
-          </div>
-          
-          <div class="choice__card">
-            <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Duck terrine</h3>
-              <p class="choice__card__txt--description">Fig jam and toasted brioche</p>
-            </div>
-            <div class="choice__card__price">
-              <span>£35</span>
+              <span>£20</span>
             </div>
             <div class="choice__card__check">
               <i class="fas fa-lg fa-circle-check"></i>
@@ -120,6 +615,17 @@
           </div>
         </div>
       </div>
+
+      <!-- THE MAINS BLOCK WITH THREE CHOICE CARDS -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      <!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            
+              <!-- 
+                -> this is the same as the starters block with three choice cards <- except that the content was changed to match the Figma mockup
+                -> for more information about which classes were used / media queries for this etc, refer to the comments around the starters block 
+                    of this html page since it is the same as this block (just with different content)
+             -->
 
       <div class="menu__block menu__block--mainsFadeIn">
         <div class="category">
@@ -130,8 +636,8 @@
 
           <div class="choice__card">
             <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Scallops</h3>
-              <p class="choice__card__txt--description">On a bed of celeriac purée</p>
+              <h3 class="choice__card__txt--title">Beef fillet with herb butter</h3>
+              <p class="choice__card__txt--description">Served with a vegetable medley</p>
             </div>
             <div class="choice__card__price">
               <span>£40</span>
@@ -143,8 +649,8 @@
 
           <div class="choice__card">
             <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Pan-fried langoustine</h3>
-              <p class="choice__card__txt--description">With sweet potato mash</p>
+              <h3 class="choice__card__txt--title">Braised oxtail cottage pie</h3>
+              <p class="choice__card__txt--description">With black truffle and parsnip puree</p>
             </div>
             <div class="choice__card__price">
               <span>£35</span>
@@ -156,8 +662,8 @@
 
           <div class="choice__card">
             <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Braised oxtail</h3>
-              <p class="choice__card__txt--description">With lemon-zested wild rice</p>
+              <h3 class="choice__card__txt--title">Fillet of turbot</h3>
+              <p class="choice__card__txt--description">With citrus dressing</p>
             </div>
             <div class="choice__card__price">
               <span>£44</span>
@@ -169,6 +675,17 @@
         </div>
       </div>
 
+      <!-- THE DESSERTS BLOCK WITH THREE CHOICE CARDS -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      <!-- 66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 -->
+      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            
+              <!-- 
+                -> this is the same as the starters block with three choice cards <- except that the content was changed to match the Figma mockup
+                -> for more information about which classes were used / media queries for this etc, refer to the comments around the starters block 
+                    of this html page since it is the same as this block (just with different content)
+             -->
+
       <div class="menu__block menu__block--dessertsFadeIn">
         <div class="category">
           <h3 class="category__name">DESSERTS</h3>
@@ -178,8 +695,8 @@
 
           <div class="choice__card">
             <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Chocolate parfait</h3>
-              <p class="choice__card__txt--description">With salted caramel ice cream</p>
+              <h3 class="choice__card__txt--title">Treacle tart</h3>
+              <p class="choice__card__txt--description">With Cornish clotted cream</p>
             </div>
             <div class="choice__card__price">
               <span>£18</span>
@@ -191,8 +708,8 @@
 
           <div class="choice__card">
             <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Deconstructed rum baba</h3>
-              <p class="choice__card__txt--description">With lemon coulis</p>
+              <h3 class="choice__card__txt--title">Lemon posset</h3>
+              <p class="choice__card__txt--description">With shortbread biscuit</p>
             </div>
             <div class="choice__card__price">
               <span>£22</span>
@@ -204,8 +721,8 @@
 
           <div class="choice__card">
             <div class="choice__card__txt">
-              <h3 class="choice__card__txt--title">Lemon meringue pie</h3>
-              <p class="choice__card__txt--description">Deconstructed</p>
+              <h3 class="choice__card__txt--title">Chocolate mousse</h3>
+              <p class="choice__card__txt--description">With a hint of chili and a hazelnut tuile</p>
             </div>
             <div class="choice__card__price">
               <span>£23</span>
@@ -218,13 +735,35 @@
       </div>
     </div>
 
+    <!-- The 'Order' button -->
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --> 
+      <!-- 
+        -> this button is the same as the one which was used in the homepage 
+        -> the fonts et al are the same (except the contents of the button has changed)
+        -> for more information about how this button was designed, see the the comments around the button on for the index.html file of the project 
+          (the homepage of the ohmyfood website)
+       -->
 
     <div class="order">
       <button class="order__button">Order</button>
     </div>
   </div>
 
-  <!--  FOOTER -->
+<!-- FOOTER -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 77777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777 -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+  
+    <!-- 
+      The footer for the four menu pages were there same as the homepage 
+        -> for more in depth comments about how the footer was created (from list elements), refer to the comments around the index.html 
+            file for the project (the ohmyfood homepage)
+        -> all of the webpages (html files) in the project link back to the same compiled css file (styles.css) -> which formats these 
+          list elements into a footer and adds in media queries
+        -> the footer which this html file uses is exactly the same as the one in the index.html file for the project (again to understand 
+            how the footer for this html file works refer to the comments around the footer section in the index.html file for the project)
+    -->
+
   <footer>
     <div class="footer">
         <a href="#">
@@ -267,17 +806,9 @@
     </div>
   </footer>
 </body>
-
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
+<!-- DOCUMENT END -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
