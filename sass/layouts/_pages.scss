@@ -160,22 +160,26 @@
 // THIS IS THE SASS FOR THE GREEN TICK ANIMATIONS
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+  // FOR THE GREEN TICK ANIMATION IN ITS REGULAR STATE <- NORMAL STATE 
+  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 .choice__card__check {
 
   // STYLING 
   width: 4.3em;
   height: 100%;
-  margin-right: -4.3em;
   background-color: $tertiary-color;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   // TRANSITION 
   transition-duration: 0.4s;
-  cursor: pointer;
+  margin-right: -4.3em;
 }
 
+  // FOR THE GREEN TICK ANIMATION IN ITS HOVER STATE <- HOVER STATE
+  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 .choice__card:hover .choice__card__check {
   margin: 0;
 

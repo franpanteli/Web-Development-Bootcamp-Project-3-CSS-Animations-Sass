@@ -3,6 +3,9 @@
 @import '../utils/mixins';
 
 // Sass
+
+// FOR THE OPAQUE HEART 
+  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // no mixins were used here
 .my-heart-full {
   // styles for the opaque heart <- REGULAR STATE OF THE OPAQUE HEART 
@@ -26,6 +29,8 @@
     // -> then the code which defines how the heart looks in its hover state 
   &:hover {
     opacity: 1;
+    // below - this places the icon along the bottom left corner of the containing div in its hover state 
+      // -> 0% for the x and 100% in the y 
     background-position: 0% 100%;
       // SO THAT THE HEART ANIMATION WORKS IN REVERSE 
         // -> going from hovered to not hovered 
@@ -34,6 +39,7 @@
 }
 
   // FOR THE TRANSPARENT HEART 
+  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   // styles for the transparent heart <- ALL STATES
     // -> the heart without a background is always there
     // -> this is the css for that heart 
