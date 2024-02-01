@@ -5,11 +5,14 @@
 // Sass 
 // THE BACKGROUND WHICH CONTAINS THE LOADER 
 .loader {
+      // fix the position
   position: fixed;
   display: grid;
+      // move the text in the background into its centre 
   place-items: center;
   background: radial-gradient(circle, $primary-color, $tertiary-color);
   inset: 0;
+      // start before the keyframe (when the page reloads) with that background in front of the page 
   z-index: 1;
   animation: goAway 0s 2.9s forwards;
   
@@ -21,6 +24,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    // move it to the z index of -1 (from 1)
     z-index: -1;
     background: inherit;
   }
@@ -28,11 +32,14 @@
 
 // THE TEXT IN THE LOADER ANIMATION
 .word {
+      // TO FORMAT THE TEXT 
   font-size: 79px;
   opacity: 0.9;
   color: $secondary-color;
   text-shadow: 3px 3px 3px black;
   font-family: shrikhand;
+  
+      // TO ANIMATE THE TEXT 
   animation: textExpand 2.9s forwards ease-out;
 }
 
