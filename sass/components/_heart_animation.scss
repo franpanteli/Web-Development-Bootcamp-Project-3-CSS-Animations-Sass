@@ -7,14 +7,23 @@
 .my-heart-full {
   // styles for the opaque heart <- REGULAR STATE OF THE OPAQUE HEART 
     // -> going from not hovered to hovered 
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+    // -> this is the code which defines how the heart looks normally 
+    // -> there is an icon for the transparent heart, and another for the heart with its background filled in 
+    // -> the heart with its background filled in is made opaque 
+    // -> then the opacity is transitioned 
+  
+  // TO DEFINE THE BACKGROUND OF THE FULL HEART 
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient($secondary-color, $primary-color);
   -webkit-background-clip: text;
   background-clip: text;
 
+  // TO SET THE TRANSITION FOR THE FULL HEART 
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
   //  styles for the opaque heart <- HOVER STATE OF THE OPAQUE HEART 
+    // -> then the code which defines how the heart looks in its hover state 
   &:hover {
     opacity: 1;
     background-position: 0% 100%;
@@ -24,7 +33,13 @@
   }
 }
 
+  // FOR THE TRANSPARENT HEART 
   // styles for the transparent heart <- ALL STATES
+    // -> the heart without a background is always there
+    // -> this is the css for that heart 
+    // -> the position is absolute (so relative to the box it's been placed in)
+    // -> the transparent and full heart icond have been placed on top of each other 
+        // -> and then the opacity of the full heart is transitioned 
 .fa-heart {
   position: absolute;
   cursor: pointer;

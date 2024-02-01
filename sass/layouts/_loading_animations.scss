@@ -3,6 +3,7 @@
 @import '../utils/mixins';
 
 // Sass 
+// THE BACKGROUND WHICH CONTAINS THE LOADER 
 .loader {
   position: fixed;
   display: grid;
@@ -12,6 +13,7 @@
   z-index: 1;
   animation: goAway 0s 2.9s forwards;
   
+  // MAKING THE BACKGROUND GO AWAY WITH A KEYFRAME 
   &::after {
     content: "";
     position: absolute;
@@ -24,6 +26,7 @@
   }
 }
 
+// THE TEXT IN THE LOADER ANIMATION
 .word {
   font-size: 79px;
   opacity: 0.9;
@@ -33,6 +36,7 @@
   animation: textExpand 2.9s forwards ease-out;
 }
 
+// DEFINING THE KEYFRAMES
 @keyframes goAway {
   to {
     opacity: 0;
