@@ -21,22 +21,29 @@
   }
 }
 
+// APPLY THE KEYFRAME TO FADE THE MENU ELEMENTS ONE BY ONE -> WITH A TIME DELAY 
+  // THE ENTIRE PAGE
 .menu-page-container {
   animation: fadeInMenu 2.9s forwards;
 }
 
+  // EACH OF THE INDIVIDUAL MENU SECTIONS - STARTERS 
+  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 .menu__block--startersFadeIn {
   animation: fadeInMenu 1.5s forwards;
 }
 
+  // MAINS 
 .menu__block--mainsFadeIn {
   animation: fadeInMenu 3s forwards;
 }
 
+  // DESSERTS
 .menu__block--dessertsFadeIn {
   animation: fadeInMenu 4s forwards;
 }
 
+// DEFINE THE KEYFRAME TO FADE THE MENU ELEMENTS 
 @keyframes fadeInMenu {
   0% {
     opacity: 0;
