@@ -9,6 +9,9 @@
   <li>Netlify: fran-web-dev-bootcamp-project-3.netlify.app </li>
   <li>GitHub Pages: https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-Menu-Website/</li>
 </ul>
+
+<h3>Ohmyfood Public Speaking Skills Assessment</h3>
+This project was examined in a 30 minute oral presentation I gave on the OpenClassrooms platform, to develop public speaking and presentation skills. My flashcards from this assessment are available in the directory called 'assessment.'
   
 <h3>Web Development Bootcamp Notes (Extension)</h3>
 <p>Three new courses were covered as part of this project. These are detailed below and were provided on the OpenClassrooms platform to develop Sass, versioning and animation skills with CSS.Their contents are described below</p>
