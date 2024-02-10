@@ -7,7 +7,7 @@
 <p>I normally deploy my projects using Netlify and had initially deployed the project using this platform. Since the project milestone guide suggests using GitHub Pages to deploy the project, this has project has been deployed twice for the sake of practice. The links to its two deployments are below, although GitHub Pages is the preferred method as part of this skills bootcamp. 
 <ul>
   <li>Netlify: fran-web-dev-bootcamp-project-3.netlify.app </li>
-  <li>GitHub Pages: [https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-Menu-Website/](https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-CSS-Animations-Sass/)</li>
+  <li>GitHub Pages: https://franpanteli.github.io/Web-Development-Bootcamp-Project-3-CSS-Animations-Sass/</li>
 </ul>
 
 <h3>Ohmyfood Public Speaking Skills Assessment</h3>
